@@ -74,3 +74,13 @@ def save_dao_edges(edges):
     output_file = PROCESSED_DATA_DIR / "edges.csv"
 
     edges.to_csv(output_file, index=False)
+if __name__ == "__main__":
+    voter_dao_pairs = load_unique_voter_dao_pairs()
+
+    valid_pairs = filter_valid_voters(voter_dao_pairs)
+
+    edges = generate_dao_edges(valid_pairs)
+
+    save_dao_edges(edges)
+
+    print(f"Edges generated: {len(edges)}")

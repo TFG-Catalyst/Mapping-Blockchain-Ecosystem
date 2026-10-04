@@ -32,3 +32,9 @@ def save_dao_nodes(nodes):
     output_file = PROCESSED_DATA_DIR / "nodes.csv"
 
     nodes.to_csv(output_file, index=False)
+if __name__ == "__main__":
+    nodes = generate_dao_nodes()
+    save_dao_nodes(nodes)
+
+    print(f"Nodes generated: {len(nodes)}")
+    
