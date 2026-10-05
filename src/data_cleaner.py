@@ -76,32 +76,31 @@ def clean_votes(df):
     return df
 
 def save_processed_data(deployments, proposals):
-    # Directory where the cleaned datasets are stored
     output_dir = Path(__file__).resolve().parents[1] / "data" / "processed"
 
-    # Save cleaned deployments
+    output_dir.mkdir(parents=True, exist_ok=True)
+
     deployments.to_csv(
         output_dir / "deployments_clean.csv",
         index=False
     )
 
-    # Save cleaned proposals
     proposals.to_csv(
         output_dir / "proposals_clean.csv",
         index=False
     )
 
 def process_votes(votes_generator):
-    # Output file for the cleaned votes dataset
     output_dir = Path(__file__).resolve().parents[1] / "data" / "processed"
     output_file = output_dir / "votes_clean.csv"
 
+    output_dir.mkdir(parents=True, exist_ok=True)
+
     first_chunk = True
-    # Process votes in chunks to avoid loading the entire dataset into memory
+
     for i, chunk in enumerate(votes_generator, start=1):
         cleaned_chunk = clean_votes(chunk)
 
-        # Create the file with the first chunk, then append the remaining chunks
         cleaned_chunk.to_csv(
             output_file,
             mode="w" if first_chunk else "a",

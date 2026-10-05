@@ -71,8 +71,9 @@ def generate_dao_edges(valid_pairs):
 
 #Export
 def save_dao_edges(edges):
-    output_file = PROCESSED_DATA_DIR / "edges.csv"
+    PROCESSED_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
+    output_file = PROCESSED_DATA_DIR / "edges.csv"
     edges.to_csv(output_file, index=False)
 if __name__ == "__main__":
     voter_dao_pairs = load_unique_voter_dao_pairs()

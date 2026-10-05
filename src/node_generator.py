@@ -29,8 +29,9 @@ def generate_dao_nodes():
 
 #Export
 def save_dao_nodes(nodes):
-    output_file = PROCESSED_DATA_DIR / "nodes.csv"
+    PROCESSED_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
+    output_file = PROCESSED_DATA_DIR / "nodes.csv"
     nodes.to_csv(output_file, index=False)
 if __name__ == "__main__":
     nodes = generate_dao_nodes()
