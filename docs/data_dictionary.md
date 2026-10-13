@@ -13,8 +13,9 @@ Three CSV files. Platforms covered: Aragon, DAOHaus, DAOstack, Realms, Snapshot,
 | `votes.csv` | 11,638,348 | 8 | one row per individual vote |
 
 Row counts for `deployments` and `proposals` were verified directly. The `votes.csv`
-count was obtained by chunked reading (see S1-01); note that the dataset description on
-Zenodo mentions roughly 66 million votes, so this discrepancy is still open.
+count was obtained by chunked reading (see `notebooks/01_dataset_inspection.ipynb`). The roughly 66 million votes
+mentioned on Zenodo are the sum of the `votes_count` metadata, not rows of
+`votes.csv`; see "Coverage of votes.csv" below.
 
 Rows per platform:
 
@@ -139,6 +140,60 @@ below are marked as unverified where they have not been checked against the whol
   (1e+18 = 1 token). Since each DAO uses its own token, raw weights are not comparable
   across DAOs and would need normalisation (for example, as a share of the total voting
   power of that DAO).
+
+---
+## Coverage of votes.csv (S2-01)
+
+Analysis in `notebooks/03_votes_coverage.ipynb`.
+
+| Platform | Declared (`deployments.votes_count`) | Rows in `votes.csv` | Coverage |
+| :---- | ----: | ----: | ----: |
+| aragon | 26,833 | 26,833 | 100% |
+| daohaus | 51,129 | 51,129 | 100% |
+| daostack | 12,331 | 12,331 | 100% |
+| realms | 1,067,333 | 1,067,333 | 100% |
+| tally | 1,440,390 | 1,597,604 | 110.9% |
+| snapshot | 64,697,595 | 8,883,118 | 13.7% |
+| **total** | 67,295,611 | 11,638,348 | 17.3% |
+
+**Snapshot.** Compared proposal by proposal with `proposals.csv`, which declares
+65,716,576 Snapshot votes (the two metadata tables do not agree). About 56.8 million
+votes are missing:
+
+- 54,749,561 (96.3%) belong to 1,040 proposals with more than 6,000 declared votes
+  and no rows in `votes.csv`. Another 13 such proposals are truncated at exactly 6,000
+  rows. No Snapshot proposal with more than 6,000 votes is complete.
+- 2,050,741 (3.6%) belong to 16,736 smaller proposals that also have no rows. No cause
+  was identified; this remains an open uncertainty.
+- Missing votes are concentrated in 2023 (81%) and in six spaces (92%):
+  `magicappstore.eth`, `stgdao.eth`, `arbitrumfoundation.eth`, `linea-build.eth`,
+  `aavedao.eth` and `opcollective.eth`.
+- 12 proposal ids have votes in `votes.csv` but are absent from `proposals.csv`.
+
+**Tally.** `votes.csv` holds 157,214 more votes than declared. They are not duplicates
+(every `vote_id` is unique; only 559 repeated `(proposal_id, voter)` pairs) and do not
+come from deployments missing from the catalogue. Counts disagree in both directions
+for 1,035 of 4,394 deployments: 190,512 votes above declared in 101 deployments and
+33,298 below in 934. The largest difference (+110,795) is the chain-10 deployment named
+`test`. Metadata and votes were probably collected at different times; this could not
+be verified.
+
+**Population represented.** For Aragon, DAOhaus, DAOstack and Realms, `votes.csv` is
+the full population. For Snapshot, it covers proposals with up to about 6,000 votes,
+minus an unexplained set of smaller proposals; mass-participation proposals are
+excluded. For Tally, it is close to complete but does not match the metadata
+deployment by deployment.
+
+**Implications.**
+
+- Large Snapshot spaces enter the graph with a small fraction of their voters
+  (e.g. `arbitrumfoundation.eth` 6.7%, `aavedao.eth` 20.6%; `linea-build.eth` 0%), so
+  their shared-voter edges are underestimated.
+- Metadata counters (`votes_count`, `unique_voters`) describe a different population
+  from the graph edges and must not be combined with measures computed from
+  `votes.csv`.
+- Snapshot is only 13.7% covered, so comparisons between platforms must take this into
+  account.
 
 ---
 
