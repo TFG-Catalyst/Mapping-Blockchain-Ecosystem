@@ -32,7 +32,9 @@ Rows per platform:
 
 ## deployments.csv
 
-One row per DAO. This is the node table.
+One row per DAO. This is the main source of the node table; six deployments that appear
+in `votes.csv` but not here are added as nodes (see "Deployments missing from the
+catalogue (S2-02)").
 
 | Column | Meaning | Nulls | Useful for DAO-to-DAO relationships? |
 | :---- | :---- | ----: | :---- |
@@ -89,9 +91,9 @@ One row per proposal. Links each proposal to its DAO and to its author.
   (`eip155:5:0x16449fc3...` vs `eip155:5:0x16449fC3...`). A direct join fails for all
   37,635 Tally proposals; lowercasing both sides recovers every one of them. Any join
   between files must normalise `deployment_id` to lowercase first.
-- After that normalisation, only **319 proposals** (all Snapshot, e.g. `mimo.eth`) point
-  to a DAO that is genuinely absent from `deployments.csv`. Whether to keep or drop them
-  is an open decision.
+- After that normalisation, only **319 proposals** (all Snapshot) point to a DAO that is
+  genuinely absent from `deployments.csv`. They belong to the six deployments described
+  in "Deployments missing from the catalogue (S2-02)", which are kept as nodes.
 - `author` is missing for **all 37,839 Tally proposals and all 21,153 Realms
   proposals**, and for no row of any other platform. Any relationship built on shared
   authorship is therefore restricted to Snapshot, DAOHaus, Aragon and DAOstack.
@@ -194,6 +196,46 @@ deployment by deployment.
   `votes.csv`.
 - Snapshot is only 13.7% covered, so comparisons between platforms must take this into
   account.
+
+---
+
+## Deployments missing from the catalogue (S2-02)
+
+Analysis in `notebooks/04_missing_entities.ipynb`.
+
+Six deployment identifiers appear in `votes.csv` (and therefore in `edges.csv`) but have
+no row in `deployments.csv`. Before S2-02, `src/graph_builder.py` silently dropped every
+edge touching them: 1,348 of 602,295 edges (0.22%).
+
+| deployment_id | Platform | Proposals | Votes | Voters | Activity | Edges |
+| :---- | :---- | ----: | ----: | ----: | :---- | ----: |
+| gauges.equilibria-xeqb.eth | snapshot | 21 | 4,968 | 647 | 2023-10 to 2024-02 | 634 |
+| equilibria-xeqb.eth | snapshot | 50 | 1,949 | 290 | 2023-09 to 2024-08 | 440 |
+| mimo.eth | snapshot | 212 | 1,792 | 104 | 2021-04 to 2025-05 | 195 |
+| shardcoin.eth | snapshot | 9 | 229 | 110 | 2021-06 to 2022-01 | 33 |
+| gaiadao.eth | snapshot | 5 | 120 | 69 | 2021-05 to 2021-06 | 31 |
+| aventus.eth | snapshot | 22 | 233 | 76 | 2022-03 to 2025-03 | 18 |
+
+Three edges join two of these deployments, so the edge counts add up to 1,351.
+
+**Findings.** All six are Snapshot spaces with sustained activity in `proposals.csv`
+and `votes.csv`; their proposals are exactly the 319 orphan proposals noted above. None
+of them matches a catalogued deployment under another identifier: `aventus-gov.eth` and
+`eips.equilibria-xeqb.eth` are separate spaces of related organisations, not the same
+deployment. The most likely explanation is that the catalogue and the votes were
+collected at different times; this could not be verified.
+
+**Policy.** The six are included as nodes, keeping the deployment as the unit of
+analysis. `src/node_generator.py` adds every deployment that has votes but no catalogue
+row, with `in_catalogue = False`, its platform taken from the votes, and the catalogue
+fields (`name`, `proposals_count`, `unique_voters`, `votes_count`) left empty. They are
+not set to 0, which would mean no activity, and not computed from `votes.csv`, which
+would mix populations (see "Coverage of votes.csv"). `src/graph_builder.py` now prints
+a warning listing any edge endpoint that is not a node, so future exclusions are visible.
+
+**Impact.** Nodes 86,489 to 86,495; edges 600,947 to 602,295. All six join the largest
+connected component (31,024 to 31,030 nodes); isolated nodes (49,243) and the number of
+connected components (50,754) are unchanged.
 
 ---
 

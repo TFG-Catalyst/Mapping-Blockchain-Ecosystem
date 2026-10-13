@@ -34,10 +34,12 @@ def build_graph():
             name=row["name"],
             proposals_count=row["proposals_count"],
             unique_voters=row["unique_voters"],
-            votes_count=row["votes_count"]
+            votes_count=row["votes_count"],
+            in_catalogue=row["in_catalogue"]
         )
 
     valid_node_ids = set(nodes["deployment_id"])
+    dropped_edges = 0
 
     for _, row in edges.iterrows():
         source = row["source"]
@@ -49,5 +51,16 @@ def build_graph():
                 target,
                 shared_voters=row["shared_voters"]
             )
+        else:
+            dropped_edges += 1
+
+    if dropped_edges > 0:
+        missing_ids = (
+            set(edges["source"]) | set(edges["target"])
+        ) - valid_node_ids
+        print(
+            f"Warning: {dropped_edges} edges dropped because "
+            f"{len(missing_ids)} endpoints are not nodes: {sorted(missing_ids)}"
+        )
 
     return graph
