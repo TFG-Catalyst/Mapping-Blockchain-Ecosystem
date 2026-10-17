@@ -353,15 +353,15 @@ Safeguards: keep the `max200` and `nolimit` results as sensitivity in the TFG re
 
 **Figure 1: edges per configuration.** Going from max. 200 to max. 100 removes 25,434 edges (4.2%). The edges with weight ≥ 2 go from 226,077 to 202,455.
 
-![Edges per configuration](../results/S2-04/S2-04_fig1_edges.png)
+![Edges per configuration](figures/S2-04_fig1_edges.png)
 
 **Figure 2: total weight and group weight.** The group of 469 wallets contributes 50.2% of the weight with no limit, 31.9% with max. 200, 1.9% with max. 100 and 0.09% with max. 50. It is the figure that justifies the choice of `max100`.
 
-![Total weight and group weight](../results/S2-04/S2-04_fig2_group_weight.png)
+![Total weight and group weight](figures/S2-04_fig2_group_weight.png)
 
 **Figure 3: hub stability.** Of the 102 nodes that are in the top 100 by degree of some configuration, 98 are in all four. By weighted degree it is 54 of 146. The 92 that change receive a median of 46% of their weight from the group; the 54 stable ones, 0%. In figures 2 and 3 orange marks the effect of the group.
 
-![Hub stability](../results/S2-04/S2-04_fig3_hub_stability.png)
+![Hub stability](figures/S2-04_fig3_hub_stability.png)
 
 ## Pending in S2-04
 

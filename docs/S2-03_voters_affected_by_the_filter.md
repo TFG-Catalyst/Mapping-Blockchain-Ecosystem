@@ -68,7 +68,9 @@ Percentiles: p50 = 1, p90 = 3, p99 = 12, p99.9 = 26 DAOs; maximum = 353 DAOs.
 
 ## Step 2 — Log-log histogram (done)
 
-Files: `results/S2-03/S2-03_activity_histogram.png` and `results/S2-03/S2-03_frequency_by_n_daos.csv` (exact data of the chart: `n_daos`, `voters`, one value for each n present).
+![Histogram of the number of DAOs per voter (log-log)](figures/S2-03_activity_histogram.png)
+
+Files: `docs/figures/S2-03_activity_histogram.png` and `results/S2-03/S2-03_frequency_by_n_daos.csv` (exact data of the chart: `n_daos`, `voters`, one value for each n present).
 
 Reading the chart:
 
