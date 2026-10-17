@@ -8,7 +8,7 @@
 
 Goal (according to the backlog): select prominent DAOs from the filtering and normalization results, examine the relationships that explain their position, verify their identity, check whether their prominence persists under other graph-construction decisions, distinguish stable hubs from those dominated by size, the filter or relationships between DAOs of the same organization, and interpret with concrete examples.
 
-> **Reproducibility note.** The edge files `results/S2-04/edges_<config>.csv`, `results/S2-04/S2-04_nodes_by_config.csv` (an intermediate file) and `data/raw/` are not included in the repository (see the notes of S2-03 and S2-04 to regenerate them). Order of execution after S2-04: `python scripts/prepare_hub_candidates.py`, then `python scripts/classify_hubs.py --top 60`, then `python scripts/select_hubs.py`. `results/S2-09/S2-09_verified_identity.csv` is manual evidence (explorer and Snapshot consultations) and is an input, not an output, of the scripts. The candidates file `S2-09_hub_candidates.csv` was regenerated on 2026-10-16 with the complete identity file: 9 candidates that appeared as `pending` in the earlier version now show their verified identity (no other value changed).
+> **Reproducibility note.** The edge files `results/S2-04/edges_<config>.csv`, `results/S2-04/S2-04_nodes_by_config.csv` (an intermediate file) and `data/raw/` are not included in the repository (see the notes of S2-03 and S2-04 to regenerate them). Order of execution after S2-04: `python src/prepare_hub_candidates.py`, then `python src/classify_hubs.py --top 60`, then `python src/select_hubs.py`. `results/S2-09/S2-09_verified_identity.csv` is manual evidence (explorer and Snapshot consultations) and is an input, not an output, of the scripts. The candidates file `S2-09_hub_candidates.csv` was regenerated on 2026-10-16 with the complete identity file: 9 candidates that appeared as `pending` in the earlier version now show their verified identity (no other value changed).
 
 ## What can be done without Rodrigo's results and what cannot
 
@@ -22,7 +22,7 @@ Goal (according to the backlog): select prominent DAOs from the filtering and no
 
 ## Step 1 — Candidates table (done)
 
-**Script:** `scripts/prepare_hub_candidates.py` (it only reads; it writes to `results/S2-09/`).
+**Script:** `src/prepare_hub_candidates.py` (it only reads; it writes to `results/S2-09/`).
 
 **Candidate criterion:** union of the first 25 nodes by degree and the first 25 by weighted degree in `max100` → **29 candidates**.
 
@@ -75,7 +75,7 @@ The 11 spaces exist and the name matches that of the data. The 7 large hubs are 
 
 ## Step 3 — Objective indicators and classification (done)
 
-**Script:** `scripts/classify_hubs.py` (it only reads; it writes `results/S2-09/S2-09_hub_indicators.csv`). It was applied to the 29 candidates plus the nodes that are in the top 60 by weighted degree of any configuration (`--top 60`): **78 nodes**. It was widened because the hubs that depend on the group of 469 are not among the `max100` candidates, which is where they disappear.
+**Script:** `src/classify_hubs.py` (it only reads; it writes `results/S2-09/S2-09_hub_indicators.csv`). It was applied to the 29 candidates plus the nodes that are in the top 60 by weighted degree of any configuration (`--top 60`): **78 nodes**. It was widened because the hubs that depend on the group of 469 are not among the `max100` candidates, which is where they disappear.
 
 **Indicators** (reference `max100`): rank by weighted degree in the 4 configurations and its difference; % of the no-limit weighted degree that comes from the group; unique voters and their rank; proportion between the weight of the main neighbor and the unique voters of the smaller of the two; whether among the 5 main neighbors there is a node of its same organization.
 
@@ -103,7 +103,7 @@ The organization assignment is manual and only covers Arbitrum, Uniswap, Aave an
 
 ## Step 4 — Selection, classification and examples (done; reviewed in step 5)
 
-**Script:** `scripts/select_hubs.py`. It writes `results/S2-09/S2-09_selected_hubs.csv`. The figures come from the indicators CSV; only the category and the interpretation of each hub are written by hand in the script (dictionary `SELECTION`).
+**Script:** `src/select_hubs.py`. It writes `results/S2-09/S2-09_selected_hubs.csv`. The figures come from the indicators CSV; only the category and the interpretation of each hub are written by hand in the script (dictionary `SELECTION`).
 
 **Selection:** 15 hubs chosen to cover each category with the clearest cases from the step 3 indicators. Carlos approved the selection on 2026-10-12. It is not a list of "the 15 largest hubs": ranks 1-15 by weighted degree include nodes that were not chosen because they repeat a category.
 
@@ -205,10 +205,10 @@ For S2-05 Rodrigo computes the **Jaccard** of each edge: `common / (voters A + v
 
 | Date | Change | Files |
 |---|---|---|
-| 2026-10-12 | Candidates table, main neighbors and first verified identities | `scripts/prepare_hub_candidates.py`, `results/S2-09/` |
+| 2026-10-12 | Candidates table, main neighbors and first verified identities | `src/prepare_hub_candidates.py`, `results/S2-09/` |
 | 2026-10-12 | Verified identity of the 7 Tally candidates (screenshots by Carlos) | `results/S2-09/S2-09_verified_identity.csv`, this document |
-| 2026-10-12 | Indicators and classification of 78 nodes; corrected the assumption about OpenDAO, Metis and ApeCoin | `scripts/classify_hubs.py`, `results/S2-09/S2-09_hub_indicators.csv`, this document |
-| 2026-10-12 | Verified identity of the 11 selected Snapshot hubs; selection and classification of 15 hubs; 4 interpreted examples | `scripts/select_hubs.py`, `results/S2-09/S2-09_selected_hubs.csv`, `results/S2-09/S2-09_verified_identity.csv`, this document |
+| 2026-10-12 | Indicators and classification of 78 nodes; corrected the assumption about OpenDAO, Metis and ApeCoin | `src/classify_hubs.py`, `results/S2-09/S2-09_hub_indicators.csv`, this document |
+| 2026-10-12 | Verified identity of the 11 selected Snapshot hubs; selection and classification of 15 hubs; 4 interpreted examples | `src/select_hubs.py`, `results/S2-09/S2-09_selected_hubs.csv`, `results/S2-09/S2-09_verified_identity.csv`, this document |
 | 2026-10-16 | Added the limits that come from S2-01 (Snapshot coverage and denominators) | this document |
 | 2026-10-16 | Recorded Rodrigo's Jaccard definition and clarified that `neighbor_1_proportion` is not Jaccard | this document |
 | 2026-10-16 | English version for the repository: file names, script names, CSV columns, flags (`F_filtro` → `F_filter`, `F_solap` → `F_overlap`, `F_tamano` → `F_size`) and categories translated; candidates file regenerated with the complete identity file | all files of S2-09 |

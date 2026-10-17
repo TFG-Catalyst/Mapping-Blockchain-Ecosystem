@@ -8,7 +8,7 @@
 
 Goal (according to the backlog): build and compare the graph under the current filter, the chosen alternatives and a baseline with no exclusion by activity; measure changes in edges, weights, main hubs and connected components; identify which results are stable and which depend on the threshold; record the processing limitations; choose and justify the working configuration, with the parameter adjustable without changing code.
 
-> **Reproducibility note.** The edge files `results/S2-04/edges_<config>.csv` (about 22 MB each), `votes.csv`, `deployments.csv` (in `data/raw/`) and the voter cache (`data/processed/voters_cache.pkl`) are not included in the repository. To regenerate them, run from the repository root `python scripts/explore_shared_voters.py --max-daos <N> --format team --output results/S2-04/edges_<config>.csv` for each configuration (see step 2). Also not included: the one-off script used in step 1 to compare our edges with the team's pipeline (it imported the team's code from a local clone), and the backups of earlier versions of our script.
+> **Reproducibility note.** The edge files `results/S2-04/edges_<config>.csv` (about 22 MB each), `votes.csv`, `deployments.csv` (in `data/raw/`) and the voter cache (`data/processed/voters_cache.pkl`) are not included in the repository. To regenerate them, run from the repository root `python src/explore_shared_voters.py --max-daos <N> --format team --output results/S2-04/edges_<config>.csv` for each configuration (see step 2). Also not included: the one-off script used in step 1 to compare our edges with the team's pipeline (it imported the team's code from a local clone), and the backups of earlier versions of our script.
 
 ## Summary and decision
 
@@ -102,7 +102,7 @@ The check was made with a one-off script that imported `edge_generator.py` and `
 
 ## Step 2 — Generate the edge CSV of each configuration, in the team's format (done)
 
-**What was changed.** `scripts/explore_shared_voters.py` now has the option `--format {original,team}` (default `original`, which changes nothing compared with Sprint 1). With `team`:
+**What was changed.** `src/explore_shared_voters.py` now has the option `--format {original,team}` (default `original`, which changes nothing compared with Sprint 1). With `team`:
 
 - columns `source,target,shared_voters` (those read by `graph_builder.py`);
 - lowercase DAO ids and each pair sorted alphabetically (A-B and B-A are the same edge);
@@ -114,10 +114,10 @@ A backup of the previous script was kept outside the repository.
 **How they are generated** (from the repository root; about 13-15 s each thanks to the cache):
 
 ```
-python scripts/explore_shared_voters.py --max-daos 50  --format team --output results/S2-04/edges_max50.csv
-python scripts/explore_shared_voters.py --max-daos 100 --format team --output results/S2-04/edges_max100.csv
-python scripts/explore_shared_voters.py --max-daos 200 --format team --output results/S2-04/edges_max200.csv
-python scripts/explore_shared_voters.py --max-daos 0   --format team --output results/S2-04/edges_nolimit.csv
+python src/explore_shared_voters.py --max-daos 50  --format team --output results/S2-04/edges_max50.csv
+python src/explore_shared_voters.py --max-daos 100 --format team --output results/S2-04/edges_max100.csv
+python src/explore_shared_voters.py --max-daos 200 --format team --output results/S2-04/edges_max200.csv
+python src/explore_shared_voters.py --max-daos 0   --format team --output results/S2-04/edges_nolimit.csv
 ```
 
 **Verifications.**
@@ -146,7 +146,7 @@ The CSVs are in `results/S2-04/`.
 
 ## Step 3 — Metrics per configuration (done)
 
-**New script:** `scripts/graph_metrics.py`. It replicates the logic of `graph_builder.py` (the nodes are the DAOs of `deployments.csv` in lowercase; an edge only gets in if both of its endpoints are nodes) and the measures of `graph_sanity.py`, but reading the files it is given. Usage: `python scripts/graph_metrics.py` (options `--configs`, `--folder`, `--deployments`, `--output`). It only reads; it writes `results/S2-04/S2-04_metrics_by_config.csv`. It runs in about 5 s per configuration.
+**New script:** `src/graph_metrics.py`. It replicates the logic of `graph_builder.py` (the nodes are the DAOs of `deployments.csv` in lowercase; an edge only gets in if both of its endpoints are nodes) and the measures of `graph_sanity.py`, but reading the files it is given. Usage: `python src/graph_metrics.py` (options `--configs`, `--folder`, `--deployments`, `--output`). It only reads; it writes `results/S2-04/S2-04_metrics_by_config.csv`. It runs in about 5 s per configuration.
 
 `networkx` (3.4.2) was installed in the working environment, the same library the team uses.
 
@@ -184,7 +184,7 @@ These figures are descriptive. Which edges and which concrete hubs change is see
 
 ## Step 4 — Hubs, components and comparison with the current configuration (done)
 
-**New script:** `scripts/analyze_hubs_components.py` (it only reads; ~10 s). Same rule as `graph_builder.py`. The reference configuration is `max200` (the team's current one). It generates in `results/S2-04/`:
+**New script:** `src/analyze_hubs_components.py` (it only reads; ~10 s). Same rule as `graph_builder.py`. The reference configuration is `max200` (the team's current one). It generates in `results/S2-04/`:
 
 - `S2-04_hubs_by_config.csv`: top 20 per configuration and per criterion.
 - `S2-04_nodes_by_config.csv`: degree and weighted degree of each node in the 4 configurations (the basis for step 5 and for S2-09).
@@ -234,7 +234,7 @@ Compared with `max200`, the largest component of `nolimit` contains the same nod
 
 ## Step 5 — What is stable and what depends on the threshold (done)
 
-**New script:** `scripts/analyze_stability.py` (it only reads; ~8 s). Run it from the repository root (it needs `data/raw/votes.csv`; it uses the cache to attribute weight to the group). It generates `S2-04_stability_bands.csv`, `S2-04_stability_edges.csv`, `S2-04_stability_hubs.csv` and `S2-04_stability_vs_no_group.csv` in `results/S2-04/`.
+**New script:** `src/analyze_stability.py` (it only reads; ~8 s). Run it from the repository root (it needs `data/raw/votes.csv`; it uses the cache to attribute weight to the group). It generates `S2-04_stability_bands.csv`, `S2-04_stability_edges.csv`, `S2-04_stability_hubs.csv` and `S2-04_stability_vs_no_group.csv` in `results/S2-04/`.
 
 **Method.** Since the 4 configurations are nested, the weight of each edge is split by the activity of the wallets that contribute it: `max50` = wallets with 2-50 DAOs; `max100` − `max50` = wallets with 51-100; `max200` − `max100` = 101-200; `nolimit` − `max200` = more than 200. Then it is computed how much of each band comes from the 469 wallets of the S2-03 group. The script itself checks that the group never contributes more than its band (if it failed, it stops). Cross-check: the group makes up 31.86% of the weight of `max200`, the same as the 31.8% computed in S2-03.
 
@@ -343,13 +343,13 @@ Safeguards: keep the `max200` and `nolimit` results as sensitivity in the TFG re
 
 ### 6d. Parameter adjustable without changing code
 
-- **Today:** `python scripts/explore_shared_voters.py --max-daos N` (0 = no limit), with `--format team` for the repository format. The metrics, hubs and stability scripts read the CSVs by configuration name.
+- **Today:** `python src/explore_shared_voters.py --max-daos N` (0 = no limit), with `--format team` for the repository format. The metrics, hubs and stability scripts read the CSVs by configuration name.
 - **Default value of the script:** changed from `200` to `100` (constant `DEFAULT_MAX_DAOS_PER_VOTER`; a backup of the earlier version was kept outside the repository). Checked: without `--max-daos` the script generates exactly `edges_max100.csv`, and with `--max-daos 200` it reproduces the Sprint 1 CSV byte for byte.
 - **For the team repository:** proposal B (`--max-daos` and `--output` in `edge_generator.py`) was postponed on 2026-10-12; only the fixed value is changed from 200 to 100.
 
 ## Figures (2026-10-16)
 
-**Script:** `scripts/make_s2_04_figures.py`. It only reads the CSVs in `results/S2-04/` (it recomputes nothing) and writes the 3 PNGs. Before drawing it checks that the weight per activity band, accumulated, matches the total weight of each configuration; if it does not match, it stops.
+**Script:** `src/make_s2_04_figures.py`. It only reads the CSVs in `results/S2-04/` (it recomputes nothing) and writes the 3 PNGs. Before drawing it checks that the weight per activity band, accumulated, matches the total weight of each configuration; if it does not match, it stops.
 
 **Figure 1: edges per configuration.** Going from max. 200 to max. 100 removes 25,434 edges (4.2%). The edges with weight ≥ 2 go from 226,077 to 202,455.
 
@@ -387,11 +387,11 @@ Safeguards: keep the `max200` and `nolimit` results as sensitivity in the TFG re
 |---|---|---|
 | 2026-10-11 | Review of the team repository; decision on approach A | this document |
 | 2026-10-11 | Step 1: verification of edge and normalization equivalence | one-off script (not included in the repository) |
-| 2026-10-11 | Step 2: `--format team` option and 4 CSVs per configuration | `scripts/explore_shared_voters.py`, `results/S2-04/edges_*.csv` |
-| 2026-10-11 | Step 3: metrics per configuration; corrected the S2-02 exclusions figure in `max50` (1,287, not 1,348) | `scripts/graph_metrics.py`, `results/S2-04/S2-04_metrics_by_config.csv` |
-| 2026-10-11 | Step 4: hubs, components and edge comparison compared with `max200` | `scripts/analyze_hubs_components.py`, `results/S2-04/S2-04_*.csv` |
-| 2026-10-11 | Step 5: stability by activity bands, edges and hubs; diagnosis compared with removing the group | `scripts/analyze_stability.py`, `results/S2-04/S2-04_stability_*.csv` |
-| 2026-10-11 | Step 6: measured limitations; working configuration `max100` confirmed; default value of `--max-daos` changed from 200 to 100; S2-04 completed | `scripts/explore_shared_voters.py`, this document |
+| 2026-10-11 | Step 2: `--format team` option and 4 CSVs per configuration | `src/explore_shared_voters.py`, `results/S2-04/edges_*.csv` |
+| 2026-10-11 | Step 3: metrics per configuration; corrected the S2-02 exclusions figure in `max50` (1,287, not 1,348) | `src/graph_metrics.py`, `results/S2-04/S2-04_metrics_by_config.csv` |
+| 2026-10-11 | Step 4: hubs, components and edge comparison compared with `max200` | `src/analyze_hubs_components.py`, `results/S2-04/S2-04_*.csv` |
+| 2026-10-11 | Step 5: stability by activity bands, edges and hubs; diagnosis compared with removing the group | `src/analyze_stability.py`, `results/S2-04/S2-04_stability_*.csv` |
+| 2026-10-11 | Step 6: measured limitations; working configuration `max100` confirmed; default value of `--max-daos` changed from 200 to 100; S2-04 completed | `src/explore_shared_voters.py`, this document |
 | 2026-10-12 | Change of `max_daos` to 100 commented in the team group; node `test` verified | this document |
-| 2026-10-16 | Three figures for the deliverable (edges, group weight, hub stability) | `scripts/make_s2_04_figures.py`, `results/S2-04/S2-04_fig1_edges.png`, `S2-04_fig2_group_weight.png`, `S2-04_fig3_hub_stability.png`, this document |
+| 2026-10-16 | Three figures for the deliverable (edges, group weight, hub stability) | `src/make_s2_04_figures.py`, `results/S2-04/S2-04_fig1_edges.png`, `S2-04_fig2_group_weight.png`, `S2-04_fig3_hub_stability.png`, this document |
 | 2026-10-16 | English version for the repository: file names, script names, options, configuration label `sinlimite` → `nolimit` and CSV columns translated; numbers use English formatting | all files of S2-04 |

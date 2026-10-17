@@ -4,13 +4,13 @@
 **Track:** A — Carlos
 **Start date:** 2026-10-11
 **Status:** Completed on 2026-10-11 (steps 1 to 4, quantification and decision on configurations)
-**Script:** `scripts/analyze_voter_activity.py` (reuses `load_voters` from `explore_shared_voters.py`, with its cache)
+**Script:** `src/analyze_voter_activity.py` (reuses `load_voters` from `explore_shared_voters.py`, with its cache)
 
 Goal (according to the backlog): analyze in how many distinct DAOs each voter takes part using the full dataset, examine the distribution and representative cases near or above the threshold of 200 DAOs, identify the participation that the filter excludes without automatically treating very active wallets as invalid, and choose alternative configurations based on evidence.
 
 Starting data: the full `votes.csv` (11,638,348 rows), 1,629,408 unique wallets.
 
-> **Reproducibility note.** `votes.csv` and `deployments.csv` (in `data/raw/`), the voter cache (`data/processed/voters_cache.pkl`) and the edge files `results/S2-04/edges_<config>.csv` (about 22 MB each) are not included in the repository. The S2-00 preparation note (an earlier working note on the script) is not included either. All the results of this document are regenerated with `python scripts/analyze_voter_activity.py --cases --pattern --thresholds`, run from the repository root. **Caveat:** the printed tables of steps 3 and 3d were computed when the default threshold of the script was 200; it is now 100 (`DEFAULT_MAX_DAOS_PER_VOTER` in `scripts/explore_shared_voters.py`), so the console output of those steps differs. To reproduce them exactly, set that constant temporarily to 200.
+> **Reproducibility note.** `votes.csv` and `deployments.csv` (in `data/raw/`), the voter cache (`data/processed/voters_cache.pkl`) and the edge files `results/S2-04/edges_<config>.csv` (about 22 MB each) are not included in the repository. The S2-00 preparation note (an earlier working note on the script) is not included either. All the results of this document are regenerated with `python src/analyze_voter_activity.py --cases --pattern --thresholds`, run from the repository root. **Caveat:** the printed tables of steps 3 and 3d were computed when the default threshold of the script was 200; it is now 100 (`DEFAULT_MAX_DAOS_PER_VOTER` in `src/explore_shared_voters.py`), so the console output of those steps differs. To reproduce them exactly, set that constant temporarily to 200.
 
 ---
 
@@ -85,7 +85,7 @@ Technical details: both axes on a logarithmic scale because the values go from 1
 
 The **319 wallets with 100 or more DAOs** are studied (228 enter the graph with the filter of 200 used at the time; 91 are left out). For them `votes.csv` is read again (≈40 s) and the following is computed per wallet: platforms, total votes, votes per DAO, percentage of DAOs where it voted only once, dates, days with activity and percentage of its votes concentrated on its best day.
 
-Run with `python scripts/analyze_voter_activity.py --cases`. Full result: `results/S2-03/S2-03_highly_active_wallets.csv` (one row per wallet).
+Run with `python src/analyze_voter_activity.py --cases`. Full result: `results/S2-03/S2-03_highly_active_wallets.csv` (one row per wallet).
 
 **Observed facts**
 
@@ -178,7 +178,7 @@ Carlos reviewed 3 wallets that the filter of 200 lets through (screenshots of 20
 
 ## Step 3d — How many more wallets follow the same pattern? (done)
 
-Run with `python scripts/analyze_voter_activity.py --pattern` (it only uses the cache; ≈5 s).
+Run with `python src/analyze_voter_activity.py --pattern` (it only uses the cache; ≈5 s).
 
 **Method.** The reference wallet is the one that votes in the most DAOs (`0xbd2a18…b086d`, 353 DAOs). For each wallet with 5 or more DAOs (72,847 wallets) the *containment* is computed: the fraction of its DAOs that are in the reference's list. A wallet is considered to "follow the pattern" if the containment is ≥ 0.8. The threshold of 5 DAOs prevents a high containment from being a coincidence in wallets with 1–2 DAOs.
 
@@ -240,7 +240,7 @@ Carlos reviewed on Etherscan 3 wallets that follow the pattern (step 3d) and tha
 
 ## Step 4 — Threshold comparison table (done)
 
-Run with `python scripts/analyze_voter_activity.py --thresholds` (it only uses the cache; ≈5 s). A wallet is **excluded** if it has **more** DAOs than the threshold. "Group" = the 469 wallets that follow the pattern (step 3d). "Others" = excluded wallets that are not in the group (side effect). "Weight" = sum of the weights of the edges (n·(n−1)/2 per wallet).
+Run with `python src/analyze_voter_activity.py --thresholds` (it only uses the cache; ≈5 s). A wallet is **excluded** if it has **more** DAOs than the threshold. "Group" = the 469 wallets that follow the pattern (step 3d). "Others" = excluded wallets that are not in the group (side effect). "Weight" = sum of the weights of the edges (n·(n−1)/2 per wallet).
 
 | Threshold | Excluded | From the group | Others | Group inside the graph | Graph weight | % of weight from the group |
 |---|---|---|---|---|---|---|
@@ -319,14 +319,14 @@ For S2-04 (not pending items of S2-03):
 
 | Date | Change | Files |
 |---|---|---|
-| 2026-10-11 | Step 1: distribution by band and percentiles | `scripts/analyze_voter_activity.py`, `results/S2-03/S2-03_activity_distribution.csv` |
-| 2026-10-11 | Step 2: log-log histogram and frequency table | `scripts/analyze_voter_activity.py`, `results/S2-03/S2-03_activity_histogram.png`, `results/S2-03/S2-03_frequency_by_n_daos.csv` |
-| 2026-10-11 | Step 3: analysis of the 319 wallets with 100+ DAOs (option `--cases`) | `scripts/analyze_voter_activity.py`, `results/S2-03/S2-03_highly_active_wallets.csv` |
+| 2026-10-11 | Step 1: distribution by band and percentiles | `src/analyze_voter_activity.py`, `results/S2-03/S2-03_activity_distribution.csv` |
+| 2026-10-11 | Step 2: log-log histogram and frequency table | `src/analyze_voter_activity.py`, `results/S2-03/S2-03_activity_histogram.png`, `results/S2-03/S2-03_frequency_by_n_daos.csv` |
+| 2026-10-11 | Step 3: analysis of the 319 wallets with 100+ DAOs (option `--cases`) | `src/analyze_voter_activity.py`, `results/S2-03/S2-03_highly_active_wallets.csv` |
 | 2026-10-11 | Step 3b: manual review on Etherscan of 2 wallets and overlap check with #1 | this document |
 | 2026-10-11 | Step 3c: manual review of 3 wallets inside the graph | this document |
-| 2026-10-11 | Step 3d: wallets that follow the reference pattern (option `--pattern`) | `scripts/analyze_voter_activity.py`, `results/S2-03/S2-03_wallets_with_pattern.csv` |
+| 2026-10-11 | Step 3d: wallets that follow the reference pattern (option `--pattern`) | `src/analyze_voter_activity.py`, `results/S2-03/S2-03_wallets_with_pattern.csv` |
 | 2026-10-11 | Step 3e: manual review of 3 wallets with the pattern and 50–99 DAOs; correction of the translation of `兔子洞投票任务专用` | this document |
-| 2026-10-11 | Step 4: threshold comparison table (option `--thresholds`); function `evaluate_containment()` extracted from step 3d | `scripts/analyze_voter_activity.py`, `results/S2-03/S2-03_threshold_comparison.csv` |
+| 2026-10-11 | Step 4: threshold comparison table (option `--thresholds`); function `evaluate_containment()` extracted from step 3d | `src/analyze_voter_activity.py`, `results/S2-03/S2-03_threshold_comparison.csv` |
 | 2026-10-11 | Quantification of what is excluded by the filter of 200 (wallets, vote rows, pairs, weight and edges) | this document |
 | 2026-10-11 | Closing of S2-03: summary, decision on the 4 configurations and completed status | this document |
 | 2026-10-16 | English version for the repository: file names, script names, options and CSV columns translated; numbers use English formatting | all files of S2-03 |
