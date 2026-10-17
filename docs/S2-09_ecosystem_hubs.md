@@ -3,8 +3,8 @@
 **Sprint:** Sprint 2
 **Track:** A — Carlos
 **Start date:** 2026-10-12
-**Status:** In progress (selection of 15 hubs classified and with verified identity; pending review with Rodrigo's normalized results)
-**Depends on:** S2-04 (done) and S2-05/06 (Rodrigo, pending)
+**Status:** Completed on 2026-10-17 (steps 1 to 5; selection and classification reviewed with Rodrigo's normalized results)
+**Depends on:** S2-04 (done) and S2-05/06 (Rodrigo, done 2026-10-17; `edges_jaccard_hubs_S2-09.csv` received)
 
 Goal (according to the backlog): select prominent DAOs from the filtering and normalization results, examine the relationships that explain their position, verify their identity, check whether their prominence persists under other graph-construction decisions, distinguish stable hubs from those dominated by size, the filter or relationships between DAOs of the same organization, and interpret with concrete examples.
 
@@ -18,7 +18,7 @@ Goal (according to the backlog): select prominent DAOs from the filtering and no
 | Classification of each hub and examples | Partially: the comparison between raw weight and normalized measure (Jaccard) comes from S2-05/06 |
 | Final selection of the 10-15 hubs | Partially: it must be reviewed with the normalized measure |
 
-**Decision:** we work with the raw weight of the working configuration (`max100`, S2-04). Jaccard is not computed here: S2-05 asks to take care that the denominators come from the same votes of the graph and not from the counters of `deployments.csv`, and duplicating it risks results that do not match Rodrigo's. The column `normalized_measure_S2_05_06` of the table stays empty until then.
+**Decision:** we work with the raw weight of the working configuration (`max100`, S2-04). Jaccard is not computed here: S2-05 asks to take care that the denominators come from the same votes of the graph and not from the counters of `deployments.csv`, and duplicating it risks results that do not match Rodrigo's. The column `normalized_measure_S2_05_06` of the table stayed empty until S2-05/06 were delivered; the review is in step 5.
 
 ## Step 1 — Candidates table (done)
 
@@ -73,7 +73,7 @@ The 11 spaces exist and the name matches that of the data. The 7 large hubs are 
 
 **Warning:** the node `test` is a real Optimism governance contract, with 78,724 unique voters and 240,303 votes. The name comes from the label Tally gave it. It must not be discarded as a test DAO.
 
-## Step 3 — Objective indicators and classification (done; selection pending approval)
+## Step 3 — Objective indicators and classification (done)
 
 **Script:** `scripts/classify_hubs.py` (it only reads; it writes `results/S2-09/S2-09_hub_indicators.csv`). It was applied to the 29 candidates plus the nodes that are in the top 60 by weighted degree of any configuration (`--top 60`): **78 nodes**. It was widened because the hubs that depend on the group of 469 are not among the `max100` candidates, which is where they disappear.
 
@@ -101,7 +101,7 @@ The organization assignment is manual and only covers Arbitrum, Uniswap, Aave an
 
 `OpenDAO`, `Metis` and `ApeCoin DAO` seemed "configuration-dependent" because their rank changes (`OpenDAO` from 62 to 209). **They are not**: their weighted degree is identical in `nolimit`, `max200` and `max100` (`OpenDAO` 33,559, `Metis` 50,606, `ApeCoin DAO` 52,963) and falls 3-5% in `max50`. They only drop in rank in `nolimit` because the group inflates 147 nodes that overtake them (there are 61 nodes with more weight than `OpenDAO` in `max100` and 208 in `nolimit`). It is a change of relative ranking, not a dependence on the filter. Other nodes change the same way (`dYdX`, `compound`, `Decentraland`).
 
-## Step 4 — Selection, classification and examples (done; provisional until S2-05/06)
+## Step 4 — Selection, classification and examples (done; reviewed in step 5)
 
 **Script:** `scripts/select_hubs.py`. It writes `results/S2-09/S2-09_selected_hubs.csv`. The figures come from the indicators CSV; only the category and the interpretation of each hub are written by hand in the script (dictionary `SELECTION`).
 
@@ -127,17 +127,50 @@ The organization assignment is manual and only covers Arbitrum, Uniswap, Aave an
 
 **How to read the categories.** "Dominated by community size" means that the node is among those with the most unique voters and that this is consistent with its weight, not that the cause has been demonstrated. `OpenDAO` is the borderline case (rank 30 by unique voters). "Stable" is the absence of the four flags and a rank that does not change between configurations; it does not prove that it is a real connector.
 
-**Limits that come from S2-01 (sprint report).** (1) `votes.csv` only covers 13.7% of the declared Snapshot votes, and `aavedao.eth` and `stgdao.eth` are among the six spaces with the most missing votes: the weights of `Aave DAO` and `Stargate DAO` are lower bounds. (2) S2-01 indicates that the Jaccard denominators must come from `votes.csv`; the overlap proportion of this document uses `unique_voters` from `deployments.csv` (metadata, not recomputed), so it is indicative until S2-05.
+**Limits that come from S2-01 (sprint report).** (1) `votes.csv` only covers 13.7% of the declared Snapshot votes, and `aavedao.eth` and `stgdao.eth` are among the six spaces with the most missing votes: the weights of `Aave DAO` and `Stargate DAO` are lower bounds. (2) S2-01 indicates that the Jaccard denominators must come from `votes.csv`; the overlap proportion of this document uses `unique_voters` from `deployments.csv` (metadata, not recomputed), so it is indicative; step 5 compares it with the Jaccard of S2-05 (always lower).
 
 ### Interpreted examples
 
 **1. `Metrox`: a hub that depends on the filter.** With no limit it has 790 neighbors and a weighted degree of 56,319 (rank 38); with `max100` it goes to 490 neighbors and 6,516 (rank 173), that is, it loses 88% of its weight. 93.1% of its no-limit weight comes from the group of 469 wallets. Its own community is small (1,301 unique voters, rank 275) and Snapshot describes it as "Metrox test space". Reading: it appears as a hub because the wallets of the group vote in it, not because of its community. `Strio` follows the same pattern (53,844 → 3,676). *Limit:* the data show that the weight comes from the group, not why those wallets vote there.
 
-**2. `balsam` and `tarpon`: a proportional-overlap cluster.** Each has only 126 and 115 neighbors, but a weighted degree of 61,671 and 61,467, almost the same as `Lido` (66,693) and `ENS` (65,626) with more than 3,000 neighbors. They share 4,528 voters between them, and each has 4,570 and 4,541 unique voters, so almost all the voters of one are in the other. They do not depend on the filter (0% from the group) and in `max50` their weighted degree hardly falls (61,592 and 61,388), so that weight comes from wallets with 50 DAOs or fewer. Reading: there is a cluster of 15 spaces with an almost common voter base (of them, it has only been checked that `balsam` and `tarpon` are not verified on Snapshot). This is a lot of weight concentrated in few neighbors and it does not fit size, filter or organization. *Limits:* the cause is unknown; `unique_voters` may have a different coverage than the votes of the graph; the exact proportion will be given by S2-05/06.
+**2. `balsam` and `tarpon`: a proportional-overlap cluster.** Each has only 126 and 115 neighbors, but a weighted degree of 61,671 and 61,467, almost the same as `Lido` (66,693) and `ENS` (65,626) with more than 3,000 neighbors. They share 4,528 voters between them, and each has 4,570 and 4,541 unique voters, so almost all the voters of one are in the other. They do not depend on the filter (0% from the group) and in `max50` their weighted degree hardly falls (61,592 and 61,388), so that weight comes from wallets with 50 DAOs or fewer. Reading: there is a cluster of 15 spaces with an almost common voter base (of them, it has only been checked that `balsam` and `tarpon` are not verified on Snapshot). This is a lot of weight concentrated in few neighbors and it does not fit size, filter or organization. *Limits:* the cause is unknown; `unique_voters` may have a different coverage than the votes of the graph. With the votes of the graph, the Jaccard of `balsam` and `tarpon` is 0.988 (step 5).
 
 **3. `arbitrum treasury` and `arbitrum core`: the same organization.** They are ranks 1 and 2 in the four configurations (338,588 and 331,442 of weighted degree, more than 9,600 neighbors each) and their main link is between them: 86,230 shared voters, proportion 0.77. They are proxies with the same implementation, verified on Arbiscan. Reading: a large part of their weight reflects that the same community votes in two governors of one organization, not that two different DAOs discover each other. The same happens with `Uniswap` and `uniswap` (13,390 shared voters, proportion 0.62). *Limit:* deciding whether these nodes should be merged in the graph is a team decision, outside S2-09.
 
-**4. `Lido` and `ENS`: no flag.** They are ranks 18 and 20 by weighted degree in `max100` and 53 and 37 by unique voters, with equal ranks in the four configurations (±1). They do not depend on the group (0%), they are not of the same organization as their main neighbor and they are not in the top 30 by size. They contrast with `PancakeSwap` (rank 3 by unique voters, 6 by weighted degree), whose weight is consistent with the size of its community. Reading: they are the best candidates for real connectors between communities. *Limit:* that none of our four checks explains them does not prove that they are; the normalized result of S2-05/06 is missing.
+**4. `Lido` and `ENS`: no flag.** They are ranks 18 and 20 by weighted degree in `max100` and 53 and 37 by unique voters, with equal ranks in the four configurations (±1). They do not depend on the group (0%), they are not of the same organization as their main neighbor and they are not in the top 30 by size. They contrast with `PancakeSwap` (rank 3 by unique voters, 6 by weighted degree), whose weight is consistent with the size of its community. Reading: they are the best candidates for real connectors between communities. *Limit:* that none of our four checks explains them does not prove that they are. The normalized result qualifies the reading: by summed Jaccard they fall to ranks 351 (`Lido`) and 392 (`ENS`), and the Jaccard of their main neighbor (`Aave DAO`) is 0.070 and 0.057: their weight comes from the number of voters they share with a large community, not from a high proportion of their own (step 5).
+
+## Step 5 — Review with the normalized results of S2-05/06 (done)
+
+**Source.** `edges_jaccard_hubs_S2-09.csv` (Rodrigo, S2-05): 62,973 edges that touch the 15 hubs, with `shared_voters`, the size of both DAOs, the union and the Jaccard. It is not in the repository (`data/processed/` is ignored). Same reference graph as ours (`max100`): for the 15 hubs the shared voters with the main neighbor are identical to `neighbor_1_weight` of step 4, which confirms that both analyses use the same edges. Context and figures of the whole graph: `docs/S2-05_jaccard_weights.md` and `docs/S2-06_normalization_effect.md`. Jaccard with single-DAO voters in the denominator (`COUNT_SINGLE_DAO_VOTERS = True`, still to be confirmed by the group). The Jaccard of the main neighbor is also written in the column `normalized_measure_S2_05_06` of `S2-09_selected_hubs.csv`.
+
+| Hub | Category (step 4) | Main neighbor (shared voters) | Proportion (step 4) | Jaccard | Strongest neighbor by Jaccard |
+|---|---|---|---:|---:|---|
+| `Metrox` | filter-dependent | `Fabien` (384) | 0.30 | 0.176 | same |
+| `Strio` | filter-dependent | `Fabien` (188) | 0.35 | 0.117 | `0xchenhu` (0.191; 42 voters) |
+| `balsam` | proportional-overlap cluster | `tarpon` (4,528) | 1.00 | 0.988 | same |
+| `tarpon` | proportional-overlap cluster | `balsam` (4,528) | 1.00 | 0.988 | `danhuacap` (0.992; 4,516 voters) |
+| `arbitrum treasury` | same-organization cluster | `arbitrum core` (86,230) | 0.77 | 0.604 | same |
+| `arbitrum core` | same-organization cluster | `arbitrum treasury` (86,230) | 0.77 | 0.604 | same |
+| `Uniswap` (snapshot) | same-organization cluster | `uniswap` (13,390) | 0.62 | 0.434 | same |
+| `uniswap` (tally) | same-organization cluster | `Uniswap` (13,390) | 0.62 | 0.434 | same |
+| `PancakeSwap` | dominated by community size | `Aave DAO` (6,713) | 0.14 | 0.040 | same |
+| `Aave DAO` | dominated by community size | `Uniswap` (9,753) | 0.43 | 0.163 | same |
+| `Stargate DAO` | dominated by community size | `arbitrum treasury` (7,851) | 0.26 | 0.055 | `arbitrumfoundation.eth` (0.109; 4,839 voters) |
+| `test` (Optimism) | dominated by community size | `arbitrum core` (24,078) | 0.31 | 0.146 | same |
+| `OpenDAO` | dominated by community size | `PeopleDAO` (550) | 0.21 | 0.043 | same |
+| `Lido` | stable | `Aave DAO` (3,528) | 0.53 | 0.070 | Aave (Tally, `0xec568f…`) (0.105; 1,544 voters) |
+| `ENS` | stable | `Aave DAO` (3,028) | 0.34 | 0.057 | a Tally deployment, `0x323a76…` (0.154; 1,659 voters) |
+
+The last column considers only edges with at least 10 shared voters, the minimum used in S2-06. The ranks quoted from S2-06 are by strength (sum of the weights of the edges with at least 10 shared voters), not by weighted degree over all edges as in steps 3 and 4.
+
+**What the review says.**
+
+1. **The categories hold.** The Jaccard of the main neighbor separates them clearly: the proportional-overlap cluster is at 0.988; the same-organization pairs at 0.43-0.60; every other hub is at 0.18 or below. No hub changes category.
+2. **The proportion of step 4 overestimated the overlap.** It is `common / unique voters of the smaller one`, which is always greater than or equal to the Jaccard. The gap is small when the two DAOs are similar (`balsam`, 1.00 against 0.988) and large when one is much bigger: `Arbitrum` 0.77 against 0.604, `Uniswap` 0.62 against 0.434, `Lido` 0.53 against 0.070, `PancakeSwap` 0.14 against 0.040. The order of the categories does not change, but the proportions of the tables of step 4 should be read as the overlap coefficient, not as Jaccard.
+3. **`Lido` and `ENS` are not connectors by proportional overlap.** Their main neighbor is `Aave DAO` (47,018 voters in the graph), and the Jaccard is 0.070 and 0.057, in the same band as the hubs dominated by size (0.040-0.163). Added to the ranks of S2-06 (351 and 392 by Jaccard against 20 and 34 by count), "stable" only means that no flag applies: their weight comes from the number of voters shared with a large community, not from a high proportion of their own. Example 4 is qualified in that sense.
+4. **The strongest relationship changes with the measure in 5 hubs:** `Strio`, `tarpon`, `Stargate DAO`, `Lido` and `ENS`. In the other 10 the main neighbor by count and by Jaccard is the same.
+5. **The `Metrox` and `Strio` communities are smaller than the metadata says.** In the votes of the graph they have 987 and 219 voters, against 1,301 and 536 in `unique_voters`: the wallets of the group that vote there are left out by the filter of 100. It is consistent with their category (filter-dependent). For the other Snapshot hubs the two counts coincide (differences of 1-25 voters). On Tally they do not: `arbitrum treasury` has 119,676 voters in the graph against 138,480 in the metadata, `arbitrum core` 109,289 against 112,713 and `test` 79,610 against 78,724.
+6. **Limits that remain.** `MIN_SHARED_VOTERS = 10` and the top-5% cut of S2-06 are choices pending a group decision. Large Snapshot spaces are undercovered in `votes.csv` (S2-01), so the counts of `Aave DAO` and `Stargate DAO` are lower bounds and their Jaccard is biased. And the data show that these patterns exist, not why: for example, the cause of the near-identical voter bases of the cluster is unknown.
 
 ## Preliminary findings (prior to the classification; see steps 3 and 4)
 
@@ -162,10 +195,11 @@ For S2-05 Rodrigo computes the **Jaccard** of each edge: `common / (voters A + v
 - [x] Verify the identity of the 7 Tally candidates.
 - [x] Check the identity of the 11 selected Snapshot hubs (Snapshot API).
 - [x] Compute the indicators and the classification (step 3).
-- [x] Select 15 hubs from step 3 (approved by Carlos; provisional until S2-05/06 is available).
+- [x] Select 15 hubs from step 3 (approved by Carlos; confirmed after the review of step 5).
 - [x] Classify each hub: stable, dominated by community size, filter-dependent, same-organization cluster or proportional-overlap cluster (a category that arises from finding 1).
 - [x] Write 3-4 examples with their interpretation (4 written).
-- [ ] Review the selection and the classification with Rodrigo's normalized results (fill in `normalized_measure_S2_05_06`).
+- [x] Review the selection and the classification with Rodrigo's normalized results (step 5, with the figures published in S2-05/06).
+- [x] Fill in `normalized_measure_S2_05_06` in `S2-09_selected_hubs.csv` with the Jaccard of the main neighbor of each hub (from Rodrigo's `edges_jaccard_hubs_S2-09.csv`).
 
 ## Changelog
 
@@ -178,3 +212,4 @@ For S2-05 Rodrigo computes the **Jaccard** of each edge: `common / (voters A + v
 | 2026-10-16 | Added the limits that come from S2-01 (Snapshot coverage and denominators) | this document |
 | 2026-10-16 | Recorded Rodrigo's Jaccard definition and clarified that `neighbor_1_proportion` is not Jaccard | this document |
 | 2026-10-16 | English version for the repository: file names, script names, CSV columns, flags (`F_filtro` → `F_filter`, `F_solap` → `F_overlap`, `F_tamano` → `F_size`) and categories translated; candidates file regenerated with the complete identity file | all files of S2-09 |
+| 2026-10-17 | Step 5: Jaccard of the main neighbor of the 15 hubs from Rodrigo's file; categories confirmed; examples 2 and 4 qualified; S2-09 completed | `results/S2-09/S2-09_selected_hubs.csv`, this document |

@@ -372,12 +372,14 @@ Safeguards: keep the `max200` and `nolimit` results as sensitivity in the TFG re
 - [x] Step 6: processing limitations, justified working configuration and default value of the parameter.
 - [x] Notify the team and propose alternative B (parameterize `edge_generator.py`): done; the team decides to postpone it (2026-10-12).
 - [x] Comment in the team group the change of the default value to `max_daos=100` (Carlos, 2026-10-12).
-- [ ] Change `max_daos=200` to `max_daos=100` in `src/edge_generator.py` of the repository and regenerate `edges.csv` (pending to apply in the repository).
-- [ ] Talk to Rodrigo (S2-05/06): working configuration `max100`, name of the parameter (`--max-daos`) and CSV format.
-- [ ] Decide with the team who maintains `edge_generator.py` (it has the 200 fixed) and unify the normalization of Tally-Solana wallets (proposal: do not lowercase).
-- [ ] `.gitignore` for `*.pkl` and `__pycache__/`; check that `pandas`, `matplotlib` and `networkx` are installed wherever the scripts are run.
+- [x] Change `max_daos=200` to `max_daos=100` in `src/edge_generator.py` (default of `filter_valid_voters`, 2026-10-17).
+- [x] Regenerate `votes_clean.csv`, `nodes.csv` and `edges.csv` with the new default and the unified normalization (2026-10-17): 11,638,348 vote rows, 86,495 nodes and 576,861 edges with total weight 4,503,001, identical to `edges_max100.csv` (and to the edges of Rodrigo's `edges_jaccard_hubs_S2-09.csv`, with no difference in any weight).
+- [x] Talk to Rodrigo (S2-05/06): working configuration `max100`, name of the parameter (`--max-daos`) and CSV format. Confirmed by his S2-05: he uses `max_daos = 100` and his 576,861 edges and total weight (4,503,001) match our `edges_max100.csv`.
+- [x] Unify the normalization of wallets: `src/wallet_normalization.py` is now the only definition and it is used by `data_cleaner.py`, `explore_shared_voters.py` and `shared_voters.py`; only `0x` addresses are lowercased, so Tally-Solana addresses are no longer lowercased (2026-10-17).
+- [x] Decide who maintains `edge_generator.py`: Carlos takes charge of it (2026-10-17).
+- [x] `.gitignore` for `*.pkl` and `__pycache__/` (2026-10-17); `pandas`, `matplotlib` and `networkx` checked: they install from `requirements.txt` and the scripts run with them.
 - [x] Verify which DAO the node `test` is (third hub by degree): it is Optimism Governance (Agora), verified on Optimistic Etherscan; see `S2-09_ecosystem_hubs.md`.
-- [ ] Optional: check the metrics of this document against the team's real `build_graph()` (the current results replicate its logic, they do not run its code).
+- [x] Optional: check the metrics of this document against the team's real `build_graph()` (2026-10-17). With `max_daos=100` the real graph has 86,495 nodes (our 86,489 plus the 6 of S2-02) and 576,861 edges (our 575,513 plus the 1,348 excluded); isolated nodes (49,256) and components (50,767) are identical, and the largest component grows from 31,011 to 31,017 nodes because of those 6 nodes. The differences are exactly the S2-02 exclusions.
 
 ## Changelog
 

@@ -1,6 +1,12 @@
 import pandas as pd
 from pathlib import Path
 
+try:
+    from .wallet_normalization import extract_address
+except ImportError:  # run as a script from src/
+    from wallet_normalization import extract_address
+
+
 def clean_deployments(df):
     #working on a copy to conserve the raw data
     df = df.copy()
@@ -37,28 +43,17 @@ def clean_proposals(df):
     df = df.drop_duplicates()
 
     return df
-def normalize_voter(voter, platform):
-    #Preserve missing voter values 
+def normalize_voter(voter, platform=None):
+    # Preserve missing voter values
     if pd.isna(voter):
         return pd.NA
 
-    voter = str(voter)
+    # The format is detected from the value itself (see wallet_normalization.py).
+    # `platform` is kept only so that old calls normalize_voter(voter, platform)
+    # keep working; it does not change the result.
+    return extract_address(str(voter))
 
-    # Argon stores the wallet after "-voter-" prefixes
-    if platform == "aragon":
-        voter = voter.split("-voter-")[-1]
 
-
-    # Tally uses the format eip155:<chain_id>:<wallet>
-    elif platform == "tally":
-        voter = voter.split(":")[-1]
-
-    # Ethereum addresses are normalized to lowercase.
-    # Realms uses Solana addresses, which are case-sensitive.
-    if platform != "realms":
-        voter = voter.lower()
-
-    return voter
 def clean_votes(df):
     df = df.copy()
 

@@ -31,7 +31,7 @@ def load_unique_voter_dao_pairs(chunksize=1_000_000):
     return voter_dao_pairs
 
 
-def filter_valid_voters(voter_dao_pairs, max_daos=200):
+def filter_valid_voters(voter_dao_pairs, max_daos=100):
     dao_count_per_voter = (
         voter_dao_pairs
         .groupby("voter")["deployment_id"]

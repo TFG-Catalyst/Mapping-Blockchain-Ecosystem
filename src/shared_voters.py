@@ -9,23 +9,11 @@ import csv
 from collections import Counter, defaultdict
 from itertools import combinations
 
+from wallet_normalization import extract_address
+
 VOTES_CSV = "votes.csv"
 OUTPUT_CSV = "shared_voters_edges.csv"
 MAX_DAOS_PER_VOTER = 200  # wallets voting in more DAOs than this are ignored (bots/delegates)
-
-
-def extract_address(voter):
-    """Return the clean wallet address, depending on each platform's format."""
-    voter = voter.strip()
-
-    if "-voter-" in voter:                # Aragon: "<dao>-voter-<wallet>"
-        voter = voter.split("-voter-")[-1]
-    elif voter.startswith("eip155:"):     # Tally: "eip155:<chain>:<wallet>"
-        voter = voter.split(":")[-1]
-
-    # Ethereum addresses (0x...) are case-insensitive.
-    # Solana addresses (Realms) are case-sensitive, so they are left untouched.
-    return voter.lower() if voter.startswith("0x") else voter
 
 
 def read_voters(path):
