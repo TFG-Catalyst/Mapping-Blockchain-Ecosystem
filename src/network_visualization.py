@@ -164,8 +164,8 @@ def visualize_top_daos(graph, top_n=50, max_edges=100, min_shared_voters=1, plat
             f"DAO: {node_name(subgraph, node_id)}\n"
             f"ID: {node_id}\n"
             f"Platform: {format_value(attributes.get('platform'))}\n"
-            f"Unique voters: {format_value(attributes.get('unique_voters'))}\n"
-            f"Votes: {format_value(attributes.get('votes_count'))}\n"
+            f"Unique voters (metadata): {format_value(attributes.get('unique_voters'))}\n"
+            f"Votes (metadata): {format_value(attributes.get('votes_count'))}\n"
             f"Connections in full graph: {graph.degree[node_id]:,}"
         )
 
@@ -206,11 +206,10 @@ def visualize_top_daos(graph, top_n=50, max_edges=100, min_shared_voters=1, plat
 
 
     plt.title(
-            f"Up to {max_edges} Strongest Relationships "
-            f"among Top {top_n} DAOs by Degree"
-            f"Platform: {platform if platform is not None else 'All'} | "
-            f"Minimum shared voters: {min_shared_voters}"
-        )    
+        f"Up to {max_edges} strongest relationships among the top {top_n} DAOs by degree\n"
+        f"Platform: {platform if platform is not None else 'All'} | "
+        f"Minimum shared voters: {min_shared_voters}"
+    )   
     plt.axis("off")
     plt.tight_layout()
 
