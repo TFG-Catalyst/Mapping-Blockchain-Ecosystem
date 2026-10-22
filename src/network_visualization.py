@@ -314,7 +314,7 @@ if __name__ == "__main__":
     parser.add_argument("--min-shared-voters", type=int, default=1)
     parser.add_argument(
         "--platform",
-        choices=["all", "snapshot", "tally", "aragon"],
+        choices=["all", "snapshot", "tally", "aragon", "daohaus", "daostack", "realms"],
         default="all"
     )
 
