@@ -1,0 +1,146 @@
+hub,hub_name,position,neighbor,neighbor_name,shared_voters,neighbor_unique_voters
+aavedao.eth,Aave DAO,1,uniswapgovernance.eth,Uniswap,9753,22446.0
+aavedao.eth,Aave DAO,2,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,9194,138480.0
+aavedao.eth,Aave DAO,3,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,8547,112713.0
+aavedao.eth,Aave DAO,4,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,8200,78724.0
+aavedao.eth,Aave DAO,5,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,7416,21747.0
+aavegotchi.eth,Aavegotchi,1,aavedao.eth,Aave DAO,3645,47019.0
+aavegotchi.eth,Aavegotchi,2,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,2093,78724.0
+aavegotchi.eth,Aavegotchi,3,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,1702,112713.0
+aavegotchi.eth,Aavegotchi,4,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,1646,138480.0
+aavegotchi.eth,Aavegotchi,5,qidao.eth,Qi Dao | Mai.Finance,1543,6316.0
+apecoin.eth,ApeCoin DAO,1,aavedao.eth,Aave DAO,2139,47019.0
+apecoin.eth,ApeCoin DAO,2,uniswapgovernance.eth,Uniswap,1594,22446.0
+apecoin.eth,ApeCoin DAO,3,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,1476,138480.0
+apecoin.eth,ApeCoin DAO,4,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,1412,112713.0
+apecoin.eth,ApeCoin DAO,5,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,1338,21747.0
+arbitrumfoundation.eth,Arbitrum DAO,1,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,15320,138480.0
+arbitrumfoundation.eth,Arbitrum DAO,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,13768,112713.0
+arbitrumfoundation.eth,Arbitrum DAO,3,stgdao.eth,Stargate DAO,4839,30475.0
+arbitrumfoundation.eth,Arbitrum DAO,4,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,4187,78724.0
+arbitrumfoundation.eth,Arbitrum DAO,5,eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,zkprotocolgovernor,3327,13510.0
+balancer.eth,Balancer,1,badgerdao.eth,BadgerDAO,2559,11247.0
+balancer.eth,Balancer,2,sushigov.eth,Sushi,2421,11731.0
+balancer.eth,Balancer,3,ybaby.eth,yearn (old),2239,4824.0
+balancer.eth,Balancer,4,cream-finance.eth,Cream Finance,1940,2920.0
+balancer.eth,Balancer,5,cakevote.eth,PancakeSwap,1939,129322.0
+balsam.eth,balsam,1,tarpon.eth,tarpon,4528,4541.0
+balsam.eth,balsam,2,danhuacap.eth,danhuacap,4517,4527.0
+balsam.eth,balsam,3,mists.eth,mists,4503,4515.0
+balsam.eth,balsam,4,goodchina.eth,goodchina,4216,4227.0
+balsam.eth,balsam,5,godsgirl.eth,godsgirl,4214,4225.0
+bitdao.eth,Mantle (prev. BitDAO),1,bitembassy.eth,BIT Embassy,4833,5472.0
+bitdao.eth,Mantle (prev. BitDAO),2,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,3572,138480.0
+bitdao.eth,Mantle (prev. BitDAO),3,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,3235,112713.0
+bitdao.eth,Mantle (prev. BitDAO),4,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,2473,78724.0
+bitdao.eth,Mantle (prev. BitDAO),5,stgdao.eth,Stargate DAO,1626,30475.0
+cakevote.eth,PancakeSwap,1,aavedao.eth,Aave DAO,6713,47019.0
+cakevote.eth,PancakeSwap,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,4833,112713.0
+cakevote.eth,PancakeSwap,3,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,4681,138480.0
+cakevote.eth,PancakeSwap,4,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,3251,78724.0
+cakevote.eth,PancakeSwap,5,uniswapgovernance.eth,Uniswap,2520,22446.0
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,1,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,24078,112713.0
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,2,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,23075,138480.0
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,3,aavedao.eth,Aave DAO,8200,47019.0
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,4,speraxdao.eth,Sperax DAO,6819,15247.0
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,5,uniswapgovernance.eth,Uniswap,5850,22446.0
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,1,uniswapgovernance.eth,Uniswap,13390,22446.0
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,2,aavedao.eth,Aave DAO,7416,47019.0
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,3,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,5305,112713.0
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,4,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,5285,78724.0
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,5,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,5168,138480.0
+eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,aave,1,aavedao.eth,Aave DAO,6493,47019.0
+eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,aave,2,uniswapgovernance.eth,Uniswap,4256,22446.0
+eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,aave,3,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,4123,21747.0
+eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,aave,4,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,2225,78724.0
+eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,aave,5,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,1929,112713.0
+eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,zktokengovernor,1,eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,zkprotocolgovernor,7967,13510.0
+eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,zktokengovernor,2,eip155:324:0x496869a7575a1f907d1c5b1eca28e4e9e382afab,zkgovopsgovernor,4562,5687.0
+eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,zktokengovernor,3,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,4438,138480.0
+eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,zktokengovernor,4,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,4068,112713.0
+eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,zktokengovernor,5,eip155:324:0xb83ff6501214ddf40c91c9565d095400f3f45746,zktokengovernor,2897,3012.0
+eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,zkprotocolgovernor,1,eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,zktokengovernor,7967,10933.0
+eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,zkprotocolgovernor,2,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,5891,138480.0
+eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,zkprotocolgovernor,3,eip155:324:0x496869a7575a1f907d1c5b1eca28e4e9e382afab,zkgovopsgovernor,5478,5687.0
+eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,zkprotocolgovernor,4,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,5364,112713.0
+eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,zkprotocolgovernor,5,eip155:324:0xb83ff6501214ddf40c91c9565d095400f3f45746,zktokengovernor,3893,3012.0
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,1,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,86230,112713.0
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,2,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,23075,78724.0
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,3,arbitrumfoundation.eth,Arbitrum DAO,15320,18605.0
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,4,aavedao.eth,Aave DAO,9194,47019.0
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,5,stgdao.eth,Stargate DAO,7851,30475.0
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,1,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,86230,138480.0
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,2,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,24078,78724.0
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,3,arbitrumfoundation.eth,Arbitrum DAO,13768,18605.0
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,4,aavedao.eth,Aave DAO,8547,47019.0
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,5,stgdao.eth,Stargate DAO,7364,30475.0
+ens.eth,ENS,1,aavedao.eth,Aave DAO,3028,47019.0
+ens.eth,ENS,2,uniswapgovernance.eth,Uniswap,2865,22446.0
+ens.eth,ENS,3,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,2317,21747.0
+ens.eth,ENS,4,gitcoindao.eth,Gitcoin,1888,12532.0
+ens.eth,ENS,5,eip155:1:0x323a76393544d5ecca80cd6ef2a560c6a395b7e3,uni,1659,3166.0
+g-dao.eth,G DAO,1,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,3784,138480.0
+g-dao.eth,G DAO,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,3543,112713.0
+g-dao.eth,G DAO,3,aavedao.eth,Aave DAO,2494,47019.0
+g-dao.eth,G DAO,4,cakevote.eth,PancakeSwap,1988,129322.0
+g-dao.eth,G DAO,5,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,1946,78724.0
+gitcoindao.eth,Gitcoin,1,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,4714,138480.0
+gitcoindao.eth,Gitcoin,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,4631,112713.0
+gitcoindao.eth,Gitcoin,3,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,3682,78724.0
+gitcoindao.eth,Gitcoin,4,aavedao.eth,Aave DAO,3315,47019.0
+gitcoindao.eth,Gitcoin,5,uniswapgovernance.eth,Uniswap,2866,22446.0
+gmx.eth,GMX,1,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,4077,138480.0
+gmx.eth,GMX,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,3991,112713.0
+gmx.eth,GMX,3,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,2725,78724.0
+gmx.eth,GMX,4,aavedao.eth,Aave DAO,2437,47019.0
+gmx.eth,GMX,5,speraxdao.eth,Sperax DAO,2101,15247.0
+lido-snapshot.eth,Lido,1,aavedao.eth,Aave DAO,3528,47019.0
+lido-snapshot.eth,Lido,2,uniswapgovernance.eth,Uniswap,2653,22446.0
+lido-snapshot.eth,Lido,3,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,2394,78724.0
+lido-snapshot.eth,Lido,4,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,2113,21747.0
+lido-snapshot.eth,Lido,5,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,1655,112713.0
+metislayer2.eth,Metis,1,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,3343,138480.0
+metislayer2.eth,Metis,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,2709,112713.0
+metislayer2.eth,Metis,3,stgdao.eth,Stargate DAO,1405,30475.0
+metislayer2.eth,Metis,4,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,1333,78724.0
+metislayer2.eth,Metis,5,radiantcapital.eth,Radiant Capital,1263,17491.0
+radiantcapital.eth,Radiant Capital,1,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,4777,138480.0
+radiantcapital.eth,Radiant Capital,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,4577,112713.0
+radiantcapital.eth,Radiant Capital,3,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,4066,78724.0
+radiantcapital.eth,Radiant Capital,4,aavedao.eth,Aave DAO,2498,47019.0
+radiantcapital.eth,Radiant Capital,5,speraxdao.eth,Sperax DAO,2324,15247.0
+shellprotocol.eth,Shell Protocol,1,aavedao.eth,Aave DAO,3388,47019.0
+shellprotocol.eth,Shell Protocol,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,3262,112713.0
+shellprotocol.eth,Shell Protocol,3,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,3166,78724.0
+shellprotocol.eth,Shell Protocol,4,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,3127,138480.0
+shellprotocol.eth,Shell Protocol,5,uniswapgovernance.eth,Uniswap,2164,22446.0
+sismo.eth,Sismo,1,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,2789,78724.0
+sismo.eth,Sismo,2,aavedao.eth,Aave DAO,2548,47019.0
+sismo.eth,Sismo,3,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,2124,112713.0
+sismo.eth,Sismo,4,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,2107,138480.0
+sismo.eth,Sismo,5,uniswapgovernance.eth,Uniswap,1717,22446.0
+stgdao.eth,Stargate DAO,1,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,7851,138480.0
+stgdao.eth,Stargate DAO,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,7364,112713.0
+stgdao.eth,Stargate DAO,3,arbitrumfoundation.eth,Arbitrum DAO,4839,18605.0
+stgdao.eth,Stargate DAO,4,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,4038,78724.0
+stgdao.eth,Stargate DAO,5,aavedao.eth,Aave DAO,2673,47019.0
+sushigov.eth,Sushi,1,yam.eth,Yam,2602,4867.0
+sushigov.eth,Sushi,2,badgerdao.eth,BadgerDAO,2545,11247.0
+sushigov.eth,Sushi,3,balancer.eth,Balancer,2421,9210.0
+sushigov.eth,Sushi,4,ybaby.eth,yearn (old),2345,4824.0
+sushigov.eth,Sushi,5,aavedao.eth,Aave DAO,2015,47019.0
+tarpon.eth,tarpon,1,balsam.eth,balsam,4528,4570.0
+tarpon.eth,tarpon,2,danhuacap.eth,danhuacap,4516,4527.0
+tarpon.eth,tarpon,3,mists.eth,mists,4500,4515.0
+tarpon.eth,tarpon,4,goodchina.eth,goodchina,4194,4227.0
+tarpon.eth,tarpon,5,godsgirl.eth,godsgirl,4193,4225.0
+theopendao.eth,OpenDAO,1,people-dao.eth,PeopleDAO,550,2661.0
+theopendao.eth,OpenDAO,2,cakevote.eth,PancakeSwap,544,129322.0
+theopendao.eth,OpenDAO,3,aavedao.eth,Aave DAO,492,47019.0
+theopendao.eth,OpenDAO,4,ens.eth,ENS,448,9010.0
+theopendao.eth,OpenDAO,5,apecoin.eth,ApeCoin DAO,403,13870.0
+uniswapgovernance.eth,Uniswap,1,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,13390,21747.0
+uniswapgovernance.eth,Uniswap,2,aavedao.eth,Aave DAO,9753,47019.0
+uniswapgovernance.eth,Uniswap,3,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,5850,78724.0
+uniswapgovernance.eth,Uniswap,4,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,5119,112713.0
+uniswapgovernance.eth,Uniswap,5,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,5118,138480.0

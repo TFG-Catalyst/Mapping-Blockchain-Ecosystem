@@ -1,0 +1,6 @@
+category,edges,pct_edges,edges_weight_ge_2,weight_in_nolimit,pct_weight,pct_group_weight,edges_all_weight_from_group
+1 stable (same weight in all 4),484968,75.21,145756,1258900,14.21,0.04,5
+2 growing (exists in all 4; weight increases),54055,8.38,54055,3389896,38.27,8.02,819
+3 new in max100,36490,5.66,3543,489234,5.52,92.66,2099
+4 new in max200,25434,3.94,23614,3244237,36.62,100.0,25434
+5 new only in nolimit,43843,6.8,15883,475834,5.37,100.0,43843

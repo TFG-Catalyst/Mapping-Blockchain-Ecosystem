@@ -1,0 +1,161 @@
+config,criterion,position,deployment_id,platform,name,degree,weighted_degree
+nolimit,degree,1,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,tally,arbitrum treasury,10237,338588
+nolimit,degree,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,tally,arbitrum core,9628,331442
+nolimit,degree,3,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,tally,test,7256,229594
+nolimit,degree,4,aavedao.eth,snapshot,Aave DAO,6970,250503
+nolimit,degree,5,cakevote.eth,snapshot,PancakeSwap,5598,138988
+nolimit,degree,6,uniswapgovernance.eth,snapshot,Uniswap,4658,151307
+nolimit,degree,7,stgdao.eth,snapshot,Stargate DAO,4416,103641
+nolimit,degree,8,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,tally,uniswap,4246,127872
+nolimit,degree,9,gitcoindao.eth,snapshot,Gitcoin,3886,94435
+nolimit,degree,10,arbitrumfoundation.eth,snapshot,Arbitrum DAO,3798,108263
+nolimit,degree,11,radiantcapital.eth,snapshot,Radiant Capital,3614,79106
+nolimit,degree,12,shellprotocol.eth,snapshot,Shell Protocol,3488,85213
+nolimit,degree,13,ens.eth,snapshot,ENS,3426,65626
+nolimit,degree,14,aavegotchi.eth,snapshot,Aavegotchi,3208,62486
+nolimit,degree,15,metislayer2.eth,snapshot,Metis,3176,50606
+nolimit,degree,16,eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,tally,zkprotocolgovernor,3150,83672
+nolimit,degree,17,lido-snapshot.eth,snapshot,Lido,3090,66693
+nolimit,degree,18,eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,tally,aave,3067,71451
+nolimit,degree,19,g-dao.eth,snapshot,G DAO,3050,72616
+nolimit,degree,20,apecoin.eth,snapshot,ApeCoin DAO,3029,52963
+nolimit,weighted_degree,1,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,tally,arbitrum treasury,10237,338588
+nolimit,weighted_degree,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,tally,arbitrum core,9628,331442
+nolimit,weighted_degree,3,aavedao.eth,snapshot,Aave DAO,6970,250503
+nolimit,weighted_degree,4,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,tally,test,7256,229594
+nolimit,weighted_degree,5,uniswapgovernance.eth,snapshot,Uniswap,4658,151307
+nolimit,weighted_degree,6,cakevote.eth,snapshot,PancakeSwap,5598,138988
+nolimit,weighted_degree,7,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,tally,uniswap,4246,127872
+nolimit,weighted_degree,8,arbitrumfoundation.eth,snapshot,Arbitrum DAO,3798,108263
+nolimit,weighted_degree,9,stgdao.eth,snapshot,Stargate DAO,4416,103641
+nolimit,weighted_degree,10,gitcoindao.eth,snapshot,Gitcoin,3886,94435
+nolimit,weighted_degree,11,shellprotocol.eth,snapshot,Shell Protocol,3488,85213
+nolimit,weighted_degree,12,eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,tally,zkprotocolgovernor,3150,83672
+nolimit,weighted_degree,13,radiantcapital.eth,snapshot,Radiant Capital,3614,79106
+nolimit,weighted_degree,14,gmx.eth,snapshot,GMX,2927,74447
+nolimit,weighted_degree,15,g-dao.eth,snapshot,G DAO,3050,72616
+nolimit,weighted_degree,16,eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,tally,aave,3067,71451
+nolimit,weighted_degree,17,sushigov.eth,snapshot,Sushi,2731,70425
+nolimit,weighted_degree,18,sismo.eth,snapshot,Sismo,2843,67737
+nolimit,weighted_degree,19,lido-snapshot.eth,snapshot,Lido,3090,66693
+nolimit,weighted_degree,20,eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,tally,zktokengovernor,2731,66053
+max200,degree,1,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,tally,arbitrum treasury,10237,338588
+max200,degree,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,tally,arbitrum core,9628,331442
+max200,degree,3,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,tally,test,7256,229594
+max200,degree,4,aavedao.eth,snapshot,Aave DAO,6820,250271
+max200,degree,5,cakevote.eth,snapshot,PancakeSwap,5451,138756
+max200,degree,6,uniswapgovernance.eth,snapshot,Uniswap,4658,151307
+max200,degree,7,stgdao.eth,snapshot,Stargate DAO,4416,103641
+max200,degree,8,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,tally,uniswap,4246,127872
+max200,degree,9,gitcoindao.eth,snapshot,Gitcoin,3886,94435
+max200,degree,10,arbitrumfoundation.eth,snapshot,Arbitrum DAO,3798,108263
+max200,degree,11,radiantcapital.eth,snapshot,Radiant Capital,3614,79106
+max200,degree,12,shellprotocol.eth,snapshot,Shell Protocol,3488,85213
+max200,degree,13,ens.eth,snapshot,ENS,3426,65626
+max200,degree,14,aavegotchi.eth,snapshot,Aavegotchi,3208,62486
+max200,degree,15,metislayer2.eth,snapshot,Metis,3176,50606
+max200,degree,16,eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,tally,zkprotocolgovernor,3150,83672
+max200,degree,17,lido-snapshot.eth,snapshot,Lido,3090,66693
+max200,degree,18,eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,tally,aave,3067,71451
+max200,degree,19,g-dao.eth,snapshot,G DAO,3050,72616
+max200,degree,20,apecoin.eth,snapshot,ApeCoin DAO,3029,52963
+max200,weighted_degree,1,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,tally,arbitrum treasury,10237,338588
+max200,weighted_degree,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,tally,arbitrum core,9628,331442
+max200,weighted_degree,3,aavedao.eth,snapshot,Aave DAO,6820,250271
+max200,weighted_degree,4,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,tally,test,7256,229594
+max200,weighted_degree,5,uniswapgovernance.eth,snapshot,Uniswap,4658,151307
+max200,weighted_degree,6,cakevote.eth,snapshot,PancakeSwap,5451,138756
+max200,weighted_degree,7,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,tally,uniswap,4246,127872
+max200,weighted_degree,8,arbitrumfoundation.eth,snapshot,Arbitrum DAO,3798,108263
+max200,weighted_degree,9,stgdao.eth,snapshot,Stargate DAO,4416,103641
+max200,weighted_degree,10,gitcoindao.eth,snapshot,Gitcoin,3886,94435
+max200,weighted_degree,11,shellprotocol.eth,snapshot,Shell Protocol,3488,85213
+max200,weighted_degree,12,eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,tally,zkprotocolgovernor,3150,83672
+max200,weighted_degree,13,radiantcapital.eth,snapshot,Radiant Capital,3614,79106
+max200,weighted_degree,14,gmx.eth,snapshot,GMX,2927,74447
+max200,weighted_degree,15,g-dao.eth,snapshot,G DAO,3050,72616
+max200,weighted_degree,16,eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,tally,aave,3067,71451
+max200,weighted_degree,17,sushigov.eth,snapshot,Sushi,2731,70425
+max200,weighted_degree,18,sismo.eth,snapshot,Sismo,2843,67737
+max200,weighted_degree,19,lido-snapshot.eth,snapshot,Lido,3090,66693
+max200,weighted_degree,20,eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,tally,zktokengovernor,2731,66053
+max100,degree,1,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,tally,arbitrum treasury,10237,338588
+max100,degree,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,tally,arbitrum core,9628,331442
+max100,degree,3,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,tally,test,7151,224928
+max100,degree,4,aavedao.eth,snapshot,Aave DAO,6820,250271
+max100,degree,5,cakevote.eth,snapshot,PancakeSwap,5451,138756
+max100,degree,6,uniswapgovernance.eth,snapshot,Uniswap,4545,147537
+max100,degree,7,stgdao.eth,snapshot,Stargate DAO,4416,103641
+max100,degree,8,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,tally,uniswap,4246,127872
+max100,degree,9,gitcoindao.eth,snapshot,Gitcoin,3886,94435
+max100,degree,10,arbitrumfoundation.eth,snapshot,Arbitrum DAO,3798,108263
+max100,degree,11,radiantcapital.eth,snapshot,Radiant Capital,3614,79106
+max100,degree,12,ens.eth,snapshot,ENS,3426,65626
+max100,degree,13,shellprotocol.eth,snapshot,Shell Protocol,3322,81456
+max100,degree,14,aavegotchi.eth,snapshot,Aavegotchi,3208,62486
+max100,degree,15,metislayer2.eth,snapshot,Metis,3176,50606
+max100,degree,16,eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,tally,zkprotocolgovernor,3150,83672
+max100,degree,17,lido-snapshot.eth,snapshot,Lido,3090,66693
+max100,degree,18,eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,tally,aave,3067,71451
+max100,degree,19,g-dao.eth,snapshot,G DAO,3050,72616
+max100,degree,20,apecoin.eth,snapshot,ApeCoin DAO,3029,52963
+max100,weighted_degree,1,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,tally,arbitrum treasury,10237,338588
+max100,weighted_degree,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,tally,arbitrum core,9628,331442
+max100,weighted_degree,3,aavedao.eth,snapshot,Aave DAO,6820,250271
+max100,weighted_degree,4,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,tally,test,7151,224928
+max100,weighted_degree,5,uniswapgovernance.eth,snapshot,Uniswap,4545,147537
+max100,weighted_degree,6,cakevote.eth,snapshot,PancakeSwap,5451,138756
+max100,weighted_degree,7,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,tally,uniswap,4246,127872
+max100,weighted_degree,8,arbitrumfoundation.eth,snapshot,Arbitrum DAO,3798,108263
+max100,weighted_degree,9,stgdao.eth,snapshot,Stargate DAO,4416,103641
+max100,weighted_degree,10,gitcoindao.eth,snapshot,Gitcoin,3886,94435
+max100,weighted_degree,11,eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,tally,zkprotocolgovernor,3150,83672
+max100,weighted_degree,12,shellprotocol.eth,snapshot,Shell Protocol,3322,81456
+max100,weighted_degree,13,radiantcapital.eth,snapshot,Radiant Capital,3614,79106
+max100,weighted_degree,14,g-dao.eth,snapshot,G DAO,3050,72616
+max100,weighted_degree,15,eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,tally,aave,3067,71451
+max100,weighted_degree,16,sushigov.eth,snapshot,Sushi,2731,70425
+max100,weighted_degree,17,gmx.eth,snapshot,GMX,2792,69781
+max100,weighted_degree,18,lido-snapshot.eth,snapshot,Lido,3090,66693
+max100,weighted_degree,19,eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,tally,zktokengovernor,2731,66053
+max100,weighted_degree,20,ens.eth,snapshot,ENS,3426,65626
+max50,degree,1,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,tally,arbitrum treasury,10124,335232
+max50,degree,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,tally,arbitrum core,9514,327975
+max50,degree,3,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,tally,test,7053,221980
+max50,degree,4,aavedao.eth,snapshot,Aave DAO,6709,246037
+max50,degree,5,cakevote.eth,snapshot,PancakeSwap,5367,136350
+max50,degree,6,uniswapgovernance.eth,snapshot,Uniswap,4422,143724
+max50,degree,7,stgdao.eth,snapshot,Stargate DAO,4311,101105
+max50,degree,8,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,tally,uniswap,4117,124565
+max50,degree,9,gitcoindao.eth,snapshot,Gitcoin,3740,90925
+max50,degree,10,arbitrumfoundation.eth,snapshot,Arbitrum DAO,3705,105789
+max50,degree,11,radiantcapital.eth,snapshot,Radiant Capital,3525,76823
+max50,degree,12,ens.eth,snapshot,ENS,3252,62607
+max50,degree,13,shellprotocol.eth,snapshot,Shell Protocol,3197,78359
+max50,degree,14,metislayer2.eth,snapshot,Metis,3115,49084
+max50,degree,15,aavegotchi.eth,snapshot,Aavegotchi,3082,60208
+max50,degree,16,eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,tally,zkprotocolgovernor,3068,81677
+max50,degree,17,eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,tally,aave,2968,68456
+max50,degree,18,g-dao.eth,snapshot,G DAO,2968,70194
+max50,degree,19,lido-snapshot.eth,snapshot,Lido,2953,63187
+max50,degree,20,apecoin.eth,snapshot,ApeCoin DAO,2949,50521
+max50,weighted_degree,1,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,tally,arbitrum treasury,10124,335232
+max50,weighted_degree,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,tally,arbitrum core,9514,327975
+max50,weighted_degree,3,aavedao.eth,snapshot,Aave DAO,6709,246037
+max50,weighted_degree,4,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,tally,test,7053,221980
+max50,weighted_degree,5,uniswapgovernance.eth,snapshot,Uniswap,4422,143724
+max50,weighted_degree,6,cakevote.eth,snapshot,PancakeSwap,5367,136350
+max50,weighted_degree,7,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,tally,uniswap,4117,124565
+max50,weighted_degree,8,arbitrumfoundation.eth,snapshot,Arbitrum DAO,3705,105789
+max50,weighted_degree,9,stgdao.eth,snapshot,Stargate DAO,4311,101105
+max50,weighted_degree,10,gitcoindao.eth,snapshot,Gitcoin,3740,90925
+max50,weighted_degree,11,eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,tally,zkprotocolgovernor,3068,81677
+max50,weighted_degree,12,shellprotocol.eth,snapshot,Shell Protocol,3197,78359
+max50,weighted_degree,13,radiantcapital.eth,snapshot,Radiant Capital,3525,76823
+max50,weighted_degree,14,g-dao.eth,snapshot,G DAO,2968,70194
+max50,weighted_degree,15,eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,tally,aave,2968,68456
+max50,weighted_degree,16,sushigov.eth,snapshot,Sushi,2623,67582
+max50,weighted_degree,17,gmx.eth,snapshot,GMX,2679,67013
+max50,weighted_degree,18,eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,tally,zktokengovernor,2664,64709
+max50,weighted_degree,19,lido-snapshot.eth,snapshot,Lido,2953,63187
+max50,weighted_degree,20,ens.eth,snapshot,ENS,3252,62607
