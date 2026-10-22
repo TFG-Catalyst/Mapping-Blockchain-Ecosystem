@@ -2,8 +2,20 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import argparse
 import pandas as pd
+from matplotlib.lines import Line2D
 
 from graph_builder import build_graph
+
+PLATFORM_COLORS = {
+    "snapshot": "#1f77b4",
+    "tally": "#ff7f0e",
+    "aragon": "#2ca02c",
+    "daohaus": "#d62728",
+    "daostack": "#9467bd",
+    "realms": "#8c564b",
+}
+UNKNOWN_COLOR = "#7f7f7f"
+LABELLED_NODES = 10
 
 def format_value(value):
     if value is None or pd.isna(value):
@@ -78,9 +90,17 @@ def visualize_top_daos(graph, top_n=50, max_edges=100, min_shared_voters=1, plat
     # Remove nodes that became isolated after filtering
     subgraph.remove_nodes_from(list(nx.isolates(subgraph)))
 
+    # Keep only the largest connected component of the selection
+    components = list(nx.connected_components(subgraph))
+    largest_component = max(components, key=len)
+    omitted_components = len(components) - 1
+    omitted_nodes = subgraph.number_of_nodes() - len(largest_component)
+    subgraph = subgraph.subgraph(largest_component).copy()
+
     # Print visualization information
     print(f"Nodes visualized: {subgraph.number_of_nodes()}")
     print(f"Edges visualized: {subgraph.number_of_edges()}")
+    print(f"Omitted: {omitted_nodes} nodes in {omitted_components} smaller components")
 
     # Calculate node positions
     pos = nx.spring_layout(
@@ -93,20 +113,58 @@ def visualize_top_daos(graph, top_n=50, max_edges=100, min_shared_voters=1, plat
 
     node_ids = list(subgraph.nodes())
 
+    # Node colour = platform; node size = degree in the full graph (square root scale)
+    node_colors = [
+        PLATFORM_COLORS.get(subgraph.nodes[node_id].get("platform"), UNKNOWN_COLOR)
+        for node_id in node_ids
+    ]
+    degrees = [graph.degree[node_id] for node_id in node_ids]
+    min_degree, max_degree = min(degrees), max(degrees)
+    degree_range = max(max_degree - min_degree, 1)
+    node_sizes = [
+        100 + 900 * ((degree - min_degree) / degree_range) ** 0.5
+        for degree in degrees
+    ]
+
     node_collection = nx.draw_networkx_nodes(
         subgraph,
         pos,
         nodelist=node_ids,
-        node_size=150
+        node_color=node_colors,
+        node_size=node_sizes,
+        edgecolors="white",
+        linewidths=0.5
     )
 
+    # Edge width = shared voters (square root scale)
     edge_ids = list(subgraph.edges())
+    weights = [subgraph.edges[edge]["shared_voters"] for edge in edge_ids]
+    min_weight, max_weight = min(weights), max(weights)
+    weight_range = max(max_weight - min_weight, 1)
+    edge_widths = [
+        0.5 + 5.5 * ((weight - min_weight) / weight_range) ** 0.5
+        for weight in weights
+    ]
 
     edge_collection = nx.draw_networkx_edges(
         subgraph,
         pos,
         edgelist=edge_ids,
-        width=0.5
+        width=edge_widths,
+        edge_color="gray",
+        alpha=0.6
+    )
+
+    # Names of the most connected DAOs only, to keep the view readable
+    labelled_ids = sorted(
+        node_ids, key=lambda node_id: graph.degree[node_id], reverse=True
+    )[:LABELLED_NODES]
+    nx.draw_networkx_labels(
+        subgraph,
+        pos,
+        labels={node_id: node_name(subgraph, node_id) for node_id in labelled_ids},
+        font_size=8,
+        bbox=dict(facecolor="white", edgecolor="none", alpha=0.7, pad=1)
     )
 
     edge_collection.set_picker(5)
@@ -131,6 +189,36 @@ def visualize_top_daos(graph, top_n=50, max_edges=100, min_shared_voters=1, plat
         zorder=10
     )
     info_box.set_visible(False)
+
+    # Legend: one entry per platform present in the view
+    platforms_shown = sorted(
+        {str(subgraph.nodes[node_id].get("platform")) for node_id in node_ids}
+    )
+    legend_handles = [
+        Line2D(
+            [0], [0],
+            marker="o",
+            color="w",
+            markerfacecolor=PLATFORM_COLORS.get(platform_name, UNKNOWN_COLOR),
+            markersize=9,
+            label=platform_name
+        )
+        for platform_name in platforms_shown
+    ]
+    ax.legend(handles=legend_handles, title="Platform", loc="upper right")
+
+    # Counts of what is shown and what is left out
+    ax.text(
+        0.01,
+        0.99,
+        f"Shown: {subgraph.number_of_nodes():,} of {graph.number_of_nodes():,} DAOs, "
+        f"{subgraph.number_of_edges():,} of {graph.number_of_edges():,} relationships\n"
+        f"Omitted from the selection: {omitted_nodes} DAOs in {omitted_components} smaller components\n"
+        f"Node size: degree in the full graph | Edge width: shared voters (both scaled within the view)",
+        transform=ax.transAxes,
+        va="top",
+        fontsize=9
+    )
 
     ax.text(
         0.01,
@@ -206,7 +294,7 @@ def visualize_top_daos(graph, top_n=50, max_edges=100, min_shared_voters=1, plat
 
 
     plt.title(
-        f"Up to {max_edges} strongest relationships among the top {top_n} DAOs by degree\n"
+        f"Largest connected component of the {max_edges} strongest relationships among the top {top_n} DAOs by degree\n"
         f"Platform: {platform if platform is not None else 'All'} | "
         f"Minimum shared voters: {min_shared_voters}"
     )   
