@@ -1,8 +1,23 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import argparse
+import pandas as pd
 
 from graph_builder import build_graph
+
+def format_value(value):
+    if value is None or pd.isna(value):
+        return "Unknown"
+    if isinstance(value, float) and value.is_integer():
+        return f"{int(value):,}"
+    return str(value)
+
+
+def node_name(graph, node_id):
+    name = graph.nodes[node_id].get("name")
+    if name is None or pd.isna(name):
+        return node_id
+    return name
 
 
 def visualize_top_daos(graph, top_n=50, max_edges=100, min_shared_voters=1, platform = None):
@@ -100,20 +115,42 @@ def visualize_top_daos(graph, top_n=50, max_edges=100, min_shared_voters=1, plat
 
     ax = node_collection.axes
 
-    info_box = ax.text(
-        0.02,
-        0.98,
-        "Click a node to see its details",
-        transform=ax.transAxes,
-        va="top",
+    info_box = ax.annotate(
+        "",
+        xy=(0, 0),
+        xytext=(15, 15),
+        textcoords="offset points",
         fontsize=9,
+        multialignment="left",
         bbox=dict(
             boxstyle="round",
             facecolor="white",
             edgecolor="gray",
             alpha=0.9
-        )
+        ),
+        zorder=10
     )
+    info_box.set_visible(False)
+
+    ax.text(
+        0.01,
+        0.01,
+        "Click a node or an edge to see its details",
+        transform=ax.transAxes,
+        fontsize=8,
+        color="gray"
+    )
+
+    def show_info(x, y, text):
+        # Open the box towards the centre so it stays inside the figure
+        x_min, x_max = ax.get_xlim()
+        offset_x = -15 if x > (x_min + x_max) / 2 else 15
+        info_box.xy = (x, y)
+        info_box.xyann = (offset_x, 15)
+        info_box.set_horizontalalignment("right" if offset_x < 0 else "left")
+        info_box.set_text(text)
+        info_box.set_visible(True)
+        ax.figure.canvas.draw_idle()
 
 
     def on_node_click(event):
@@ -124,15 +161,16 @@ def visualize_top_daos(graph, top_n=50, max_edges=100, min_shared_voters=1, plat
         attributes = subgraph.nodes[node_id]
 
         details = (
-            f"DAO: {attributes.get('name', node_id)}\n"
+            f"DAO: {node_name(subgraph, node_id)}\n"
             f"ID: {node_id}\n"
-            f"Platform: {attributes.get('platform', 'Unknown')}\n"
-            f"Unique voters: {attributes.get('unique_voters', 'Unknown')}\n"
-            f"Votes: {attributes.get('votes_count', 'Unknown')}\n"
-            f"Connections in full graph: {graph.degree[node_id]}"
+            f"Platform: {format_value(attributes.get('platform'))}\n"
+            f"Unique voters: {format_value(attributes.get('unique_voters'))}\n"
+            f"Votes: {format_value(attributes.get('votes_count'))}\n"
+            f"Connections in full graph: {graph.degree[node_id]:,}"
         )
 
-        info_box.set_text(details)
+        x, y = pos[node_id]
+        show_info(x, y, details)
         node_collection.figure.canvas.draw_idle()
 
     def on_edge_click(event):
@@ -146,16 +184,15 @@ def visualize_top_daos(graph, top_n=50, max_edges=100, min_shared_voters=1, plat
         source, target = edge_ids[event.ind[0]]
         attributes = subgraph.edges[source, target]
 
-        source_name = subgraph.nodes[source].get("name", source)
-        target_name = subgraph.nodes[target].get("name", target)
-
         details = (
-            f"DAO 1: {source_name}\n"
-            f"DAO 2: {target_name}\n"
-            f"Shared voters: {attributes['shared_voters']}"
+            f"DAO 1: {node_name(subgraph, source)}\n"
+            f"DAO 2: {node_name(subgraph, target)}\n"
+            f"Shared voters: {attributes['shared_voters']:,}"
         )
 
-        info_box.set_text(details)
+        x = (pos[source][0] + pos[target][0]) / 2
+        y = (pos[source][1] + pos[target][1]) / 2
+        show_info(x, y, details)
         edge_collection.figure.canvas.draw_idle()
 
     node_collection.figure.canvas.mpl_connect(
