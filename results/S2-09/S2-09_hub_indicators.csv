@@ -1,0 +1,79 @@
+deployment_id,name,platform,rank_weighted_nolimit,rank_weighted_max200,rank_weighted_max100,rank_weighted_max50,rank_weighted_diff,rank_degree_max100,pct_group_weight_nolimit,unique_voters,rank_unique_voters,neighbor_1,neighbor_1_weight,neighbor_1_proportion,assigned_organization,F_filter,F_overlap,F_size,F_org
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,tally,1,1,1,1,0,1,0.0,138480.0,1,arbitrum core,86230,0.77,Arbitrum,False,False,True,True
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,tally,2,2,2,2,0,2,0.0,112713.0,4,arbitrum treasury,86230,0.77,Arbitrum,False,False,True,True
+aavedao.eth,Aave DAO,snapshot,3,3,3,3,0,4,0.1,47019.0,6,Uniswap,9753,0.43,Aave,False,False,True,False
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,tally,4,4,4,4,0,3,2.0,78724.0,5,arbitrum core,24078,0.31,,False,False,True,False
+uniswapgovernance.eth,Uniswap,snapshot,5,5,5,5,0,6,2.5,22446.0,8,uniswap,13390,0.62,Uniswap,False,False,True,True
+cakevote.eth,PancakeSwap,snapshot,6,6,6,6,0,5,0.2,129322.0,3,Aave DAO,6713,0.14,,False,False,True,False
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,tally,7,7,7,7,0,8,0.0,21747.0,9,Uniswap,13390,0.62,Uniswap,False,False,True,True
+arbitrumfoundation.eth,Arbitrum DAO,snapshot,8,8,8,8,0,10,0.0,18605.0,11,arbitrum treasury,15320,0.82,Arbitrum,False,False,True,True
+stgdao.eth,Stargate DAO,snapshot,9,9,9,9,0,7,0.0,30475.0,7,arbitrum treasury,7851,0.26,,False,False,True,False
+gitcoindao.eth,Gitcoin,snapshot,10,10,10,10,0,9,0.0,12532.0,22,arbitrum treasury,4714,0.38,,False,False,True,False
+eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,zkprotocolgovernor,tally,12,12,11,11,1,16,0.0,13510.0,19,zktokengovernor,7967,0.73,zkSync,False,False,True,True
+shellprotocol.eth,Shell Protocol,snapshot,11,11,12,12,1,13,4.4,12970.0,20,Aave DAO,3388,0.26,,False,False,True,False
+radiantcapital.eth,Radiant Capital,snapshot,13,13,13,13,0,11,0.0,17491.0,12,arbitrum treasury,4777,0.27,,False,False,True,False
+g-dao.eth,G DAO,snapshot,15,15,14,14,1,19,0.0,11679.0,26,arbitrum treasury,3784,0.32,,False,False,True,False
+eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,aave,tally,16,16,15,15,1,18,0.0,9565.0,33,Aave DAO,6493,0.68,Aave,False,False,False,True
+sushigov.eth,Sushi,snapshot,17,17,16,16,1,25,0.0,11731.0,25,Yam,2602,0.53,,False,False,True,False
+gmx.eth,GMX,snapshot,14,14,17,17,3,23,6.3,11165.0,28,arbitrum treasury,4077,0.37,,False,False,True,False
+lido-snapshot.eth,Lido,snapshot,19,19,18,19,1,17,0.0,6657.0,53,Aave DAO,3528,0.53,,False,False,False,False
+eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,zktokengovernor,tally,20,20,19,18,2,24,0.0,10933.0,29,zkprotocolgovernor,7967,0.73,zkSync,False,False,True,True
+ens.eth,ENS,snapshot,21,21,20,20,1,12,0.0,9010.0,37,Aave DAO,3028,0.34,,False,False,False,False
+balancer.eth,Balancer,snapshot,22,22,21,23,2,32,0.0,9210.0,35,BadgerDAO,2559,0.28,,False,False,False,False
+sismo.eth,Sismo,snapshot,18,18,22,30,12,26,6.9,7602.0,45,test,2789,0.37,,False,False,False,False
+aavegotchi.eth,Aavegotchi,snapshot,23,23,23,31,8,14,0.0,13544.0,18,Aave DAO,3645,0.27,,False,False,True,False
+balsam.eth,balsam,snapshot,24,24,24,21,3,1784,0.0,4570.0,85,tarpon,4528,1.0,,False,True,False,False
+tarpon.eth,tarpon,snapshot,25,25,25,22,3,1938,0.0,4541.0,87,balsam,4528,1.0,,False,True,False,False
+danhuacap.eth,danhuacap,snapshot,26,26,26,24,2,2131,0.0,4527.0,88,balsam,4517,1.0,,False,True,False,False
+mists.eth,mists,snapshot,27,27,27,25,2,2107,0.0,4515.0,90,balsam,4503,1.0,,False,True,False,False
+godsgirl.eth,godsgirl,snapshot,28,28,28,26,2,2020,0.0,4225.0,95,balsam,4214,1.0,,False,True,False,False
+goodchina.eth,goodchina,snapshot,29,29,29,27,2,2001,0.0,4227.0,94,balsam,4216,1.0,,False,True,False,False
+wangzian.eth,wangzian,snapshot,30,30,30,28,2,2142,0.0,4211.0,96,balsam,4205,1.0,,False,True,False,False
+gaggle.eth,gaggle,snapshot,31,31,31,29,2,2134,0.0,4203.0,97,balsam,4197,1.0,,False,True,False,False
+caiman.eth,caiman,snapshot,32,32,32,32,0,1673,0.0,4085.0,100,balsam,4073,1.0,,False,True,False,False
+hotstock.eth,hotstock,snapshot,33,33,33,33,0,2105,0.0,4083.0,101,balsam,4077,1.0,,False,True,False,False
+hinny.eth,hinny,snapshot,34,34,34,34,0,2028,0.0,4074.0,102,caiman,4068,1.0,,False,True,False,False
+electricite.eth,electricite,snapshot,35,35,35,35,0,1480,0.0,4071.0,103,hinny,4056,1.0,,False,True,False,False
+tunny.eth,tunny,snapshot,36,36,36,36,0,3562,0.0,4070.0,104,balsam,4064,1.0,,False,True,False,False
+bitdao.eth,Mantle (prev. BitDAO),snapshot,37,37,37,37,0,22,0.0,12034.0,24,BIT Embassy,4833,0.88,,False,False,True,False
+angelmother.eth,angelmother,snapshot,39,38,38,38,1,2130,0.0,3744.0,115,balsam,3744,1.0,,False,True,False,False
+lootdex.eth,lootdex,snapshot,40,39,39,39,1,2123,0.0,3739.0,116,mists,3738,1.0,,False,True,False,False
+badgerdao.eth,BadgerDAO,snapshot,41,40,40,42,2,36,0.0,11247.0,27,Balancer,2559,0.28,,False,False,True,False
+joegovernance.eth,Lets F***ing Joe (prev. TJ),snapshot,42,41,41,41,1,31,0.0,6950.0,48,arbitrum treasury,2700,0.39,,False,False,False,False
+speraxdao.eth,Sperax DAO,snapshot,43,42,42,40,3,51,0.0,15247.0,16,test,6819,0.45,,False,False,True,False
+apecoin.eth,ApeCoin DAO,snapshot,56,43,43,43,13,20,0.0,13870.0,17,Aave DAO,2139,0.15,,False,False,True,False
+metislayer2.eth,Metis,snapshot,73,44,44,44,29,15,0.0,21364.0,10,arbitrum treasury,3343,0.16,,False,False,True,False
+dao.spaceid.eth,SPACE ID DAO,snapshot,77,45,45,45,32,40,0.0,9876.0,32,arbitrum treasury,3749,0.38,,False,False,False,False
+opcollective.eth,Optimism Collective,snapshot,78,46,46,46,32,35,0.0,7444.0,47,test,2962,0.4,,False,False,False,False
+eip155:324:0x496869a7575a1f907d1c5b1eca28e4e9e382afab,zkgovopsgovernor,tally,80,47,47,48,33,49,0.0,5687.0,65,zkprotocolgovernor,5478,0.96,,False,False,False,False
+vestafinance.eth,Vesta,snapshot,81,48,48,47,34,56,0.0,7861.0,43,arbitrum core,4301,0.55,,False,False,False,False
+cow.eth,CoW DAO,snapshot,82,49,49,49,33,28,0.6,7534.0,46,Aave DAO,2152,0.29,,False,False,False,False
+hashflowdao.eth,Hashflow,snapshot,84,50,50,51,34,43,0.0,4687.0,81,Aave DAO,1874,0.4,,False,False,False,False
+gnosis.eth,GnosisDAO,snapshot,85,51,51,53,34,30,0.0,6265.0,58,Aave DAO,2018,0.32,,False,False,False,False
+klimadao.eth,Klima DAO,snapshot,86,52,52,50,36,29,0.0,8460.0,40,Aave DAO,1504,0.18,,False,False,False,False
+mavxyz.eth,Maverick Protocol,snapshot,87,53,53,52,35,34,0.0,6498.0,55,arbitrum core,1720,0.26,,False,False,False,False
+mail3.eth,Mail3,snapshot,93,54,54,54,39,48,0.0,5215.0,72,test,1790,0.34,,False,False,False,False
+eip155:324:0xb83ff6501214ddf40c91c9565d095400f3f45746,zktokengovernor,tally,174,55,55,55,119,62,0.0,3012.0,147,zkprotocolgovernor,3893,1.29,,False,False,False,False
+ybaby.eth,yearn (old),snapshot,176,56,56,56,120,93,0.0,4824.0,78,BadgerDAO,2463,0.51,,False,False,False,False
+etherscoredao.eth,EtherScore,snapshot,198,57,57,57,141,47,0.0,5200.0,73,arbitrum treasury,1623,0.31,,False,False,False,False
+snapshot.dcl.eth,Decentraland,snapshot,202,58,58,58,144,27,0.0,8594.0,39,Aave DAO,1830,0.21,,False,False,False,False
+eip155:1:0xc0da02939e1441f497fd74f78ce7decb17b66529,compound,tally,203,59,59,59,144,55,0.0,3874.0,112,Aave DAO,2026,0.52,,False,False,False,False
+dydxgov.eth,dYdX,snapshot,204,60,60,60,144,41,0.0,4671.0,82,Aave DAO,1587,0.34,,False,False,False,False
+theopendao.eth,OpenDAO,snapshot,209,63,62,62,147,21,0.0,10636.0,30,PeopleDAO,550,0.21,,False,False,True,False
+metrox.eth,Metrox,snapshot,38,61,173,236,198,413,93.1,1301.0,275,Fabien,384,0.3,,True,False,False,False
+zziaweiwei.eth,兔子洞投票任务专用,snapshot,44,64,231,401,357,637,96.8,4759.0,80,arbitrum core,716,0.15,,True,False,False,False
+test6.shot.eth,Strio,snapshot,45,65,255,605,560,793,98.0,536.0,566,Fabien,188,0.35,,True,False,False,False
+jeremywei.eth,outofgas,snapshot,46,66,285,850,804,2120,98.9,864.0,392,PancakeSwap,488,0.56,,True,False,False,False
+webcoin.eth,connext社区dao,snapshot,53,74,319,1590,1537,1358,99.6,384.0,773,li.finance社区,43,0.11,,True,False,False,False
+0xchen123.eth,0xchen123,snapshot,47,68,336,2024,1977,1467,99.8,434.0,691,0xchenliang,47,0.11,,True,False,False,False
+mxlcolm.eth,mxlcolm,snapshot,54,75,340,2094,2040,1537,99.8,391.0,758,Onchain Labs,42,0.12,,True,False,False,False
+eosswap.eth,li.finance社区,snapshot,55,76,346,2294,2239,1743,99.9,403.0,734,connext社区dao,43,0.11,,True,False,False,False
+0xchenliang.eth,0xchenliang,snapshot,48,69,349,2580,2532,2096,99.9,428.0,702,0xchen123,47,0.11,,True,False,False,False
+l2pay.eth,miraidao,snapshot,60,80,355,2886,2826,2553,100.0,361.0,828,InoriDAO,43,0.12,,True,False,False,False
+elon6.eth,BigDAO,snapshot,59,79,357,2904,2845,2547,100.0,365.0,806,li.finance社区,42,0.12,,True,False,False,False
+0xchenhu.eth,0xchenhu,snapshot,49,70,359,2954,2905,2603,100.0,362.0,819,0xchenliang,42,0.12,,True,False,False,False
+0xueli.eth,0xueli,snapshot,50,71,360,2956,2906,2606,100.0,362.0,820,8848vip,42,0.12,,True,False,False,False
+8848vip.eth,8848vip,snapshot,58,78,361,2957,2899,2607,100.0,361.0,829,squawk&chirp,42,0.12,,True,False,False,False
+huxueli.eth,huxueli,snapshot,51,72,363,2964,2913,2617,100.0,362.0,818,outofgas,42,0.12,,True,False,False,False
+kirillevans.eth,kirillevans,snapshot,52,73,364,2965,2913,2620,100.0,362.0,817,miraidao,42,0.12,,True,False,False,False
+virtualpangea.eth,virtualpangea,snapshot,57,77,368,2972,2915,2633,100.0,361.0,830,connext社区dao,42,0.12,,True,False,False,False

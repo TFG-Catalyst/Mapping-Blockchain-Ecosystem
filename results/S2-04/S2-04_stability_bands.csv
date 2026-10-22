@@ -1,0 +1,5 @@
+wallet_dao_band,weight,pct_total_weight,edges_with_band_weight,group_weight,pct_of_band_from_group
+2-50,4248248,47.96,539023,3869,0.09
+51-100,249759,2.82,89507,81807,32.75
+101-200,1977604,22.33,28770,1977604,100.0
+>200,2382490,26.9,69653,2382490,100.0

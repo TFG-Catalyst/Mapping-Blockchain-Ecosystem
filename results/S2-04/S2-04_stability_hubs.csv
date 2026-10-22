@@ -1,0 +1,249 @@
+deployment_id,rank_degree_max50,rank_degree_max100,rank_degree_max200,rank_degree_nolimit,stable_top100,criterion,name,platform,pct_group_weight,rank_weighted_degree_max50,rank_weighted_degree_max100,rank_weighted_degree_max200,rank_weighted_degree_nolimit
+0x1b975a9daf25e7b01e0a6c72d657ff74925327a8,40.0,39.0,40.0,40.0,True,degree,dead foundationsdao,daohaus,0.0,,,,
+1inch.eth,77.0,66.0,67.0,67.0,True,degree,1inch Network,snapshot,0.0,,,,
+8686th.eth,71.0,72.0,63.0,63.0,True,degree,8686DAO,snapshot,0.5,,,,
+aavedao.eth,4.0,4.0,4.0,4.0,True,degree,Aave DAO,snapshot,0.1,,,,
+aavegotchi.eth,15.0,14.0,14.0,14.0,True,degree,Aavegotchi,snapshot,0.0,,,,
+acrossprotocol.eth,75.0,74.0,75.0,75.0,True,degree,Across DAO,snapshot,0.0,,,,
+alchemistcoin.eth,83.0,85.0,86.0,86.0,True,degree,Alchemist,snapshot,0.0,,,,
+alchemixstakers.eth,82.0,80.0,81.0,81.0,True,degree,Alchemix,snapshot,0.0,,,,
+apecoin.eth,20.0,20.0,20.0,20.0,True,degree,ApeCoin DAO,snapshot,0.0,,,,
+arbitrumfoundation.eth,10.0,10.0,10.0,10.0,True,degree,Arbitrum DAO,snapshot,0.0,,,,
+badgerdao.eth,39.0,36.0,38.0,38.0,True,degree,BadgerDAO,snapshot,0.0,,,,
+balancer.eth,33.0,32.0,33.0,33.0,True,degree,Balancer,snapshot,0.0,,,,
+banklessvault.eth,32.0,33.0,34.0,34.0,True,degree,Bankless DAO,snapshot,0.0,,,,
+basenamedao.eth,73.0,78.0,79.0,79.0,True,degree,Base Name Service,snapshot,0.0,,,,
+beefydao.eth,96.0,97.0,97.0,97.0,True,degree,Beefy,snapshot,0.0,,,,
+beets.eth,69.0,70.0,71.0,71.0,True,degree,Beets,snapshot,0.0,,,,
+bestfork.eth,50.0,52.0,52.0,52.0,True,degree,Volta Club,snapshot,0.0,,,,
+bitdao.eth,22.0,22.0,24.0,24.0,True,degree,Mantle (prev. BitDAO),snapshot,0.0,,,,
+bitembassy.eth,59.0,59.0,59.0,59.0,True,degree,BIT Embassy,snapshot,0.0,,,,
+cakevote.eth,5.0,5.0,5.0,5.0,True,degree,PancakeSwap,snapshot,0.2,,,,
+cow.eth,30.0,28.0,28.0,27.0,True,degree,CoW DAO,snapshot,0.6,,,,
+cvx.eth,68.0,75.0,76.0,76.0,True,degree,Convex Finance,snapshot,0.0,,,,
+dao.spaceid.eth,38.0,40.0,41.0,41.0,True,degree,SPACE ID DAO,snapshot,0.0,,,,
+daocity.eth,58.0,60.0,60.0,60.0,True,degree,CityDAO,snapshot,0.0,,,,
+dappradar.eth,91.0,90.0,90.0,90.0,True,degree,DappRadar,snapshot,0.0,,,,
+decrypt-media.eth,80.0,83.0,84.0,84.0,True,degree,Decrypt Media,snapshot,0.0,,,,
+devdao.eth,70.0,67.0,68.0,68.0,True,degree,Developer DAO,snapshot,0.0,,,,
+dinero.xyz,93.0,96.0,96.0,96.0,True,degree,Dinero,snapshot,0.0,,,,
+dunjia.eth,78.0,82.0,83.0,83.0,True,degree,ConstitutionDAO,snapshot,0.0,,,,
+dydxgov.eth,41.0,41.0,42.0,42.0,True,degree,dYdX,snapshot,0.0,,,,
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,3.0,3.0,3.0,3.0,True,degree,test,tally,2.0,,,,
+eip155:1:0x239b1f17e6efa75662cb87781025538babf1cf6b,92.0,94.0,94.0,94.0,True,degree,wormhole governor,tally,0.0,,,,
+eip155:1:0x323a76393544d5ecca80cd6ef2a560c6a395b7e3,51.0,50.0,50.0,50.0,True,degree,uni,tally,0.0,,,,
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,8.0,8.0,8.0,8.0,True,degree,uniswap,tally,0.0,,,,
+eip155:1:0xc0da02939e1441f497fd74f78ce7decb17b66529,57.0,55.0,55.0,55.0,True,degree,compound,tally,0.0,,,,
+eip155:1:0xdbd27635a534a3d3169ef0498beb56fb9c937489,54.0,53.0,53.0,53.0,True,degree,gitcoin (deprecated),tally,0.0,,,,
+eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,17.0,18.0,18.0,18.0,True,degree,aave,tally,0.0,,,,
+eip155:1:0xfb6b7c11a55c57767643f1ff65c34c8693a11a70,85.0,79.0,80.0,80.0,True,degree,diva staking,tally,0.0,,,,
+eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,24.0,24.0,25.0,25.0,True,degree,zktokengovernor,tally,0.0,,,,
+eip155:324:0x496869a7575a1f907d1c5b1eca28e4e9e382afab,49.0,49.0,49.0,49.0,True,degree,zkgovopsgovernor,tally,0.0,,,,
+eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,16.0,16.0,16.0,16.0,True,degree,zkprotocolgovernor,tally,0.0,,,,
+eip155:324:0xb83ff6501214ddf40c91c9565d095400f3f45746,65.0,62.0,62.0,62.0,True,degree,zktokengovernor,tally,0.0,,,,
+eip155:324:0xeeea739a8b6fb1b8f703e23c9be03ceea643b160,97.0,92.0,92.0,92.0,True,degree,zkgovopsgovernor,tally,0.0,,,,
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,1.0,1.0,1.0,1.0,True,degree,arbitrum treasury,tally,0.0,,,,
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,2.0,2.0,2.0,2.0,True,degree,arbitrum core,tally,0.0,,,,
+ens.eth,12.0,12.0,13.0,13.0,True,degree,ENS,snapshot,0.0,,,,
+etherscoredao.eth,48.0,47.0,47.0,47.0,True,degree,EtherScore,snapshot,0.0,,,,
+ethos-labs.eth,66.0,69.0,70.0,70.0,True,degree,Ethos,snapshot,0.0,,,,
+fei.eth,56.0,57.0,57.0,57.0,True,degree,Fei,snapshot,0.0,,,,
+friendsofpooly.eth,88.0,87.0,88.0,88.0,True,degree,PoolyDAO,snapshot,0.0,,,,
+g-dao.eth,18.0,19.0,19.0,19.0,True,degree,G DAO,snapshot,0.0,,,,
+gearbox.eth,35.0,37.0,32.0,32.0,True,degree,Gearbox,snapshot,0.8,,,,
+gitcoindao.eth,9.0,9.0,9.0,9.0,True,degree,Gitcoin,snapshot,0.0,,,,
+gitcoingov.eth,55.0,58.0,58.0,58.0,True,degree,GitcoinQV,snapshot,0.0,,,,
+gmx.eth,23.0,23.0,22.0,22.0,True,degree,GMX,snapshot,6.3,,,,
+gnosis.eth,31.0,30.0,30.0,30.0,True,degree,GnosisDAO,snapshot,0.0,,,,
+hashflowdao.eth,44.0,43.0,43.0,43.0,True,degree,Hashflow,snapshot,0.0,,,,
+hop.eth,86.0,84.0,85.0,85.0,True,degree,Hop,snapshot,0.0,,,,
+ilv.eth,95.0,104.0,104.0,104.0,False,degree,Illuvinati Council,snapshot,0.0,,,,
+joegovernance.eth,28.0,31.0,31.0,31.0,True,degree,Lets F***ing Joe (prev. TJ),snapshot,0.0,,,,
+klimadao.eth,27.0,29.0,29.0,29.0,True,degree,Klima DAO,snapshot,0.0,,,,
+kuiclub.eth,90.0,95.0,95.0,95.0,True,degree,Kui Club,snapshot,0.0,,,,
+kuiqian.eth,63.0,64.0,65.0,65.0,True,degree,KuiQian亏钱俱乐部,snapshot,0.0,,,,
+layer2dao.org,87.0,88.0,89.0,89.0,True,degree,Layer2DAO,snapshot,0.0,,,,
+lido-snapshot.eth,19.0,17.0,17.0,17.0,True,degree,Lido,snapshot,0.0,,,,
+magicappstore.eth,76.0,86.0,87.0,87.0,True,degree,Magic Square,snapshot,0.0,,,,
+mail3.eth,47.0,48.0,48.0,48.0,True,degree,Mail3,snapshot,0.0,,,,
+mavxyz.eth,34.0,34.0,35.0,35.0,True,degree,Maverick Protocol,snapshot,0.0,,,,
+metislayer2.eth,14.0,15.0,15.0,15.0,True,degree,Metis,snapshot,0.0,,,,
+moonbeam-foundation.eth,61.0,68.0,69.0,69.0,True,degree,Moonbeam Foundation,snapshot,0.0,,,,
+nftearthl2.eth,89.0,89.0,74.0,74.0,True,degree,NFTEarth,snapshot,17.4,,,,
+olympusdao.eth,36.0,38.0,39.0,39.0,True,degree,OlympusDAO,snapshot,0.0,,,,
+opcollective.eth,37.0,35.0,36.0,36.0,True,degree,Optimism Collective,snapshot,0.0,,,,
+paraswap-dao.eth,43.0,44.0,44.0,44.0,True,degree,Velora DAO,snapshot,0.0,,,,
+people-dao.eth,79.0,77.0,78.0,78.0,True,degree,PeopleDAO,snapshot,0.0,,,,
+pooltogether.eth,60.0,54.0,54.0,54.0,True,degree,PoolTogether,snapshot,0.0,,,,
+pyme.eth,72.0,71.0,72.0,72.0,True,degree,PymeDAO,snapshot,0.0,,,,
+qidao.eth,46.0,45.0,45.0,45.0,True,degree,Qi Dao | Mai.Finance,snapshot,0.0,,,,
+quickvote.eth,81.0,73.0,73.0,73.0,True,degree,QuickSwap,snapshot,0.0,,,,
+radiantcapital.eth,11.0,11.0,11.0,11.0,True,degree,Radiant Capital,snapshot,0.0,,,,
+rarible.eth,84.0,76.0,77.0,77.0,True,degree,Rarible Protocol DAO,snapshot,0.0,,,,
+rbn.eth,99.0,99.0,99.0,99.0,True,degree,Aevo,snapshot,0.0,,,,
+rss3.eth,98.0,105.0,105.0,105.0,False,degree,RSS3,snapshot,0.0,,,,
+safe.eth,42.0,42.0,37.0,37.0,True,degree,SafeDAO,snapshot,0.4,,,,
+safegov.eth,109.0,98.0,98.0,98.0,False,degree,SafeDAO 🌡️ Check,snapshot,0.0,,,,
+shapeshiftdao.eth,67.0,65.0,66.0,66.0,True,degree,ShapeShift,snapshot,0.0,,,,
+shelldrop.eth,62.0,63.0,64.0,64.0,True,degree,ShellDrop,snapshot,0.0,,,,
+shellprotocol.eth,13.0,13.0,12.0,12.0,True,degree,Shell Protocol,snapshot,4.4,,,,
+sismo.eth,26.0,26.0,23.0,23.0,True,degree,Sismo,snapshot,6.9,,,,
+snapshot.dcl.eth,29.0,27.0,27.0,28.0,True,degree,Decentraland,snapshot,0.0,,,,
+speraxdao.eth,52.0,51.0,51.0,51.0,True,degree,Sperax DAO,snapshot,0.0,,,,
+spookyswap.eth,45.0,46.0,46.0,46.0,True,degree,SpookySwap,snapshot,0.0,,,,
+stgdao.eth,7.0,7.0,7.0,7.0,True,degree,Stargate DAO,snapshot,0.0,,,,
+sushigov.eth,25.0,25.0,26.0,26.0,True,degree,Sushi,snapshot,0.0,,,,
+theopendao.eth,21.0,21.0,21.0,21.0,True,degree,OpenDAO,snapshot,0.0,,,,
+treasuregaming.eth,74.0,81.0,82.0,82.0,True,degree,Treasure,snapshot,0.0,,,,
+uniswapgovernance.eth,6.0,6.0,6.0,6.0,True,degree,Uniswap,snapshot,2.5,,,,
+vestafinance.eth,53.0,56.0,56.0,56.0,True,degree,Vesta,snapshot,0.0,,,,
+xdaistake.eth,112.0,91.0,91.0,91.0,False,degree,xDai Chain (Gnosis Chain),snapshot,0.1,,,,
+yam.eth,94.0,100.0,100.0,100.0,True,degree,Yam,snapshot,0.0,,,,
+ybaby.eth,100.0,93.0,93.0,93.0,True,degree,yearn (old),snapshot,0.0,,,,
+💿💿💿💿💿💿💿💿💿💿.eth,64.0,61.0,61.0,61.0,True,degree,fdgdfgfdgsgds,snapshot,0.0,,,,
+0x1b975a9daf25e7b01e0a6c72d657ff74925327a8,,,,,False,weighted_degree,dead foundationsdao,daohaus,0.0,69.0,69.0,99.0,247.0
+0x886.eth,,,,,False,weighted_degree,0x886,snapshot,100.0,9588.0,9777.0,159.0,99.0
+0xchen123.eth,,,,,False,weighted_degree,0xchen123,snapshot,99.8,2024.0,336.0,68.0,47.0
+0xchenhu.eth,,,,,False,weighted_degree,0xchenhu,snapshot,100.0,2954.0,359.0,70.0,49.0
+0xchenliang.eth,,,,,False,weighted_degree,0xchenliang,snapshot,99.9,2580.0,349.0,69.0,48.0
+0xfacadeb.eth,,,,,False,weighted_degree,0xfacadeb,snapshot,100.0,2925.0,358.0,105.0,74.0
+0xtripleh.eth,,,,,False,weighted_degree,H COMMUNITY,snapshot,99.9,2661.0,350.0,104.0,76.0
+0xueli.eth,,,,,False,weighted_degree,0xueli,snapshot,100.0,2956.0,360.0,71.0,50.0
+1btc.eth,,,,,False,weighted_degree,BTCST,snapshot,0.0,95.0,96.0,150.0,325.0
+8686th.eth,,,,,False,weighted_degree,8686DAO,snapshot,0.5,83.0,82.0,115.0,310.0
+8848vip.eth,,,,,False,weighted_degree,8848vip,snapshot,100.0,2957.0,361.0,78.0,58.0
+aavedao.eth,,,,,True,weighted_degree,Aave DAO,snapshot,0.1,3.0,3.0,3.0,3.0
+aavegotchi.eth,,,,,True,weighted_degree,Aavegotchi,snapshot,0.0,31.0,23.0,23.0,23.0
+alsa6.eth,,,,,False,weighted_degree,squawk&chirp,snapshot,100.0,2958.0,362.0,92.0,72.0
+angelmother.eth,,,,,True,weighted_degree,angelmother,snapshot,0.0,38.0,38.0,38.0,39.0
+anper.eth,,,,,False,weighted_degree,Super Space,snapshot,100.0,3539.0,376.0,107.0,75.0
+apecoin.eth,,,,,True,weighted_degree,ApeCoin DAO,snapshot,0.0,43.0,43.0,43.0,56.0
+arbitrumfoundation.eth,,,,,True,weighted_degree,Arbitrum DAO,snapshot,0.0,8.0,8.0,8.0,8.0
+badgerdao.eth,,,,,True,weighted_degree,BadgerDAO,snapshot,0.0,42.0,40.0,40.0,41.0
+balancer.eth,,,,,True,weighted_degree,Balancer,snapshot,0.0,23.0,21.0,22.0,22.0
+balsam.eth,,,,,True,weighted_degree,balsam,snapshot,0.0,21.0,24.0,24.0,24.0
+banklessvault.eth,,,,,False,weighted_degree,Bankless DAO,snapshot,0.0,78.0,77.0,110.0,305.0
+basenamedao.eth,,,,,False,weighted_degree,Base Name Service,snapshot,0.0,90.0,89.0,123.0,318.0
+big3dao.eth,,,,,False,weighted_degree,big3,snapshot,99.9,2976.0,370.0,90.0,70.0
+binancepal.eth,,,,,False,weighted_degree,xiedao,snapshot,99.5,1499.0,316.0,83.0,63.0
+bitdao.eth,,,,,True,weighted_degree,Mantle (prev. BitDAO),snapshot,0.0,37.0,37.0,37.0,37.0
+bitembassy.eth,,,,,False,weighted_degree,BIT Embassy,snapshot,0.0,82.0,85.0,118.0,313.0
+braveorder.eth,,,,,False,weighted_degree,BraveDAO,snapshot,100.0,3311.0,374.0,81.0,61.0
+btcfreedom.eth,,,,,False,weighted_degree,btcfreedom,snapshot,99.3,1688.0,1801.0,156.0,97.0
+caiman.eth,,,,,True,weighted_degree,caiman,snapshot,0.0,32.0,32.0,32.0,32.0
+cakevote.eth,,,,,True,weighted_degree,PancakeSwap,snapshot,0.2,6.0,6.0,6.0,6.0
+comp-vote.eth,,,,,False,weighted_degree,Compound,snapshot,0.0,96.0,94.0,132.0,323.0
+cow.eth,,,,,True,weighted_degree,CoW DAO,snapshot,0.6,49.0,49.0,49.0,82.0
+cream-finance.eth,,,,,False,weighted_degree,Cream Finance,snapshot,0.0,73.0,73.0,103.0,293.0
+danhuacap.eth,,,,,True,weighted_degree,danhuacap,snapshot,0.0,24.0,26.0,26.0,26.0
+dao.spaceid.eth,,,,,True,weighted_degree,SPACE ID DAO,snapshot,0.0,45.0,45.0,45.0,77.0
+darryring.eth,,,,,False,weighted_degree,LaserLab,snapshot,100.0,11304.0,863.0,140.0,90.0
+dawn,,,,,False,weighted_degree,Dawn,snapshot,0.0,98.0,99.0,231.0,330.0
+decrypt-media.eth,,,,,False,weighted_degree,Decrypt Media,snapshot,0.0,77.0,79.0,112.0,307.0
+dydxgov.eth,,,,,False,weighted_degree,dYdX,snapshot,0.0,60.0,60.0,60.0,204.0
+dysnix.eth,,,,,False,weighted_degree,dysnix,snapshot,100.0,19150.0,19304.0,160.0,100.0
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,,,,,True,weighted_degree,test,tally,2.0,4.0,4.0,4.0,4.0
+eip155:1:0x239b1f17e6efa75662cb87781025538babf1cf6b,,,,,False,weighted_degree,wormhole governor,tally,0.0,94.0,93.0,130.0,322.0
+eip155:1:0x323a76393544d5ecca80cd6ef2a560c6a395b7e3,,,,,False,weighted_degree,uni,tally,0.0,68.0,66.0,95.0,218.0
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,,,,,True,weighted_degree,uniswap,tally,0.0,7.0,7.0,7.0,7.0
+eip155:1:0xc0da02939e1441f497fd74f78ce7decb17b66529,,,,,False,weighted_degree,compound,tally,0.0,59.0,59.0,59.0,203.0
+eip155:1:0xdbd27635a534a3d3169ef0498beb56fb9c937489,,,,,False,weighted_degree,gitcoin (deprecated),tally,0.0,79.0,75.0,108.0,303.0
+eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,,,,,True,weighted_degree,aave,tally,0.0,15.0,15.0,16.0,16.0
+eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,,,,,True,weighted_degree,zktokengovernor,tally,0.0,18.0,19.0,20.0,20.0
+eip155:324:0x496869a7575a1f907d1c5b1eca28e4e9e382afab,,,,,True,weighted_degree,zkgovopsgovernor,tally,0.0,48.0,47.0,47.0,80.0
+eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,,,,,True,weighted_degree,zkprotocolgovernor,tally,0.0,11.0,11.0,12.0,12.0
+eip155:324:0xb83ff6501214ddf40c91c9565d095400f3f45746,,,,,False,weighted_degree,zktokengovernor,tally,0.0,55.0,55.0,55.0,174.0
+eip155:324:0xeeea739a8b6fb1b8f703e23c9be03ceea643b160,,,,,False,weighted_degree,zkgovopsgovernor,tally,0.0,65.0,65.0,94.0,216.0
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,,,,,True,weighted_degree,arbitrum treasury,tally,0.0,1.0,1.0,1.0,1.0
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,,,,,True,weighted_degree,arbitrum core,tally,0.0,2.0,2.0,2.0,2.0
+electricite.eth,,,,,True,weighted_degree,electricite,snapshot,0.0,35.0,35.0,35.0,35.0
+elon6.eth,,,,,False,weighted_degree,BigDAO,snapshot,100.0,2904.0,357.0,79.0,59.0
+ens.eth,,,,,True,weighted_degree,ENS,snapshot,0.0,20.0,20.0,21.0,21.0
+eosswap.eth,,,,,False,weighted_degree,li.finance社区,snapshot,99.9,2294.0,346.0,76.0,55.0
+etherscoredao.eth,,,,,False,weighted_degree,EtherScore,snapshot,0.0,57.0,57.0,57.0,198.0
+ethfree.eth,,,,,False,weighted_degree,ETHFREE,snapshot,99.0,1392.0,1495.0,152.0,95.0
+ethfreedom.eth,,,,,False,weighted_degree,ETHFREEDOM,snapshot,98.9,1257.0,1369.0,149.0,94.0
+fabien.eth,,,,,False,weighted_degree,Fabien,snapshot,92.0,253.0,182.0,119.0,83.0
+fei.eth,,,,,False,weighted_degree,Fei,snapshot,0.0,70.0,71.0,101.0,256.0
+fishleong.eth,,,,,False,weighted_degree,Metaball,snapshot,100.0,8751.0,8953.0,158.0,98.0
+g-dao.eth,,,,,True,weighted_degree,G DAO,snapshot,0.0,14.0,14.0,15.0,15.0
+gaggle.eth,,,,,True,weighted_degree,gaggle,snapshot,0.0,29.0,31.0,31.0,31.0
+gearbox.eth,,,,,False,weighted_degree,Gearbox,snapshot,0.8,61.0,61.0,62.0,208.0
+gitcoindao.eth,,,,,True,weighted_degree,Gitcoin,snapshot,0.0,10.0,10.0,10.0,10.0
+gitcoingov.eth,,,,,False,weighted_degree,GitcoinQV,snapshot,0.0,88.0,86.0,120.0,315.0
+gmx.eth,,,,,True,weighted_degree,GMX,snapshot,6.3,17.0,17.0,14.0,14.0
+gnosis.eth,,,,,True,weighted_degree,GnosisDAO,snapshot,0.0,53.0,51.0,51.0,85.0
+godsgirl.eth,,,,,True,weighted_degree,godsgirl,snapshot,0.0,26.0,28.0,28.0,28.0
+goodchina.eth,,,,,True,weighted_degree,goodchina,snapshot,0.0,27.0,29.0,29.0,29.0
+hashflowdao.eth,,,,,True,weighted_degree,Hashflow,snapshot,0.0,51.0,50.0,50.0,84.0
+hinny.eth,,,,,True,weighted_degree,hinny,snapshot,0.0,34.0,34.0,34.0,34.0
+hotstock.eth,,,,,True,weighted_degree,hotstock,snapshot,0.0,33.0,33.0,33.0,33.0
+huxueli.eth,,,,,False,weighted_degree,huxueli,snapshot,100.0,2964.0,363.0,72.0,51.0
+index-coop.eth,,,,,False,weighted_degree,Index Coop,snapshot,0.0,75.0,76.0,109.0,304.0
+intelia.eth,,,,,False,weighted_degree,intelia,snapshot,100.0,8782.0,3787.0,155.0,96.0
+investstates.eth,,,,,False,weighted_degree,Invest States,snapshot,100.0,8783.0,425.0,131.0,88.0
+jeremywei.eth,,,,,False,weighted_degree,outofgas,snapshot,98.9,850.0,285.0,66.0,46.0
+joegovernance.eth,,,,,True,weighted_degree,Lets F***ing Joe (prev. TJ),snapshot,0.0,41.0,41.0,41.0,42.0
+kirillevans.eth,,,,,False,weighted_degree,kirillevans,snapshot,100.0,2965.0,364.0,73.0,52.0
+klimadao.eth,,,,,True,weighted_degree,Klima DAO,snapshot,0.0,50.0,52.0,52.0,86.0
+kuiclub.eth,,,,,False,weighted_degree,Kui Club,snapshot,0.0,89.0,90.0,124.0,319.0
+kuiqian.eth,,,,,False,weighted_degree,KuiQian亏钱俱乐部,snapshot,0.0,74.0,74.0,106.0,297.0
+l2pay.eth,,,,,False,weighted_degree,miraidao,snapshot,100.0,2886.0,355.0,80.0,60.0
+layer2dao.org,,,,,False,weighted_degree,Layer2DAO,snapshot,0.0,97.0,97.0,151.0,326.0
+lido-snapshot.eth,,,,,True,weighted_degree,Lido,snapshot,0.0,19.0,18.0,19.0,19.0
+lootdex.eth,,,,,True,weighted_degree,lootdex,snapshot,0.0,39.0,39.0,39.0,40.0
+magicappstore.eth,,,,,False,weighted_degree,Magic Square,snapshot,0.0,99.0,100.0,232.0,331.0
+mail3.eth,,,,,True,weighted_degree,Mail3,snapshot,0.0,54.0,54.0,54.0,93.0
+mavxyz.eth,,,,,True,weighted_degree,Maverick Protocol,snapshot,0.0,52.0,53.0,53.0,87.0
+metislayer2.eth,,,,,True,weighted_degree,Metis,snapshot,0.0,44.0,44.0,44.0,73.0
+metrox.eth,,,,,False,weighted_degree,Metrox,snapshot,93.1,236.0,173.0,61.0,38.0
+mists.eth,,,,,True,weighted_degree,mists,snapshot,0.0,25.0,27.0,27.0,27.0
+moneymafia.eth,,,,,False,weighted_degree,Money Mafia,snapshot,100.0,2967.0,365.0,96.0,79.0
+moonbeam-foundation.eth,,,,,False,weighted_degree,Moonbeam Foundation,snapshot,0.0,66.0,70.0,100.0,248.0
+mstablegovernance.eth,,,,,False,weighted_degree,mStable,snapshot,0.0,91.0,91.0,125.0,320.0
+mxlcolm.eth,,,,,False,weighted_degree,mxlcolm,snapshot,99.8,2094.0,340.0,75.0,54.0
+olympusdao.eth,,,,,False,weighted_degree,OlympusDAO,snapshot,0.0,84.0,83.0,116.0,311.0
+onchainlabs.eth,,,,,False,weighted_degree,Onchain Labs,snapshot,100.0,2968.0,366.0,85.0,65.0
+opcollective.eth,,,,,True,weighted_degree,Optimism Collective,snapshot,0.0,46.0,46.0,46.0,78.0
+opensea-dot-io-slash-arenahackers.eth,,,,,False,weighted_degree,Arena Hackers,snapshot,99.9,2257.0,342.0,86.0,66.0
+pankdao.eth,,,,,False,weighted_degree,PankDAO,snapshot,100.0,2969.0,367.0,88.0,68.0
+paraswap-dao.eth,,,,,False,weighted_degree,Velora DAO,snapshot,0.0,86.0,80.0,113.0,308.0
+pickle.eth,,,,,False,weighted_degree,PICKLE,snapshot,0.0,87.0,88.0,122.0,317.0
+pyme.eth,,,,,False,weighted_degree,PymeDAO,snapshot,0.0,100.0,98.0,230.0,329.0
+qidao.eth,,,,,False,weighted_degree,Qi Dao | Mai.Finance,snapshot,0.0,71.0,67.0,97.0,237.0
+radiantcapital.eth,,,,,True,weighted_degree,Radiant Capital,snapshot,0.0,13.0,13.0,13.0,13.0
+rallygov.eth,,,,,False,weighted_degree,Rally,snapshot,0.0,93.0,95.0,133.0,324.0
+rblood.eth,,,,,False,weighted_degree,Royalblood,snapshot,99.9,5192.0,382.0,129.0,92.0
+safe.eth,,,,,False,weighted_degree,SafeDAO,snapshot,0.4,63.0,63.0,67.0,210.0
+safebyte.eth,,,,,False,weighted_degree,zkBlock,snapshot,99.4,1963.0,381.0,135.0,89.0
+shelldrop.eth,,,,,False,weighted_degree,ShellDrop,snapshot,0.0,81.0,81.0,114.0,309.0
+shellprotocol.eth,,,,,True,weighted_degree,Shell Protocol,snapshot,4.4,12.0,12.0,11.0,11.0
+sismo.eth,,,,,True,weighted_degree,Sismo,snapshot,6.9,30.0,22.0,18.0,18.0
+smiliesnft.eth,,,,,False,weighted_degree,Smilies,snapshot,99.9,4529.0,380.0,127.0,91.0
+snapshot.dcl.eth,,,,,False,weighted_degree,Decentraland,snapshot,0.0,58.0,58.0,58.0,202.0
+snapshot.floatprotocol.eth,,,,,False,weighted_degree,Float Protocol,snapshot,0.0,80.0,84.0,117.0,312.0
+spartancapital.io,,,,,False,weighted_degree,StrongSpartans,snapshot,99.6,1704.0,324.0,87.0,67.0
+speraxdao.eth,,,,,True,weighted_degree,Sperax DAO,snapshot,0.0,40.0,42.0,42.0,43.0
+spookyswap.eth,,,,,False,weighted_degree,SpookySwap,snapshot,0.0,92.0,92.0,126.0,321.0
+stgdao.eth,,,,,True,weighted_degree,Stargate DAO,snapshot,0.0,9.0,9.0,9.0,9.0
+sushigov.eth,,,,,True,weighted_degree,Sushi,snapshot,0.0,16.0,16.0,17.0,17.0
+swpr.eth,,,,,False,weighted_degree,Swapr,snapshot,0.0,76.0,78.0,111.0,306.0
+t3rn.eth,,,,,False,weighted_degree,t3rn,snapshot,100.0,2854.0,354.0,91.0,71.0
+tarpon.eth,,,,,True,weighted_degree,tarpon,snapshot,0.0,22.0,25.0,25.0,25.0
+test6.shot.eth,,,,,False,weighted_degree,Strio,snapshot,98.0,605.0,255.0,65.0,45.0
+theopendao.eth,,,,,False,weighted_degree,OpenDAO,snapshot,0.0,62.0,62.0,63.0,209.0
+treasuregaming.eth,,,,,False,weighted_degree,Treasure,snapshot,0.0,85.0,87.0,121.0,316.0
+tunny.eth,,,,,True,weighted_degree,tunny,snapshot,0.0,36.0,36.0,36.0,36.0
+uniswapgovernance.eth,,,,,True,weighted_degree,Uniswap,snapshot,2.5,5.0,5.0,5.0,5.0
+vestafinance.eth,,,,,True,weighted_degree,Vesta,snapshot,0.0,47.0,48.0,48.0,81.0
+virtualpangea.eth,,,,,False,weighted_degree,virtualpangea,snapshot,100.0,2972.0,368.0,77.0,57.0
+wangzian.eth,,,,,True,weighted_degree,wangzian,snapshot,0.0,28.0,30.0,30.0,30.0
+webcoin.eth,,,,,False,weighted_degree,connext社区dao,snapshot,99.6,1590.0,319.0,74.0,53.0
+wonderfulday.eth,,,,,False,weighted_degree,WonderfulDay,snapshot,100.0,2973.0,369.0,89.0,69.0
+xf0808.eth,,,,,False,weighted_degree,LL,snapshot,99.9,2290.0,344.0,82.0,62.0
+yam.eth,,,,,False,weighted_degree,Yam,snapshot,0.0,64.0,64.0,93.0,215.0
+yaoinori.eth,,,,,False,weighted_degree,InoriDAO,snapshot,100.0,2895.0,356.0,84.0,64.0
+ybaby.eth,,,,,False,weighted_degree,yearn (old),snapshot,0.0,56.0,56.0,56.0,176.0
+yearn,,,,,False,weighted_degree,yearn.finance (archive),snapshot,0.0,72.0,72.0,102.0,290.0
+zziaweiwei.eth,,,,,False,weighted_degree,兔子洞投票任务专用,snapshot,96.8,401.0,231.0,64.0,44.0
+💿💿💿💿💿💿💿💿💿💿.eth,,,,,False,weighted_degree,fdgdfgfdgsgds,snapshot,0.0,67.0,68.0,98.0,239.0
