@@ -1,11 +1,9 @@
-from pathlib import Path
 from itertools import combinations
 from collections import Counter
 
 import pandas as pd
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-PROCESSED_DATA_DIR = PROJECT_ROOT / "data" / "processed"
+from src.paths import PROCESSED_DATA_DIR
 
 def load_unique_voter_dao_pairs(chunksize=1_000_000):
     file_path = PROCESSED_DATA_DIR / "votes_clean.csv"

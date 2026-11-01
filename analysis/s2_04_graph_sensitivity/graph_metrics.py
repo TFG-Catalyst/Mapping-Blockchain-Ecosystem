@@ -18,8 +18,8 @@ What it does, for each configuration:
      component, degrees and edge weights.
 
 Usage (from the repository root):
-  python scripts/graph_metrics.py
-  python scripts/graph_metrics.py --configs max50 max100
+  python -m analysis.s2_04_graph_sensitivity.graph_metrics
+  python -m analysis.s2_04_graph_sensitivity.graph_metrics --configs max50 max100
 
 Options:
   --folder       folder with the edges_<config>.csv files (default results/S2-04)

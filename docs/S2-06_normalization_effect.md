@@ -1,6 +1,6 @@
 # S2-06: How normalization changes prominent relationships
 
-**Script:** `src/normalization_comparison.py` 
+**Script:** `analysis/s2_06_normalization_effect/normalization_comparison.py` 
 **Figures:** `docs/figures/S2-06_*.png` 
 **Input:** `edges_jaccard.csv` (S2-05, max_daos = 100)
 

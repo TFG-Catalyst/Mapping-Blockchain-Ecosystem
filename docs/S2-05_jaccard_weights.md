@@ -2,7 +2,7 @@
 
 **Sprint:** 2 
 **Owner:** Rodrigo 
-**Script:** `src/jaccard_weights.py` 
+**Script:** `src/pipeline/jaccard_weights.py` 
 **Output:** `data/processed/edges_jaccard.csv`
 
 ## 1. Why normalize

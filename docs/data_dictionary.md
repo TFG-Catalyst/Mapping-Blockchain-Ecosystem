@@ -204,7 +204,7 @@ deployment by deployment.
 Analysis in `notebooks/04_missing_entities.ipynb`.
 
 Six deployment identifiers appear in `votes.csv` (and therefore in `edges.csv`) but have
-no row in `deployments.csv`. Before S2-02, `src/graph_builder.py` silently dropped every
+no row in `deployments.csv`. Before S2-02, `src/pipeline/graph_builder.py` silently dropped every
 edge touching them: 1,348 of 602,295 edges (0.22%).
 
 | deployment_id | Platform | Proposals | Votes | Voters | Activity | Edges |
@@ -226,11 +226,11 @@ deployment. The most likely explanation is that the catalogue and the votes were
 collected at different times; this could not be verified.
 
 **Policy.** The six are included as nodes, keeping the deployment as the unit of
-analysis. `src/node_generator.py` adds every deployment that has votes but no catalogue
+analysis. `src/pipeline/node_generator.py` adds every deployment that has votes but no catalogue
 row, with `in_catalogue = False`, its platform taken from the votes, and the catalogue
 fields (`name`, `proposals_count`, `unique_voters`, `votes_count`) left empty. They are
 not set to 0, which would mean no activity, and not computed from `votes.csv`, which
-would mix populations (see "Coverage of votes.csv"). `src/graph_builder.py` now prints
+would mix populations (see "Coverage of votes.csv"). `src/pipeline/graph_builder.py` now prints
 a warning listing any edge endpoint that is not a node, so future exclusions are visible.
 
 **Impact.** Nodes 86,489 to 86,495; edges 600,947 to 602,295. All six join the largest

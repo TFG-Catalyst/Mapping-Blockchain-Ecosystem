@@ -39,7 +39,7 @@ def graph_sanity_checks(graph):
     print(f"Self-loops: {self_loops}")
     print(f"Largest connected component: {len(largest_component)} nodes")
 if __name__ == "__main__":
-    from graph_builder import build_graph
+    from src.pipeline.graph_builder import build_graph
 
     graph = build_graph()
     graph_sanity_checks(graph)

@@ -20,7 +20,7 @@ Uses the same rule as the team's graph_builder.py: an edge only counts if
 its two endpoints are nodes of deployments.csv (lowercase ids).
 
 Usage (from the repository root):
-  python scripts/analyze_hubs_components.py
+  python -m analysis.s2_04_graph_sensitivity.analyze_hubs_components
 
 Options: --folder, --deployments, --configs, --reference, --top.
 Writes to the edges folder:

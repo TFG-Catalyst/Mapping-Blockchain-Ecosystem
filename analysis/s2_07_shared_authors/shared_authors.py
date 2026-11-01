@@ -13,18 +13,16 @@ Two things matter for correctness:
    A missing author is NOT evidence of "no relationship".
 
 Output (data/processed/): edges_authors.csv, authors_coverage_by_platform.csv
-Run from the project root:  python src/shared_authors.py
+Run from the project root:  python -m analysis.s2_07_shared_authors.shared_authors
 """
 
 import random
 from collections import Counter
 from itertools import combinations
-from pathlib import Path
 
 import pandas as pd
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-PROCESSED_DATA_DIR = PROJECT_ROOT / "data" / "processed"
+from src.paths import PROCESSED_DATA_DIR
 
 
 def load_author_proposals():

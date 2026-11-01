@@ -3,7 +3,7 @@ S2-06: How does normalization (Jaccard) change which relationships stand out?
 
 Input : data/processed/edges_jaccard.csv (S2-05) and deployments_clean.csv (names)
 Output: docs/figures/S2-06_*.png and data/processed/s2_06_*.csv
-Run from the project root:  python src/normalization_comparison.py
+Run from the project root:  python -m analysis.s2_06_normalization_effect.normalization_comparison
 
 Reading guide
 - shared_voters (count) grows with community SIZE.
@@ -11,14 +11,11 @@ Reading guide
 We compare the two on the same reference graph (max_daos = 100).
 """
 
-from pathlib import Path
 
 import matplotlib.pyplot as plt
 import pandas as pd
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-DATA_DIR = PROJECT_ROOT / "data" / "processed"
-FIGURES_DIR = PROJECT_ROOT / "docs" / "figures"
+from src.paths import FIGURES_DIR, PROCESSED_DATA_DIR as DATA_DIR
 
 # Edges with fewer shared voters are ignored: with 1-9 voters Jaccard is unstable
 MIN_SHARED_VOTERS = 10

@@ -4,7 +4,7 @@ import argparse
 import pandas as pd
 from matplotlib.lines import Line2D
 
-from graph_builder import build_graph
+from src.pipeline.graph_builder import build_graph
 
 PLATFORM_COLORS = {
     "snapshot": "#1f77b4",

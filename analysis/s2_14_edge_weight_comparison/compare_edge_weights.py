@@ -1,13 +1,8 @@
-
-from pathlib import Path
-
 import matplotlib.pyplot as plt
 import networkx as nx
 import pandas as pd
 
-
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
+from src.paths import FIGURES_DIR, PROCESSED_DATA_DIR as PROCESSED_DIR
 
 MIN_SHARED_VOTERS = 10
 TOP_EDGES = 20
@@ -139,7 +134,7 @@ def plot_comparison(graph):
     )
     fig.tight_layout(rect=(0, 0, 1, 0.94))
 
-    output_dir = PROJECT_ROOT / "docs" / "figures"
+    output_dir = FIGURES_DIR
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / "S2-14_raw_vs_jaccard.png"
 

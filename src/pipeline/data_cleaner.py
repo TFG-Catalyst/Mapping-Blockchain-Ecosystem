@@ -1,10 +1,7 @@
 import pandas as pd
-from pathlib import Path
 
-try:
-    from .wallet_normalization import extract_address
-except ImportError:  # run as a script from src/
-    from wallet_normalization import extract_address
+from src.paths import PROCESSED_DATA_DIR
+from src.pipeline.wallet_normalization import extract_address
 
 
 def clean_deployments(df):
@@ -71,7 +68,7 @@ def clean_votes(df):
     return df
 
 def save_processed_data(deployments, proposals):
-    output_dir = Path(__file__).resolve().parents[1] / "data" / "processed"
+    output_dir = PROCESSED_DATA_DIR
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -86,7 +83,7 @@ def save_processed_data(deployments, proposals):
     )
 
 def process_votes(votes_generator):
-    output_dir = Path(__file__).resolve().parents[1] / "data" / "processed"
+    output_dir = PROCESSED_DATA_DIR
     output_file = output_dir / "votes_clean.csv"
 
     output_dir.mkdir(parents=True, exist_ok=True)

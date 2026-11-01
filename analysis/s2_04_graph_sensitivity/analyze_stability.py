@@ -28,7 +28,7 @@ What it does:
      weight of each configuration belongs to the group.
 
 Usage (from the repository root, where data/raw/votes.csv lives):
-  python scripts/analyze_stability.py
+  python -m analysis.s2_04_graph_sensitivity.analyze_stability
 
 Options: --folder (edges and node table of S2-04), --deployments, --group.
 Writes to --folder:
@@ -45,7 +45,7 @@ from pathlib import Path
 import pandas as pd
 
 # We reuse load_voters and the path VOTES_CSV from the first script.
-import explore_shared_voters as ev
+from analysis.common import explore_shared_voters as ev
 
 # Order from lowest to highest threshold: each one contains the previous one.
 CONFIGS = ["max50", "max100", "max200", "nolimit"]

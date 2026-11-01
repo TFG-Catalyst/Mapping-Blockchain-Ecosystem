@@ -1,8 +1,8 @@
 """
 Single definition of how the `voter` field of votes.csv is turned into a
-wallet address. data_cleaner.py, explore_shared_voters.py and
-shared_voters.py all use this function, so the voter identity is the same
-in every part of the pipeline.
+wallet address. data_cleaner.py and analysis/common/explore_shared_voters.py
+both use this function, so the voter identity is the same in every part of
+the project.
 
 It has no dependencies, so it can be imported from scripts that do not use
 pandas.

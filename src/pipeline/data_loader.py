@@ -1,9 +1,6 @@
-from pathlib import Path
 import pandas as pd
 
-
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-RAW_DATA_DIR = PROJECT_ROOT / "data" / "raw"
+from src.paths import RAW_DATA_DIR
 
 
 def _check_file_exists(file_path):

@@ -31,14 +31,14 @@ data/processed/edges_jaccard.csv with one row per edge:
 Both measures are kept (shared_voters and jaccard), as the backlog asks.
 
 Run from the project root:
-    python src/jaccard_weights.py
+    python -m src.pipeline.jaccard_weights
 """
 
 import random
 import pandas as pd
  
-from edge_generator import (
-    PROCESSED_DATA_DIR, # Directory for processed data
+from src.paths import PROCESSED_DATA_DIR
+from src.pipeline.edge_generator import (
     load_unique_voter_dao_pairs, # Function to load unique (voter, DAO) pairs from votes_clean.csv
     filter_valid_voters, # Function to filter voters based on MAX_DAOS
     generate_dao_edges, # Function to generate edges between DAOs based on shared voters

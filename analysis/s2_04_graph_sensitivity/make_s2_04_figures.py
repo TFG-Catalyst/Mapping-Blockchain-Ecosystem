@@ -15,7 +15,7 @@ accumulated, must match the total weight of each configuration
 (S2-04_metrics_by_config.csv). If it does not match, the script stops.
 
 Usage (from the repository root):
-  python scripts/make_s2_04_figures.py
+  python -m analysis.s2_04_graph_sensitivity.make_s2_04_figures
 
 It only reads CSVs; the only thing it writes are the 3 PNGs in results/S2-04/.
 Requires pandas and matplotlib.

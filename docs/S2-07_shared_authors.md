@@ -1,6 +1,6 @@
 # S2-07: Shared-author network
 
-**Script:** `src/shared_authors.py` (from the prototype in `notebooks/02_data_quality.ipynb`)
+**Script:** `analysis/s2_07_shared_authors/shared_authors.py` (from the prototype in `notebooks/02_data_quality.ipynb`)
 **Output:** `edges_authors.csv`, `authors_coverage_by_platform.csv`
 
 ## Definition

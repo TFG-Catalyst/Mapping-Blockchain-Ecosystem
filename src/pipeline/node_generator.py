@@ -1,8 +1,6 @@
-from pathlib import Path
 import pandas as pd
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-PROCESSED_DATA_DIR = PROJECT_ROOT / "data" / "processed"
+from src.paths import PROCESSED_DATA_DIR
 
 def find_uncatalogued_deployments(catalogue_ids, chunksize=1_000_000):
     # Deployments that have votes in votes_clean.csv but no row in the catalogue

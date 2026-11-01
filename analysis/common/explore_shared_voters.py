@@ -18,9 +18,9 @@ What this script does:
 6. Saves the resulting edge table to a CSV.
 
 How to use it (run from the repository root):
-- Run: python scripts/explore_shared_voters.py
+- Run: python -m analysis.common.explore_shared_voters
   Options: --max-daos N (0 = no limit) and --output path.csv
-  (e.g.: python scripts/explore_shared_voters.py --max-daos 50)
+  (e.g.: python -m analysis.common.explore_shared_voters --max-daos 50)
   --format team (S2-04): saves the edges in the format of the team
   repository (columns source, target, shared_voters; lowercase ids).
   With --format original the CSV is the Sprint 1 one.
@@ -54,7 +54,7 @@ from collections import Counter
 from itertools import combinations
 from pathlib import Path
 
-from wallet_normalization import extract_address
+from src.pipeline.wallet_normalization import extract_address
 
 # ----------------------------------------------------------------------
 # CONFIGURATION - ADJUST THESE PATHS
@@ -319,7 +319,7 @@ def graph_summary(weight_by_pair):
 def convert_to_team_format(weight_by_pair):
     """
     Converts the edges to the format of the team repository
-    (src/edge_generator.py): lowercase DAO ids and each pair sorted
+    (src/pipeline/edge_generator.py): lowercase DAO ids and each pair sorted
     alphabetically (so A-B and B-A are the same edge).
     Returns {(source, target): shared_voters}.
 

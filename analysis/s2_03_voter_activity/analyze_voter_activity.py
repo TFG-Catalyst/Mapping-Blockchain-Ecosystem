@@ -18,10 +18,10 @@ It is built in steps (each step is a function):
           (only with the --thresholds option: it uses only the cache, takes seconds)
 
 How to use it (from the repository root, where data/raw/votes.csv lives):
-    python scripts/analyze_voter_activity.py               # steps 1 and 2
-    python scripts/analyze_voter_activity.py --cases       # steps 1, 2 and 3
-    python scripts/analyze_voter_activity.py --pattern     # steps 1, 2 and 3d
-    python scripts/analyze_voter_activity.py --thresholds  # steps 1, 2 and 4
+    python -m analysis.s2_03_voter_activity.analyze_voter_activity               # steps 1 and 2
+    python -m analysis.s2_03_voter_activity.analyze_voter_activity --cases       # steps 1, 2 and 3
+    python -m analysis.s2_03_voter_activity.analyze_voter_activity --pattern     # steps 1, 2 and 3d
+    python -m analysis.s2_03_voter_activity.analyze_voter_activity --thresholds  # steps 1, 2 and 4
 
 Reuses the votes.csv reading (with its cache) from explore_shared_voters.py,
 so the CSV is not read again if the cache already exists.
@@ -41,7 +41,7 @@ from pathlib import Path
 # We import our previous script as if it were a library to reuse its
 # functions (load_voters, extract_address, is_excluded) and its paths
 # (VOTES_CSV). It works because both scripts are in the same folder.
-import explore_shared_voters as ev
+from analysis.common import explore_shared_voters as ev
 
 # ----------------------------------------------------------------------
 # CONFIGURATION

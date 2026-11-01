@@ -27,7 +27,7 @@ Flags (thresholds in the constants):
   F_size     among the TOP_SIZE nodes with the most unique voters
   F_org      a main neighbor belongs to its same organization
 
-Usage (from the repository root): python scripts/classify_hubs.py [--top N]
+Usage (from the repository root): python -m analysis.s2_09_ecosystem_hubs.classify_hubs [--top N]
 Writes results/S2-09/S2-09_hub_indicators.csv. It only reads.
 """
 

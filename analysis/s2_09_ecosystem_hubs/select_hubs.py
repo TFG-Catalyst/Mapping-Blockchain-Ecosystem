@@ -13,7 +13,7 @@ results of S2-05/06 are available (column normalized_measure_S2_05_06,
 empty for now).
 
 Usage (from the repository root):
-  python scripts/select_hubs.py
+  python -m analysis.s2_09_ecosystem_hubs.select_hubs
 
 It only reads files; the only thing it writes is the output CSV.
 """

@@ -13,7 +13,7 @@ It does NOT compute Jaccard or any normalized measure (that is S2-05/06,
 Rodrigo's): the column is left for when there are results.
 
 Usage (from the repository root):
-  python scripts/prepare_hub_candidates.py
+  python -m analysis.s2_09_ecosystem_hubs.prepare_hub_candidates
 Options: --top N (candidates per criterion, default 25), --reference
 (default max100). It only reads; it writes to results/S2-09/:
   S2-09_hub_candidates.csv, S2-09_main_neighbors.csv
