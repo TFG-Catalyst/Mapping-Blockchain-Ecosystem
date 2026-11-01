@@ -18,8 +18,8 @@ jaccard(A, B) = shared_voters / (voters_A + voters_B - shared_voters)
 Population 
 ----------
 - The voter sets must come from the same votes used to build the edges (votes_clean.csv).
-- Wallets that vote in more than MAX_DAOS DAOs are removed, exactly as in
-edge_generator.py. 
+- Wallets that vote in more than max_daos DAOs are removed, exactly as in
+edge_generator.py (same value, passed as a parameter). 
 - Wallets that vote in only one DAO cannot create edges, but they ARE part of that 
 DAO's community, so they are counted in the DAO size (See COUNT_SINGLE_DAO_VOTERS below)
 
@@ -30,8 +30,8 @@ data/processed/edges_jaccard.csv with one row per edge:
     union_voters, jaccard]
 Both measures are kept (shared_voters and jaccard), as the backlog asks.
 
-Run from the project root:
-    python -m src.pipeline.jaccard_weights
+Run from the project root (normally through run_pipeline.py):
+    python -m src.pipeline.jaccard_weights [--max-daos N]
 """
 
 import random
@@ -40,27 +40,26 @@ import pandas as pd
 from src.paths import PROCESSED_DATA_DIR
 from src.pipeline.edge_generator import (
     load_unique_voter_dao_pairs, # Function to load unique (voter, DAO) pairs from votes_clean.csv
-    filter_valid_voters, # Function to filter voters based on MAX_DAOS
+    DEFAULT_MAX_DAOS, # Single definition of the max_daos default
+    filter_valid_voters, # Function to filter voters based on max_daos
     generate_dao_edges, # Function to generate edges between DAOs based on shared voters
 )
 
-MAX_DAOS = 100 # Must be the same value used in edge_generator.py 
-
-# True  -> DAO size counts every voter with <= MAX_DAOS DAOs (also those who only vote in that DAO). 
-# False -> DAO size only counts voters with 2..MAX_DAOS DAOs (exactly the wallets that edge_generator.py keeps).
+# True  -> DAO size counts every voter with <= max_daos DAOs (also those who only vote in that DAO).
+# False -> DAO size only counts voters with 2..max_daos DAOs (exactly the wallets that edge_generator.py keeps).
 COUNT_SINGLE_DAO_VOTERS = True
 
 # How many random edges to check by hand in the validation step.
 RANDOM_PAIRS_TO_CHECK = 5
 
 
-def select_population(voter_dao_pairs):
+def select_population(voter_dao_pairs, max_daos=DEFAULT_MAX_DAOS):
     """Return the (voter, DAO) pairs used to measure the size of each DAO."""
     daos_per_voter = voter_dao_pairs.groupby("voter")["deployment_id"].nunique()
 
     min_daos = 1 if COUNT_SINGLE_DAO_VOTERS else 2
     kept_voters = daos_per_voter[
-        (daos_per_voter >= min_daos) & (daos_per_voter <= MAX_DAOS)
+        (daos_per_voter >= min_daos) & (daos_per_voter <= max_daos)
     ].index
 
     return voter_dao_pairs[voter_dao_pairs["voter"].isin(kept_voters)]
@@ -87,7 +86,7 @@ def add_jaccard(edges, voters_per_dao):
     return edges
 
 
-def validate_results(edges, population_pairs):
+def validate_results(edges, population_pairs, max_daos=DEFAULT_MAX_DAOS):
     """
     Check the results in three parts. The script stops if part A or B fails.
 
@@ -170,29 +169,58 @@ def validate_results(edges, population_pairs):
     print(f"     edges.csv: {len(existing)} edges | recomputed: {len(edges)} edges")
     if not same:
         print("     WARNING: edges.csv does not match. Was it generated with "
-              f"max_daos = {MAX_DAOS}? Regenerate it with edge_generator.py.")
+              f"max_daos = {max_daos}? Regenerate it with edge_generator.py.")
+
+
+def compute_jaccard_edges(voter_dao_pairs, edges, max_daos=DEFAULT_MAX_DAOS):
+    """
+    Add the DAO sizes, the union and the Jaccard similarity to the edges and
+    validate the result.
+
+    voter_dao_pairs: unique (voter, deployment_id) pairs from votes_clean.csv
+    edges:           output of generate_dao_edges() built with the same max_daos
+    """
+    print("  Measuring the size of each DAO")
+    population_pairs = select_population(voter_dao_pairs, max_daos)
+    voters_per_dao = count_voters_per_dao(population_pairs)
+
+    print("  Computing Jaccard similarity")
+    edges = add_jaccard(edges, voters_per_dao)
+
+    print("  Validating the results")
+    validate_results(edges, population_pairs, max_daos)
+
+    return edges
+
+
+def save_jaccard_edges(edges):
+    output_file = PROCESSED_DATA_DIR / "edges_jaccard.csv"
+    edges.to_csv(output_file, index=False)
+    return output_file
 
 
 if __name__ == "__main__":
-    print("1. Loading unique (voter, DAO) pairs from votes_clean.csv")
-    voter_dao_pairs = load_unique_voter_dao_pairs() # Returns a DataFrame with columns ["voter", "deployment_id"]
+    import argparse
 
-    print(f"2. Building the edges with max_daos = {MAX_DAOS} (same as edge_generator.py)")
-    edge_pairs = filter_valid_voters(voter_dao_pairs, max_daos=MAX_DAOS)
+    parser = argparse.ArgumentParser(
+        description="Generate data/processed/edges_jaccard.csv from votes_clean.csv"
+    )
+    parser.add_argument(
+        "--max-daos", type=int, default=DEFAULT_MAX_DAOS,
+        help=f"Maximum DAOs per voter (default: {DEFAULT_MAX_DAOS})"
+    )
+    args = parser.parse_args()
+
+    print("1. Loading unique (voter, DAO) pairs from votes_clean.csv")
+    voter_dao_pairs = load_unique_voter_dao_pairs()
+
+    print(f"2. Building the edges with max_daos = {args.max_daos}")
+    edge_pairs = filter_valid_voters(voter_dao_pairs, max_daos=args.max_daos)
     edges = generate_dao_edges(edge_pairs)
 
-    print("3. Measuring the size of each DAO")
-    population_pairs = select_population(voter_dao_pairs) 
-    voters_per_dao = count_voters_per_dao(population_pairs)
+    print("3. Adding Jaccard weights")
+    edges = compute_jaccard_edges(voter_dao_pairs, edges, args.max_daos)
 
-    print("4. Computing Jaccard similarity")
-    edges = add_jaccard(edges, voters_per_dao)
-
-    print("5. Validating the results")
-    validate_results(edges, population_pairs)
-
-    output_file = PROCESSED_DATA_DIR / "edges_jaccard.csv"
-    edges.to_csv(output_file, index=False)
-
+    output_file = save_jaccard_edges(edges)
     print(f"\nSaved {len(edges)} edges to {output_file}")
     print(edges["jaccard"].describe().to_string())

@@ -9,6 +9,7 @@ DAO governance dataset (Zenodo).
 src/                      Reusable code
   paths.py                Single definition of the project folders
   pipeline/               Raw CSVs -> clean CSVs -> nodes/edges -> graph
+    run_pipeline.py         Runs every step below with one command
     data_loader.py          Read the raw CSVs from data/raw/
     wallet_normalization.py Turn the `voter` field into a wallet address
     data_cleaner.py         Clean deployments, proposals and votes
@@ -40,16 +41,37 @@ instead of slashes and without `.py`). This puts the root on Python's import
 path, so every module can import any other one as `src.pipeline.<module>`
 or `analysis.<folder>.<module>`.
 
+### Full pipeline (one command)
+
+With `deployments.csv`, `proposals.csv` and `votes.csv` in `data/raw/`:
+
 ```bash
-python -m src.pipeline.node_generator
-python -m src.pipeline.edge_generator
-python -m src.pipeline.jaccard_weights
-python -m src.pipeline.graph_sanity
+python -m src.pipeline.run_pipeline
 ```
 
-The clean CSVs in `data/processed/` (`deployments_clean.csv`,
-`proposals_clean.csv`, `votes_clean.csv`) are currently generated from
-`notebooks/02_data_quality.ipynb`.
+It runs, in order: cleaning (`*_clean.csv`), nodes (`nodes.csv`), edges
+(`edges.csv`), Jaccard weights (`edges_jaccard.csv`) and the graph sanity
+checks. All outputs go to `data/processed/`.
+
+| Option | Description | Default |
+| --- | --- | --- |
+| `--max-daos N` | Maximum number of DAOs a voter may vote in to create edges. Voters above it are treated as outliers (see S2-03 and S2-04). The same value is used for the edges and for Jaccard. Must be 2 or greater. | `100` |
+| `--skip-cleaning` | Reuse the existing `*_clean.csv` files instead of cleaning `data/raw/` again (cleaning `votes.csv` is the slowest step). | off |
+
+The default threshold is defined once, as `DEFAULT_MAX_DAOS` in
+`src/pipeline/edge_generator.py`.
+
+### Single steps
+
+Each step can also be run on its own, in this order:
+
+```bash
+python -m src.pipeline.data_cleaner
+python -m src.pipeline.node_generator
+python -m src.pipeline.edge_generator --max-daos 100
+python -m src.pipeline.jaccard_weights --max-daos 100
+python -m src.pipeline.graph_sanity
+```
 
 ## Development Setup
 

@@ -1,6 +1,7 @@
 import pandas as pd
 
 from src.paths import PROCESSED_DATA_DIR
+from src.pipeline.data_loader import load_deployments, load_proposals, load_votes
 from src.pipeline.wallet_normalization import extract_address
 
 
@@ -103,3 +104,24 @@ def process_votes(votes_generator):
         first_chunk = False
 
         print(f"Chunk {i} processed - {len(cleaned_chunk)} rows")
+
+
+def run_cleaning():
+    """
+    Clean the three raw CSVs of data/raw/ and write the clean versions to
+    data/processed/ (deployments_clean.csv, proposals_clean.csv and
+    votes_clean.csv). Same steps as cells 60 and 61 of notebook 02.
+    """
+    print("Cleaning deployments and proposals")
+    deployments_clean = clean_deployments(load_deployments())
+    proposals_clean = clean_proposals(load_proposals())
+    save_processed_data(deployments_clean, proposals_clean)
+    print(f"  deployments: {len(deployments_clean)} rows, "
+          f"proposals: {len(proposals_clean)} rows")
+
+    print("Cleaning votes (in chunks)")
+    process_votes(load_votes())
+
+
+if __name__ == "__main__":
+    run_cleaning()

@@ -5,6 +5,11 @@ import pandas as pd
 
 from src.paths import PROCESSED_DATA_DIR
 
+# Maximum number of DAOs a voter may vote in to create edges. Voters above it
+# are treated as outliers (S2-03, S2-04). This is the only place where the
+# default is defined: jaccard_weights.py and run_pipeline.py import it.
+DEFAULT_MAX_DAOS = 100
+
 def load_unique_voter_dao_pairs(chunksize=1_000_000):
     file_path = PROCESSED_DATA_DIR / "votes_clean.csv"
 
@@ -29,7 +34,7 @@ def load_unique_voter_dao_pairs(chunksize=1_000_000):
     return voter_dao_pairs
 
 
-def filter_valid_voters(voter_dao_pairs, max_daos=100):
+def filter_valid_voters(voter_dao_pairs, max_daos=DEFAULT_MAX_DAOS):
     dao_count_per_voter = (
         voter_dao_pairs
         .groupby("voter")["deployment_id"]
@@ -74,12 +79,23 @@ def save_dao_edges(edges):
     output_file = PROCESSED_DATA_DIR / "edges.csv"
     edges.to_csv(output_file, index=False)
 if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Generate data/processed/edges.csv from votes_clean.csv"
+    )
+    parser.add_argument(
+        "--max-daos", type=int, default=DEFAULT_MAX_DAOS,
+        help=f"Maximum DAOs per voter (default: {DEFAULT_MAX_DAOS})"
+    )
+    args = parser.parse_args()
+
     voter_dao_pairs = load_unique_voter_dao_pairs()
 
-    valid_pairs = filter_valid_voters(voter_dao_pairs)
+    valid_pairs = filter_valid_voters(voter_dao_pairs, max_daos=args.max_daos)
 
     edges = generate_dao_edges(valid_pairs)
 
     save_dao_edges(edges)
 
-    print(f"Edges generated: {len(edges)}")
+    print(f"Edges generated: {len(edges)} (max_daos = {args.max_daos})")
