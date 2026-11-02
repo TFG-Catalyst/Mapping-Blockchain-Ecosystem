@@ -18,10 +18,10 @@ raw file, and by the chunked read of the pipeline (`src/pipeline/data_cleaner.py
 prints rows read and rows written and stops if they differ). See "Dataset version"
 below for the change from v4.
 
-**Sections still describing v4.** The per-platform tables below, the column notes
+**Sections still describing v4.** The per-platform table below, the column notes
 (null counts, duplicates, date ranges) and "Coverage of votes.csv (S2-01)" were
-measured on v4 (11,638,348 votes) and are kept as the record of that version. They
-are updated for v5 in S3-04.
+measured on v4 (11,638,348 votes) and are kept as the record of that version. The
+coverage of v5 is in "Coverage of votes.csv in v5 (S3-04)".
 
 Rows per platform (v4):
 
@@ -63,7 +63,7 @@ unchanged: same columns, same order.
 **Changes observed.** `votes.csv` grows from 11.6 to 67.3 million rows, in line with
 the roughly 67.3 million votes declared in the `votes_count` metadata. `proposals.csv`
 has 18,864 fewer rows than in v4; this comes from the new file, not from cleaning.
-Which proposals were removed, and the new coverage per platform, are analysed in S3-04.
+See "Coverage of votes.csv in v5 (S3-04)".
 
 **Effect on the network** (`python -m src.pipeline.run_pipeline --max-daos 100`):
 
@@ -248,6 +248,93 @@ deployment by deployment.
   `votes.csv`.
 - Snapshot is only 13.7% covered, so comparisons between platforms must take this into
   account.
+
+---
+
+## Coverage of votes.csv in v5 (S3-04)
+
+Analysis in `notebooks/03_votes_coverage.ipynb`, rerun on v5.
+
+| Platform | Declared (`deployments.votes_count`) | Rows in `votes.csv` | Coverage v4 | Coverage v5 |
+| :---- | ----: | ----: | ----: | ----: |
+| aragon | 26,833 | 26,833 | 100% | 100% |
+| daohaus | 51,129 | 51,129 | 100% | 100% |
+| daostack | 12,331 | 12,331 | 100% | 100% |
+| realms | 1,067,333 | 1,067,333 | 100% | 100% |
+| tally | 1,440,390 | 1,597,604 | 110.9% | 110.9% |
+| snapshot | 64,697,595 | 64,585,436 | 13.7% | 99.8% |
+| **total** | 67,295,611 | 67,340,666 | 17.3% | 100.1% |
+
+The declared counts in `deployments.csv` are the same in v4 and v5; only the vote
+rows changed, and only for Snapshot.
+
+**Snapshot, proposal by proposal.** `proposals.csv` declares 64,587,411 Snapshot
+votes over 231,834 distinct proposals, and `votes.csv` holds 64,585,436 (99.997%).
+
+| | v4 | v5 |
+| :---- | ----: | ----: |
+| Proposals truncated at exactly 6,000 votes | 13 | 0 |
+| Proposals with more than 6,000 declared votes that have votes | 13 | 1,045 |
+| Proposals with declared votes but no rows | 17,776 | 55 |
+| Votes declared in those proposals | 56,800,302 | 70,321 |
+| Spaces affected | 2,204 | 19 |
+
+- The collection defect described in S2-01 is fixed: no proposal is capped, and the
+  largest proposal now has 2,764,428 votes.
+- The 55 proposals still without rows hold 70,321 declared votes: 8 proposals with
+  more than 6,000 declared votes (64,269 votes) and 47 smaller ones (6,052 votes).
+  They are concentrated in `aavedao.eth` (32,547), `cakevote.eth` (23,247),
+  `zora.eth` (7,001) and `gyrodao.eth` (6,945), and by year in 2022 (57,324) and
+  2021 (12,444). No cause was identified.
+- The net gap is only 1,975 votes because other proposals hold slightly more rows
+  than declared, as on Tally. Metadata and votes were probably collected at
+  different times; this could not be verified.
+- The two metadata tables still disagree: 64,697,595 declared in `deployments.csv`
+  against 64,587,411 in `proposals.csv`.
+- The large spaces that were almost absent in v4 are now covered, for example
+  `aavedao.eth` 99.0% (20.6% in v4).
+
+**Proposals removed in v5.** Only two platforms change:
+
+| Platform | v4 | v5 | Difference |
+| :---- | ----: | ----: | ----: |
+| snapshot | 244,886 | 231,845 | -13,041 |
+| tally | 37,839 | 32,016 | -5,823 |
+
+The Tally difference equals the 5,823 exact duplicate rows of v4, so v5 removed
+them. The Snapshot difference is not explained. It may correspond to proposals that
+the dataset authors treated as deleted, but this could not be verified without the
+v4 file.
+
+**Repeated Snapshot proposals.** 11 `proposal_id` values (22 rows) appear twice,
+with the same date, author and `votes_count`: once under `deployment_id = mimo.eth`
+and once under `platform_deployment_id = parallel-protocol.eth`. Coverage counts keep
+one row per `proposal_id`. `mimo.eth` is one of the six deployments missing from the
+catalogue (S2-02); it is probably the earlier space of the same organisation (Mimo
+was renamed Parallel Protocol), but this is not verified. The vote graph is not
+affected, because votes are assigned to deployments through `votes.csv`. A network
+built from `proposals.csv` (shared authors) counts these 11 proposals in both spaces.
+
+**Tally.** Unchanged from v4: 1,597,604 rows against 1,440,390 declared, every
+`vote_id` unique, 559 repeated `(proposal_id, voter)` pairs, 190,512 votes above
+declared in 101 deployments and 33,298 below in 934.
+
+**Population represented.** In v5, `votes.csv` is the full population for Aragon,
+DAOhaus, DAOstack and Realms, and practically complete for Snapshot (55 proposals
+missing). Tally remains close to complete but does not match the metadata deployment
+by deployment.
+
+**Implications.**
+
+- The graph now includes the voters of the large Snapshot spaces, so their
+  shared-voter edges are no longer underestimated, and comparisons between platforms
+  are no longer biased by the 13.7% coverage of Snapshot.
+- Metadata counters (`votes_count`, `unique_voters`) still do not describe exactly
+  the population of the graph (Tally, the 55 Snapshot proposals), so measures
+  computed from `votes.csv` keep using denominators from `votes.csv`, as agreed for
+  Jaccard.
+- Results of Sprints 1 and 2 were obtained on v4 and are preliminary; they are
+  regenerated on v5 from S3-05 on.
 
 ---
 
