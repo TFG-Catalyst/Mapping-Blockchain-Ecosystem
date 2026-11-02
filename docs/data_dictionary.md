@@ -1,7 +1,8 @@
 # Data Dictionary
 
 Dataset: *Mapping Decentralized Autonomous Organization Governance Across Chains: An Updated, Multi-Platform Dataset* (Farin, Hassan & Arroyo), MSR 2026.
-Source: https://doi.org/10.5281/zenodo.18430339. Collection cut-off October 2025.
+Source: https://doi.org/10.5281/zenodo.23548842 (version v5, published 2026-10-21).
+Collection cut-off October 2025.
 Collection code: https://github.com/mashiat0808/DAOGovernance/
 
 Three CSV files. Platforms covered: Aragon, DAOHaus, DAOstack, Realms, Snapshot, Tally.
@@ -9,15 +10,20 @@ Three CSV files. Platforms covered: Aragon, DAOHaus, DAOstack, Realms, Snapshot,
 | File | Rows | Columns | Grain |
 | :---- | ----: | ----: | :---- |
 | `deployments.csv` | 86,489 | 9 | one row per DAO deployment |
-| `proposals.csv` | 370,133 | 8 | one row per governance proposal |
-| `votes.csv` | 11,638,348 | 8 | one row per individual vote |
+| `proposals.csv` | 351,269 | 8 | one row per governance proposal |
+| `votes.csv` | 67,340,666 | 8 | one row per individual vote |
 
-Row counts for `deployments` and `proposals` were verified directly. The `votes.csv`
-count was obtained by chunked reading (see `notebooks/01_dataset_inspection.ipynb`). The roughly 66 million votes
-mentioned on Zenodo are the sum of the `votes_count` metadata, not rows of
-`votes.csv`; see "Coverage of votes.csv" below.
+The `votes.csv` count was obtained twice and both agree: by counting the lines of the
+raw file, and by the chunked read of the pipeline (`src/pipeline/data_cleaner.py`
+prints rows read and rows written and stops if they differ). See "Dataset version"
+below for the change from v4.
 
-Rows per platform:
+**Sections still describing v4.** The per-platform tables below, the column notes
+(null counts, duplicates, date ranges) and "Coverage of votes.csv (S2-01)" were
+measured on v4 (11,638,348 votes) and are kept as the record of that version. They
+are updated for v5 in S3-04.
+
+Rows per platform (v4):
 
 | Platform | Deployments | Proposals |
 | :---- | ----: | ----: |
@@ -27,6 +33,52 @@ Rows per platform:
 | daohaus | 3,459 | 46,936 |
 | aragon | 2,402 | 15,746 |
 | daostack | 58 | 3,573 |
+
+---
+
+## Dataset version (S3-03)
+
+| | v4 (used in Sprints 1 and 2) | v5 (used from Sprint 3) |
+| :---- | :---- | :---- |
+| DOI | 10.5281/zenodo.18430339 | 10.5281/zenodo.23548842 |
+| Published | 2026-01-30 | 2026-10-21 |
+| `deployments.csv` rows | 86,489 | 86,489 |
+| `proposals.csv` rows | 370,133 | 351,269 |
+| `votes.csv` rows | 11,638,348 | 67,340,666 |
+| `votes.csv` size | 2.5 GB | 15.1 GB |
+
+MD5 checksums of the v5 files, as listed on Zenodo:
+
+| File | MD5 |
+| :---- | :---- |
+| `deployments.csv` | `d8d362999627fd8a2827ab6c986fb72a` |
+| `proposals.csv` | `2e36d436cd2ce0fb82fe9c5adcbec042` |
+| `votes.csv` | `035731c20b5d7a2ba7c479eef3956fd5` |
+
+**Why v5.** v4 was missing most votes of Snapshot proposals with more than 5,000 votes
+(see "Coverage of votes.csv (S2-01)"). The dataset authors confirmed the problem in
+the collection code and published v5 with the missing votes. The file schema is
+unchanged: same columns, same order.
+
+**Changes observed.** `votes.csv` grows from 11.6 to 67.3 million rows, in line with
+the roughly 67.3 million votes declared in the `votes_count` metadata. `proposals.csv`
+has 18,864 fewer rows than in v4; this comes from the new file, not from cleaning.
+Which proposals were removed, and the new coverage per platform, are analysed in S3-04.
+
+**Effect on the network** (`python -m src.pipeline.run_pipeline --max-daos 100`):
+
+| | v4 | v5 |
+| :---- | ----: | ----: |
+| Nodes | 86,495 | 86,495 |
+| Edges | 576,861 | 700,304 |
+| Total weight (shared voters) | 4,503,001 | 10,682,356 |
+| Isolated nodes | 49,256 | 35,277 |
+| Connected components | 50,767 | 36,263 |
+| Largest connected component | not recorded | 46,722 |
+
+The full pipeline takes about 28 minutes on v5 (cleaning about 16 minutes), against
+about 8 minutes on v4. `data/processed/votes_clean.csv` is about as large as the raw
+file, so at least 20 GB of free disk space is needed.
 
 ---
 
