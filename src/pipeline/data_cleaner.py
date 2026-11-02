@@ -84,14 +84,24 @@ def save_processed_data(deployments, proposals):
     )
 
 def process_votes(votes_generator):
+    """
+    Clean votes.csv chunk by chunk and append each clean chunk to
+    data/processed/votes_clean.csv, so the whole file is never in memory.
+
+    Returns (rows_read, rows_written). clean_votes() only transforms columns
+    and never drops rows, so both numbers must be equal.
+    """
     output_dir = PROCESSED_DATA_DIR
     output_file = output_dir / "votes_clean.csv"
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
     first_chunk = True
+    rows_read = 0
+    rows_written = 0
 
     for i, chunk in enumerate(votes_generator, start=1):
+        rows_read += len(chunk)
         cleaned_chunk = clean_votes(chunk)
 
         cleaned_chunk.to_csv(
@@ -102,8 +112,12 @@ def process_votes(votes_generator):
         )
 
         first_chunk = False
+        rows_written += len(cleaned_chunk)
 
-        print(f"Chunk {i} processed - {len(cleaned_chunk)} rows")
+        print(f"Chunk {i} processed - {len(cleaned_chunk)} rows "
+              f"(total {rows_written:,})")
+
+    return rows_read, rows_written
 
 
 def run_cleaning():
@@ -120,7 +134,12 @@ def run_cleaning():
           f"proposals: {len(proposals_clean)} rows")
 
     print("Cleaning votes (in chunks)")
-    process_votes(load_votes())
+    rows_read, rows_written = process_votes(load_votes())
+    print(f"  votes: {rows_read:,} rows read, {rows_written:,} rows written")
+    if rows_read != rows_written:
+        raise ValueError(
+            f"Votes lost while cleaning: read {rows_read}, wrote {rows_written}"
+        )
 
 
 if __name__ == "__main__":

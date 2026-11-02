@@ -10,7 +10,23 @@ from src.paths import PROCESSED_DATA_DIR
 # default is defined: jaccard_weights.py and run_pipeline.py import it.
 DEFAULT_MAX_DAOS = 100
 
-def load_unique_voter_dao_pairs(chunksize=1_000_000):
+def _merge_unique_pairs(unique_pairs, new_chunks):
+    """Add new chunks to the pairs kept so far and drop repeated pairs."""
+    parts = new_chunks if unique_pairs is None else [unique_pairs] + new_chunks
+    return pd.concat(parts, ignore_index=True).drop_duplicates()
+
+
+def load_unique_voter_dao_pairs(chunksize=1_000_000, merge_every=10):
+    """
+    Unique (voter, deployment_id) pairs of votes_clean.csv.
+
+    The file is read in chunks. Every `merge_every` chunks the pending chunks
+    are merged into the pairs kept so far and the repeated pairs are dropped.
+    This way memory holds the unique pairs plus at most `merge_every` chunks,
+    instead of every chunk of the file at once (needed for the ~15 GB votes
+    file of the corrected Zenodo version, S3-03). The result is the same as
+    concatenating all the chunks and dropping duplicates once at the end.
+    """
     file_path = PROCESSED_DATA_DIR / "votes_clean.csv"
 
     if not file_path.exists():
@@ -18,20 +34,24 @@ def load_unique_voter_dao_pairs(chunksize=1_000_000):
             f"Processed votes file not found: {file_path}"
         )
 
-    chunks = []
+    unique_pairs = None
+    pending = []
 
     for chunk in pd.read_csv(
         file_path,
         usecols=["voter", "deployment_id"],
         chunksize=chunksize
     ):
-        chunk = chunk.drop_duplicates()
-        chunks.append(chunk)
+        pending.append(chunk.drop_duplicates())
 
-    voter_dao_pairs = pd.concat(chunks, ignore_index=True)
-    voter_dao_pairs = voter_dao_pairs.drop_duplicates()
+        if len(pending) >= merge_every:
+            unique_pairs = _merge_unique_pairs(unique_pairs, pending)
+            pending = []
 
-    return voter_dao_pairs
+    if pending or unique_pairs is None:
+        unique_pairs = _merge_unique_pairs(unique_pairs, pending)
+
+    return unique_pairs
 
 
 def filter_valid_voters(voter_dao_pairs, max_daos=DEFAULT_MAX_DAOS):
