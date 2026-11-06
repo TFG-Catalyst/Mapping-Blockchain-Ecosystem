@@ -38,6 +38,45 @@ Anything outside these limits is **CHANGED** and is explained in the results sec
 The tolerances are decisions of the team, not findings; they are constants at the top of
 `compare_v4_v5.py`.
 
+### S2-09 recomputed with the communities counted from `votes.csv`
+
+`classify_hubs.py` divides the shared voters by `unique_voters` of `deployments.csv` (for
+`F_overlap` and for the proportion with the main neighbour) and ranks nodes by that same field
+(for `F_size`). The data dictionary (S3-04) says that these metadata counters describe a
+different population from `votes.csv` and must not be combined with measures computed from it,
+which is the rule already used for Jaccard. On v4 this went unnoticed; on v5 it is visible:
+`unique_voters` is 0 for Linea, Yoginth and Crypto435, and 27 of the 60 proportions are above
+1. `recompute_overlap_v5.py` repeats the calculation with the size of each community counted
+from `votes.csv` (wallets with at most 100 DAOs, single-DAO voters included, same population
+as the `max100` graph). Files: `results/S3-06/S2-09/S3-06_overlap_from_votes.csv` (each hub with
+its 5 main neighbours) and `S3-06_hub_flags_from_votes.csv` (old and new flags).
+
+- **Sizes are very different from the metadata.** Stargate DAO has 1,200,297 voters (30,475 in
+  `deployments.csv`), Linea 2,889,248 (0), SyncSwap 220,833 (0), Crypto435 188,177 (0), Yoginth
+  128,501 (0), ENS 87,853 (9,010).
+- **`F_overlap` is confirmed.** Same 15 nodes, no flag changes. The overlap coefficient with the
+  main neighbour is 1.00 for all of them, and no proportion is above 1 any more (27 before).
+- **The cluster is stronger than in Sprint 2.** balsam and tarpon share 6,070 voters and their
+  Jaccard is 0.998 (0.988 in Sprint 2); the other spaces of the cluster are at 0.98-0.99. Their
+  main neighbour by shared voters is Aave DAO (6,080 of the 6,083 voters of balsam also voted
+  there), but Jaccard with Aave DAO is only 0.079: the cluster is a set of about 6,000 voters that
+  are all Aave voters, and that vote the same in the 15 spaces.
+- **`F_size` changes for 18 of the 60 candidates** (22 flagged before, 24 now). Ten gain it:
+  Linea, SyncSwap, Crypto435, Yoginth, Base Name Service, Optimism Collective, ENS, EtherScore, Mail3
+  and Vesta. Eight lose it: uniswap (Tally, rank 31 with 21,790 voters), Sperax DAO, Radiant
+  Capital, zkprotocolgovernor, Aavegotchi, Gitcoin, Sushi and zktokengovernor. So the new hubs
+  with one or two proposals are explained by community size: Linea, SyncSwap, Crypto435 and
+  Yoginth are among the 10 largest communities.
+- **Categories.** 11 of the 12 selected hubs that are still candidates keep a category backed by
+  its flag. The exception is **ENS**: it was `stable` (no flag) because its metadata gave 9,010
+  voters (rank 37), but it has 87,853 voters (rank 15), so under the same rule it is
+  `dominated by community size`. Lido stays `stable` (6,656 voters, rank 84). The rest
+  (`size`, `same organization`, `proportional overlap`) are unchanged.
+
+The flags in `results/S3-06/S2-09/S2-09_hub_indicators.csv` are those of the repository script
+(computed with `unique_voters`). Changing `classify_hubs.py` to count voters from `votes.csv`
+is a decision for the team, since it also changes the Sprint 2 results.
+
 ### Does `max100` remain justified?
 
 `max100` was adopted in S2-04 for three reasons. They are checked again on v5 without
@@ -57,8 +96,8 @@ The scripts are the ones of the repository, unchanged, with the same commands as
 Sprint 2. They write to relative paths (`results/S2-0x`, `data/raw`), so they are run from a
 separate working folder, outside the repository, with the repository on `PYTHONPATH`. That
 keeps the Sprint 2 results (v4) in `results/S2-0x` untouched, and the repository without local
-changes. Three scripts of this task are new and live in `analysis/s3_06_v5_comparison/`:
-`select_hubs_v5.py`, `compare_v4_v5.py` and `make_s3_06_figures.py`.
+changes. Four scripts of this task are new and live in `analysis/s3_06_v5_comparison/`:
+`select_hubs_v5.py`, `compare_v4_v5.py`, `make_s3_06_figures.py` and `recompute_overlap_v5.py`.
 
 Requirements: the packages of `requirements.txt` (pandas, networkx, matplotlib) and the v5
 files of Zenodo (`votes.csv` of about 15 GB, `deployments.csv`, `proposals.csv`) in
@@ -95,6 +134,12 @@ Comparison figures (`docs/figures/S3-06_fig*.png`):
 
 ```
 python <repo>\analysis\s3_06_v5_comparison\make_s3_06_figures.py --v4 <repo>\results --v5 results --out figures
+```
+
+Overlap recomputed from `votes.csv` (uses the voter cache of the first run):
+
+```
+python <repo>\analysis\s3_06_v5_comparison\recompute_overlap_v5.py
 ```
 
 `select_hubs_v5.py` runs the `select_hubs.py` of the repository with its `SELECTION` list
@@ -135,8 +180,8 @@ from the committed `results/S2-0x`; v5 values from this rerun.
 | Structure of the graph (weight distribution, edges lost between thresholds) | **Stable** |
 | Which deployments are the hubs | **Changed**: 6 of the v4 top 10 remain |
 | Hubs that depend on the filter | **Changed**: none among the candidates (17 in v4) |
-| Category of each selected hub | **Stable** for the 12 that are still candidates |
-| Overlap proportions of S2-09 | **Not reliable on v5** (see limitations) |
+| Category of each selected hub | **Stable** for 11 of the 12 that are still candidates; ENS goes from `stable` to `size` (see below) |
+| Overlap proportions of S2-09 | The script's values are **not reliable on v5**; recomputed from `votes.csv`: the cluster is confirmed and `F_size` changes for 18 of 60 candidates |
 
 ### S2-03: who the filter affects
 
@@ -193,7 +238,8 @@ from the committed `results/S2-0x`; v5 values from this rerun.
   new, with identity not verified (Linea, Yoginth, Crypto435, Optimism Collective,
   EtherScore, Base Name Service, SyncSwap, Mail3, Vesta, Magic Square, Cultivator DAO).
 - **Flags.** `F_filter`: 17 nodes in v4, **0** in v5. `F_overlap` (15), `F_size` (24 to 22)
-  and `F_org` (8) are unchanged, and no node present in both tables changes any flag.
+  and `F_org` (8) are unchanged, and no node present in both tables changes any flag. These
+  flags use `unique_voters`; see the recomputation from `votes.csv` below.
 - **Selected hubs.** 12 of the 15 are still candidates, and in all 12 the category is still
   backed by its flag. Not found: Metrox and Strio (`filter-dependent`) and OpenDAO
   (`dominated by community size`). They are listed with their ranks in
@@ -242,16 +288,13 @@ The threshold is not changed in this sprint, as agreed.
 
 ### Limitations and open points
 
-- **Overlap proportions.** `unique_voters` of `deployments.csv` does not seem to include the
-  votes added in v5: it is the same as in v4 for the old hubs and 0 for Linea, Yoginth and
-  Crypto435. The proportion with the main neighbour of S2-09 (shared voters over unique voters
-  of the smaller one) is therefore above 1 in several cases (Arbitrum DAO 4.9, Aave DAO 1.33)
-  and `F_overlap` is not reliable. To be confirmed in the data dictionary; the exact
-  proportion has to be recomputed with the method of S2-05/06 on the v5 graph. For example,
-  balsam and tarpon share 6,070 voters (their unique voters are 4,570 and 4,541), so their
-  overlap remains very high.
+- **Metadata counters.** `unique_voters` and `votes_count` of `deployments.csv` describe a
+  different population from `votes.csv` (data dictionary). The recomputation above removes the
+  problem for the hubs of this task, but `classify_hubs.py` still uses them. The committed
+  indicators of Sprint 2 were built the same way.
 - **New hubs without identity.** The 11 new candidates have not been checked on Snapshot or on
-  the block explorers. Their weight comes from few and very large proposals.
+  the block explorers. Their weight comes from few and very large communities (one or two
+  proposals).
 - **Selection of hubs.** The 15 hubs of Sprint 2 were chosen by hand. The 3 missing hubs and
   the new candidates should be reviewed by the team before S3-09 fixes a new selection.
 - **Method.** The criteria were fixed before looking at the results. Labels in the

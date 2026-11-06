@@ -1,0 +1,316 @@
+hub,hub_name,neighbour,neighbour_name,shared_voters,voters_hub,voters_neighbour,overlap_coefficient,jaccard,position
+aavedao.eth,Aave DAO,linea-build.eth,Linea,30122,77050,2889248,0.391,0.01,1
+aavedao.eth,Aave DAO,arbitrumfoundation.eth,Arbitrum DAO,28454,77050,275546,0.369,0.088,2
+aavedao.eth,Aave DAO,stgdao.eth,Stargate DAO,27460,77050,1200297,0.356,0.022,3
+aavedao.eth,Aave DAO,yoginth.eth,Yoginth,19807,77050,128501,0.257,0.107,4
+aavedao.eth,Aave DAO,etherscoredao.eth,EtherScore,19587,77050,59626,0.328,0.167,5
+aavegotchi.eth,Aavegotchi,stgdao.eth,Stargate DAO,4708,13543,1200297,0.348,0.004,1
+aavegotchi.eth,Aavegotchi,aavedao.eth,Aave DAO,4097,13543,77050,0.303,0.047,2
+aavegotchi.eth,Aavegotchi,linea-build.eth,Linea,3544,13543,2889248,0.262,0.001,3
+aavegotchi.eth,Aavegotchi,gmx.eth,GMX,3131,13543,87990,0.231,0.032,4
+aavegotchi.eth,Aavegotchi,arbitrumfoundation.eth,Arbitrum DAO,2739,13543,275546,0.202,0.01,5
+angelmother.eth,angelmother,balsam.eth,balsam,6017,6017,6083,1.0,0.989,1
+angelmother.eth,angelmother,aavedao.eth,Aave DAO,6016,6017,77050,1.0,0.078,2
+angelmother.eth,angelmother,tarpon.eth,tarpon,6015,6017,6072,1.0,0.99,3
+angelmother.eth,angelmother,hotstock.eth,hotstock,6014,6017,6072,1.0,0.99,4
+angelmother.eth,angelmother,hinny.eth,hinny,6013,6017,6071,0.999,0.99,5
+arbitrumfoundation.eth,Arbitrum DAO,linea-build.eth,Linea,160852,275546,2889248,0.584,0.054,1
+arbitrumfoundation.eth,Arbitrum DAO,crypto435.eth,Crypto435,116755,275546,188177,0.62,0.337,2
+arbitrumfoundation.eth,Arbitrum DAO,stgdao.eth,Stargate DAO,107153,275546,1200297,0.389,0.078,3
+arbitrumfoundation.eth,Arbitrum DAO,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,91163,275546,119675,0.762,0.3,4
+arbitrumfoundation.eth,Arbitrum DAO,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,86408,275546,109288,0.791,0.29,5
+balancer.eth,Balancer,badgerdao.eth,BadgerDAO,2558,9213,11247,0.278,0.143,1
+balancer.eth,Balancer,sushigov.eth,Sushi,2420,9213,11730,0.263,0.131,2
+balancer.eth,Balancer,ybaby.eth,yearn (old),2238,9213,4823,0.464,0.19,3
+balancer.eth,Balancer,aavedao.eth,Aave DAO,1994,9213,77050,0.216,0.024,4
+balancer.eth,Balancer,cakevote.eth,PancakeSwap,1941,9213,131134,0.211,0.014,5
+balsam.eth,balsam,aavedao.eth,Aave DAO,6080,6083,77050,1.0,0.079,1
+balsam.eth,balsam,tarpon.eth,tarpon,6070,6083,6072,1.0,0.998,2
+balsam.eth,balsam,hotstock.eth,hotstock,6069,6083,6072,1.0,0.997,3
+balsam.eth,balsam,hinny.eth,hinny,6068,6083,6071,1.0,0.997,4
+balsam.eth,balsam,caiman.eth,caiman,6067,6083,6075,0.999,0.996,5
+basenamedao.eth,Base Name Service,linea-build.eth,Linea,67178,109684,2889248,0.612,0.023,1
+basenamedao.eth,Base Name Service,yoginth.eth,Yoginth,45638,109684,128501,0.416,0.237,2
+basenamedao.eth,Base Name Service,crypto435.eth,Crypto435,38184,109684,188177,0.348,0.147,3
+basenamedao.eth,Base Name Service,stgdao.eth,Stargate DAO,27759,109684,1200297,0.253,0.022,4
+basenamedao.eth,Base Name Service,whitelist1.eth,Whitelist,13456,109684,29341,0.459,0.107,5
+bitdao.eth,Mantle (prev. BitDAO),stgdao.eth,Stargate DAO,13518,23054,1200297,0.586,0.011,1
+bitdao.eth,Mantle (prev. BitDAO),linea-build.eth,Linea,12653,23054,2889248,0.549,0.004,2
+bitdao.eth,Mantle (prev. BitDAO),arbitrumfoundation.eth,Arbitrum DAO,6725,23054,275546,0.292,0.023,3
+bitdao.eth,Mantle (prev. BitDAO),eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,5564,23054,119675,0.241,0.041,4
+bitdao.eth,Mantle (prev. BitDAO),bitembassy.eth,BIT Embassy,5260,23054,5472,0.961,0.226,5
+caiman.eth,caiman,aavedao.eth,Aave DAO,6072,6075,77050,1.0,0.079,1
+caiman.eth,caiman,balsam.eth,balsam,6067,6075,6083,0.999,0.996,2
+caiman.eth,caiman,hinny.eth,hinny,6065,6075,6071,0.999,0.997,3
+caiman.eth,caiman,hotstock.eth,hotstock,6065,6075,6072,0.999,0.997,4
+caiman.eth,caiman,tarpon.eth,tarpon,6065,6075,6072,0.999,0.997,5
+cakevote.eth,PancakeSwap,stgdao.eth,Stargate DAO,13151,131134,1200297,0.1,0.01,1
+cakevote.eth,PancakeSwap,linea-build.eth,Linea,9195,131134,2889248,0.07,0.003,2
+cakevote.eth,PancakeSwap,aavedao.eth,Aave DAO,7609,131134,77050,0.099,0.038,3
+cakevote.eth,PancakeSwap,arbitrumfoundation.eth,Arbitrum DAO,6591,131134,275546,0.05,0.016,4
+cakevote.eth,PancakeSwap,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,4843,131134,109288,0.044,0.021,5
+cow.eth,CoW DAO,stgdao.eth,Stargate DAO,3753,14175,1200297,0.265,0.003,1
+cow.eth,CoW DAO,aavedao.eth,Aave DAO,2998,14175,77050,0.211,0.034,2
+cow.eth,CoW DAO,opcollective.eth,Optimism Collective,2811,14175,88625,0.198,0.028,3
+cow.eth,CoW DAO,shellprotocol.eth,Shell Protocol,2779,14175,32308,0.196,0.064,4
+cow.eth,CoW DAO,gnosis.eth,GnosisDAO,2182,14175,6265,0.348,0.12,5
+crypto435.eth,Crypto435,linea-build.eth,Linea,170988,188177,2889248,0.909,0.059,1
+crypto435.eth,Crypto435,arbitrumfoundation.eth,Arbitrum DAO,116755,188177,275546,0.62,0.337,2
+crypto435.eth,Crypto435,yoginth.eth,Yoginth,65933,188177,128501,0.513,0.263,3
+crypto435.eth,Crypto435,basenamedao.eth,Base Name Service,38184,188177,109684,0.348,0.147,4
+crypto435.eth,Crypto435,etherscoredao.eth,EtherScore,20643,188177,59626,0.346,0.091,5
+cultivatordao.eth,Cultivator DAO,yoginth.eth,Yoginth,8848,21054,128501,0.42,0.063,1
+cultivatordao.eth,Cultivator DAO,syncswapxyz.eth,SyncSwap,8064,21054,220833,0.383,0.034,2
+cultivatordao.eth,Cultivator DAO,stgdao.eth,Stargate DAO,7824,21054,1200297,0.372,0.006,3
+cultivatordao.eth,Cultivator DAO,linea-build.eth,Linea,7477,21054,2889248,0.355,0.003,4
+cultivatordao.eth,Cultivator DAO,opcollective.eth,Optimism Collective,5761,21054,88625,0.274,0.055,5
+danhuacap.eth,danhuacap,balsam.eth,balsam,6043,6043,6083,1.0,0.993,1
+danhuacap.eth,danhuacap,aavedao.eth,Aave DAO,6042,6043,77050,1.0,0.078,2
+danhuacap.eth,danhuacap,tarpon.eth,tarpon,6041,6043,6072,1.0,0.995,3
+danhuacap.eth,danhuacap,hotstock.eth,hotstock,6040,6043,6072,1.0,0.994,4
+danhuacap.eth,danhuacap,hinny.eth,hinny,6039,6043,6071,0.999,0.994,5
+dao.spaceid.eth,SPACE ID DAO,stgdao.eth,Stargate DAO,7326,12545,1200297,0.584,0.006,1
+dao.spaceid.eth,SPACE ID DAO,linea-build.eth,Linea,7192,12545,2889248,0.573,0.002,2
+dao.spaceid.eth,SPACE ID DAO,arbitrumfoundation.eth,Arbitrum DAO,4708,12545,275546,0.375,0.017,3
+dao.spaceid.eth,SPACE ID DAO,etherscoredao.eth,EtherScore,4433,12545,59626,0.353,0.065,4
+dao.spaceid.eth,SPACE ID DAO,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,4316,12545,119675,0.344,0.034,5
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,stgdao.eth,Stargate DAO,51393,79609,1200297,0.646,0.042,1
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,arbitrumfoundation.eth,Arbitrum DAO,30671,79609,275546,0.385,0.095,2
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,opcollective.eth,Optimism Collective,30331,79609,88625,0.381,0.22,3
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,linea-build.eth,Linea,26247,79609,2889248,0.33,0.009,4
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,24077,79609,109288,0.302,0.146,5
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,uniswapgovernance.eth,Uniswap,15004,21790,30294,0.689,0.405,1
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,stgdao.eth,Stargate DAO,10346,21790,1200297,0.475,0.009,2
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,aavedao.eth,Aave DAO,8281,21790,77050,0.38,0.091,3
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,linea-build.eth,Linea,7122,21790,2889248,0.327,0.002,4
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,opcollective.eth,Optimism Collective,7122,21790,88625,0.327,0.069,5
+eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,aave,aavedao.eth,Aave DAO,7587,9564,77050,0.793,0.096,1
+eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,aave,stgdao.eth,Stargate DAO,5095,9564,1200297,0.533,0.004,2
+eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,aave,uniswapgovernance.eth,Uniswap,4901,9564,30294,0.512,0.14,3
+eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,aave,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,4122,9564,21790,0.431,0.151,4
+eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,aave,opcollective.eth,Optimism Collective,3805,9564,88625,0.398,0.04,5
+eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,zktokengovernor,eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,zkprotocolgovernor,7967,10933,13665,0.729,0.479,1
+eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,zktokengovernor,stgdao.eth,Stargate DAO,6598,10933,1200297,0.603,0.005,2
+eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,zktokengovernor,arbitrumfoundation.eth,Arbitrum DAO,4876,10933,275546,0.446,0.017,3
+eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,zktokengovernor,eip155:324:0x496869a7575a1f907d1c5b1eca28e4e9e382afab,zkgovopsgovernor,4562,10933,5687,0.802,0.378,4
+eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,zktokengovernor,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,4438,10933,119675,0.406,0.035,5
+eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,zkprotocolgovernor,stgdao.eth,Stargate DAO,8142,13665,1200297,0.596,0.007,1
+eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,zkprotocolgovernor,eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,zktokengovernor,7967,13665,10933,0.729,0.479,2
+eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,zkprotocolgovernor,arbitrumfoundation.eth,Arbitrum DAO,6212,13665,275546,0.455,0.022,3
+eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,zkprotocolgovernor,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,5891,13665,119675,0.431,0.046,4
+eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,zkprotocolgovernor,eip155:324:0x496869a7575a1f907d1c5b1eca28e4e9e382afab,zkgovopsgovernor,5478,13665,5687,0.963,0.395,5
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,arbitrumfoundation.eth,Arbitrum DAO,91163,119675,275546,0.762,0.3,1
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,86229,119675,109288,0.789,0.604,2
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,stgdao.eth,Stargate DAO,75951,119675,1200297,0.635,0.061,3
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,linea-build.eth,Linea,37905,119675,2889248,0.317,0.013,4
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,23074,119675,79609,0.29,0.131,5
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,arbitrumfoundation.eth,Arbitrum DAO,86408,109288,275546,0.791,0.29,1
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,86229,109288,119675,0.789,0.604,2
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,stgdao.eth,Stargate DAO,73066,109288,1200297,0.669,0.059,3
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,linea-build.eth,Linea,35935,109288,2889248,0.329,0.012,4
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,24077,109288,79609,0.302,0.146,5
+electricite.eth,electricite,aavedao.eth,Aave DAO,6076,6077,77050,1.0,0.079,1
+electricite.eth,electricite,balsam.eth,balsam,6066,6077,6083,0.998,0.995,2
+electricite.eth,electricite,hinny.eth,hinny,6064,6077,6071,0.999,0.997,3
+electricite.eth,electricite,hotstock.eth,hotstock,6064,6077,6072,0.999,0.997,4
+electricite.eth,electricite,tarpon.eth,tarpon,6063,6077,6072,0.999,0.996,5
+ens.eth,ENS,stgdao.eth,Stargate DAO,6233,87853,1200297,0.071,0.005,1
+ens.eth,ENS,aavedao.eth,Aave DAO,4470,87853,77050,0.058,0.028,2
+ens.eth,ENS,opcollective.eth,Optimism Collective,3761,87853,88625,0.043,0.022,3
+ens.eth,ENS,uniswapgovernance.eth,Uniswap,3744,87853,30294,0.124,0.033,4
+ens.eth,ENS,linea-build.eth,Linea,3537,87853,2889248,0.04,0.001,5
+etherscoredao.eth,EtherScore,linea-build.eth,Linea,46059,59626,2889248,0.772,0.016,1
+etherscoredao.eth,EtherScore,arbitrumfoundation.eth,Arbitrum DAO,32900,59626,275546,0.552,0.109,2
+etherscoredao.eth,EtherScore,stgdao.eth,Stargate DAO,23405,59626,1200297,0.393,0.019,3
+etherscoredao.eth,EtherScore,crypto435.eth,Crypto435,20643,59626,188177,0.346,0.091,4
+etherscoredao.eth,EtherScore,aavedao.eth,Aave DAO,19587,59626,77050,0.328,0.167,5
+flygame.eth,dappback,syncswapxyz.eth,SyncSwap,4409,8946,220833,0.493,0.02,1
+flygame.eth,dappback,linea-build.eth,Linea,3664,8946,2889248,0.41,0.001,2
+flygame.eth,dappback,yoginth.eth,Yoginth,2832,8946,128501,0.317,0.021,3
+flygame.eth,dappback,aavedao.eth,Aave DAO,2646,8946,77050,0.296,0.032,4
+flygame.eth,dappback,mail3.eth,Mail3,2351,8946,45053,0.263,0.046,5
+g-dao.eth,G DAO,linea-build.eth,Linea,12425,28768,2889248,0.432,0.004,1
+g-dao.eth,G DAO,arbitrumfoundation.eth,Arbitrum DAO,10041,28768,275546,0.349,0.034,2
+g-dao.eth,G DAO,etherscoredao.eth,EtherScore,8432,28768,59626,0.293,0.105,3
+g-dao.eth,G DAO,stgdao.eth,Stargate DAO,8095,28768,1200297,0.281,0.007,4
+g-dao.eth,G DAO,aavedao.eth,Aave DAO,7226,28768,77050,0.251,0.073,5
+gaggle.eth,gaggle,aavedao.eth,Aave DAO,5986,5987,77050,1.0,0.078,1
+gaggle.eth,gaggle,balsam.eth,balsam,5985,5987,6083,1.0,0.984,2
+gaggle.eth,gaggle,hotstock.eth,hotstock,5983,5987,6072,0.999,0.985,3
+gaggle.eth,gaggle,tarpon.eth,tarpon,5983,5987,6072,0.999,0.985,4
+gaggle.eth,gaggle,caiman.eth,caiman,5981,5987,6075,0.999,0.984,5
+gitcoindao.eth,Gitcoin,stgdao.eth,Stargate DAO,7253,12531,1200297,0.579,0.006,1
+gitcoindao.eth,Gitcoin,arbitrumfoundation.eth,Arbitrum DAO,5809,12531,275546,0.464,0.021,2
+gitcoindao.eth,Gitcoin,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,4713,12531,119675,0.376,0.037,3
+gitcoindao.eth,Gitcoin,linea-build.eth,Linea,4631,12531,2889248,0.37,0.002,4
+gitcoindao.eth,Gitcoin,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,4630,12531,109288,0.369,0.04,5
+gmx.eth,GMX,stgdao.eth,Stargate DAO,66666,87990,1200297,0.758,0.055,1
+gmx.eth,GMX,arbitrumfoundation.eth,Arbitrum DAO,29556,87990,275546,0.336,0.088,2
+gmx.eth,GMX,linea-build.eth,Linea,28927,87990,2889248,0.329,0.01,3
+gmx.eth,GMX,vestafinance.eth,Vesta,27125,87990,31524,0.86,0.294,4
+gmx.eth,GMX,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,23563,87990,79609,0.296,0.164,5
+godsgirl.eth,godsgirl,aavedao.eth,Aave DAO,5947,5949,77050,1.0,0.077,1
+godsgirl.eth,godsgirl,balsam.eth,balsam,5945,5949,6083,0.999,0.977,2
+godsgirl.eth,godsgirl,tarpon.eth,tarpon,5943,5949,6072,0.999,0.978,3
+godsgirl.eth,godsgirl,hotstock.eth,hotstock,5942,5949,6072,0.999,0.977,4
+godsgirl.eth,godsgirl,hinny.eth,hinny,5941,5949,6071,0.999,0.977,5
+goodchina.eth,goodchina,aavedao.eth,Aave DAO,5938,5938,77050,1.0,0.077,1
+goodchina.eth,goodchina,balsam.eth,balsam,5934,5938,6083,0.999,0.975,2
+goodchina.eth,goodchina,hotstock.eth,hotstock,5932,5938,6072,0.999,0.976,3
+goodchina.eth,goodchina,tarpon.eth,tarpon,5932,5938,6072,0.999,0.976,4
+goodchina.eth,goodchina,hinny.eth,hinny,5930,5938,6071,0.999,0.975,5
+hinny.eth,hinny,aavedao.eth,Aave DAO,6068,6071,77050,1.0,0.079,1
+hinny.eth,hinny,balsam.eth,balsam,6068,6071,6083,1.0,0.997,2
+hinny.eth,hinny,hotstock.eth,hotstock,6066,6071,6072,0.999,0.998,3
+hinny.eth,hinny,tarpon.eth,tarpon,6066,6071,6072,0.999,0.998,4
+hinny.eth,hinny,caiman.eth,caiman,6065,6071,6075,0.999,0.997,5
+hotstock.eth,hotstock,aavedao.eth,Aave DAO,6070,6072,77050,1.0,0.079,1
+hotstock.eth,hotstock,balsam.eth,balsam,6069,6072,6083,1.0,0.997,2
+hotstock.eth,hotstock,tarpon.eth,tarpon,6067,6072,6072,0.999,0.998,3
+hotstock.eth,hotstock,hinny.eth,hinny,6066,6072,6071,0.999,0.998,4
+hotstock.eth,hotstock,caiman.eth,caiman,6065,6072,6075,0.999,0.997,5
+joegovernance.eth,Lets F***ing Joe (prev. TJ),stgdao.eth,Stargate DAO,5981,6950,1200297,0.861,0.005,1
+joegovernance.eth,Lets F***ing Joe (prev. TJ),linea-build.eth,Linea,4475,6950,2889248,0.644,0.002,2
+joegovernance.eth,Lets F***ing Joe (prev. TJ),gmx.eth,GMX,3945,6950,87990,0.568,0.043,3
+joegovernance.eth,Lets F***ing Joe (prev. TJ),arbitrumfoundation.eth,Arbitrum DAO,3698,6950,275546,0.532,0.013,4
+joegovernance.eth,Lets F***ing Joe (prev. TJ),eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,2700,6950,119675,0.388,0.022,5
+lido-snapshot.eth,Lido,stgdao.eth,Stargate DAO,4087,6656,1200297,0.614,0.003,1
+lido-snapshot.eth,Lido,aavedao.eth,Aave DAO,3854,6656,77050,0.579,0.048,2
+lido-snapshot.eth,Lido,opcollective.eth,Optimism Collective,3171,6656,88625,0.476,0.034,3
+lido-snapshot.eth,Lido,uniswapgovernance.eth,Uniswap,2884,6656,30294,0.433,0.085,4
+lido-snapshot.eth,Lido,linea-build.eth,Linea,2588,6656,2889248,0.389,0.001,5
+linea-build.eth,Linea,crypto435.eth,Crypto435,170988,2889248,188177,0.909,0.059,1
+linea-build.eth,Linea,stgdao.eth,Stargate DAO,163326,2889248,1200297,0.136,0.042,2
+linea-build.eth,Linea,arbitrumfoundation.eth,Arbitrum DAO,160852,2889248,275546,0.584,0.054,3
+linea-build.eth,Linea,yoginth.eth,Yoginth,84727,2889248,128501,0.659,0.029,4
+linea-build.eth,Linea,basenamedao.eth,Base Name Service,67178,2889248,109684,0.612,0.023,5
+lootdex.eth,lootdex,balsam.eth,balsam,6012,6013,6083,1.0,0.988,1
+lootdex.eth,lootdex,aavedao.eth,Aave DAO,6011,6013,77050,1.0,0.078,2
+lootdex.eth,lootdex,tarpon.eth,tarpon,6010,6013,6072,1.0,0.989,3
+lootdex.eth,lootdex,hotstock.eth,hotstock,6009,6013,6072,0.999,0.989,4
+lootdex.eth,lootdex,hinny.eth,hinny,6008,6013,6071,0.999,0.989,5
+magicappstore.eth,Magic Square,stgdao.eth,Stargate DAO,30488,651805,1200297,0.047,0.017,1
+magicappstore.eth,Magic Square,linea-build.eth,Linea,25124,651805,2889248,0.039,0.007,2
+magicappstore.eth,Magic Square,arbitrumfoundation.eth,Arbitrum DAO,11299,651805,275546,0.041,0.012,3
+magicappstore.eth,Magic Square,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,10544,651805,119675,0.088,0.014,4
+magicappstore.eth,Magic Square,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,9533,651805,109288,0.087,0.013,5
+mail3.eth,Mail3,stgdao.eth,Stargate DAO,25213,45053,1200297,0.56,0.021,1
+mail3.eth,Mail3,linea-build.eth,Linea,21152,45053,2889248,0.469,0.007,2
+mail3.eth,Mail3,gmx.eth,GMX,13888,45053,87990,0.308,0.117,3
+mail3.eth,Mail3,syncswapxyz.eth,SyncSwap,12121,45053,220833,0.269,0.048,4
+mail3.eth,Mail3,arbitrumfoundation.eth,Arbitrum DAO,11747,45053,275546,0.261,0.038,5
+mavxyz.eth,Maverick Protocol,linea-build.eth,Linea,9215,14756,2889248,0.624,0.003,1
+mavxyz.eth,Maverick Protocol,stgdao.eth,Stargate DAO,8822,14756,1200297,0.598,0.007,2
+mavxyz.eth,Maverick Protocol,arbitrumfoundation.eth,Arbitrum DAO,4088,14756,275546,0.277,0.014,3
+mavxyz.eth,Maverick Protocol,opcollective.eth,Optimism Collective,3839,14756,88625,0.26,0.039,4
+mavxyz.eth,Maverick Protocol,syncswapxyz.eth,SyncSwap,3651,14756,220833,0.247,0.016,5
+metislayer2.eth,Metis,stgdao.eth,Stargate DAO,9696,25256,1200297,0.384,0.008,1
+metislayer2.eth,Metis,linea-build.eth,Linea,6134,25256,2889248,0.243,0.002,2
+metislayer2.eth,Metis,arbitrumfoundation.eth,Arbitrum DAO,3922,25256,275546,0.155,0.013,3
+metislayer2.eth,Metis,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,3697,25256,119675,0.146,0.026,4
+metislayer2.eth,Metis,etherscoredao.eth,EtherScore,3222,25256,59626,0.128,0.039,5
+metrox.eth,Metrox,fabien.eth,Fabien,384,987,1583,0.389,0.176,1
+metrox.eth,Metrox,aavedao.eth,Aave DAO,219,987,77050,0.222,0.003,2
+metrox.eth,Metrox,stgdao.eth,Stargate DAO,218,987,1200297,0.221,0.0,3
+metrox.eth,Metrox,linea-build.eth,Linea,217,987,2889248,0.22,0.0,4
+metrox.eth,Metrox,gyrodao.eth,Gyroscope Protocol,191,987,8130,0.194,0.021,5
+mists.eth,mists,aavedao.eth,Aave DAO,6047,6049,77050,1.0,0.078,1
+mists.eth,mists,balsam.eth,balsam,6045,6049,6083,0.999,0.993,2
+mists.eth,mists,tarpon.eth,tarpon,6043,6049,6072,0.999,0.994,3
+mists.eth,mists,hotstock.eth,hotstock,6042,6049,6072,0.999,0.994,4
+mists.eth,mists,hinny.eth,hinny,6041,6049,6071,0.999,0.994,5
+opcollective.eth,Optimism Collective,stgdao.eth,Stargate DAO,47831,88625,1200297,0.54,0.039,1
+opcollective.eth,Optimism Collective,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,30331,88625,79609,0.381,0.22,2
+opcollective.eth,Optimism Collective,linea-build.eth,Linea,26950,88625,2889248,0.304,0.009,3
+opcollective.eth,Optimism Collective,gmx.eth,GMX,22039,88625,87990,0.25,0.143,4
+opcollective.eth,Optimism Collective,arbitrumfoundation.eth,Arbitrum DAO,19907,88625,275546,0.225,0.058,5
+radiantcapital.eth,Radiant Capital,stgdao.eth,Stargate DAO,14082,17491,1200297,0.805,0.012,1
+radiantcapital.eth,Radiant Capital,gmx.eth,GMX,7806,17491,87990,0.446,0.08,2
+radiantcapital.eth,Radiant Capital,arbitrumfoundation.eth,Arbitrum DAO,6641,17491,275546,0.38,0.023,3
+radiantcapital.eth,Radiant Capital,linea-build.eth,Linea,5725,17491,2889248,0.327,0.002,4
+radiantcapital.eth,Radiant Capital,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,4777,17491,119675,0.273,0.036,5
+sharelens.eth,Share,cultivatordao.eth,Cultivator DAO,4933,7994,21054,0.617,0.205,1
+sharelens.eth,Share,syncswapxyz.eth,SyncSwap,3962,7994,220833,0.496,0.018,2
+sharelens.eth,Share,yoginth.eth,Yoginth,3941,7994,128501,0.493,0.03,3
+sharelens.eth,Share,linea-build.eth,Linea,3513,7994,2889248,0.439,0.001,4
+sharelens.eth,Share,stgdao.eth,Stargate DAO,3038,7994,1200297,0.38,0.003,5
+shellprotocol.eth,Shell Protocol,stgdao.eth,Stargate DAO,13843,32308,1200297,0.428,0.011,1
+shellprotocol.eth,Shell Protocol,linea-build.eth,Linea,8911,32308,2889248,0.276,0.003,2
+shellprotocol.eth,Shell Protocol,gmx.eth,GMX,7644,32308,87990,0.237,0.068,3
+shellprotocol.eth,Shell Protocol,aavedao.eth,Aave DAO,7368,32308,77050,0.228,0.072,4
+shellprotocol.eth,Shell Protocol,opcollective.eth,Optimism Collective,7234,32308,88625,0.224,0.064,5
+sismo.eth,Sismo,stgdao.eth,Stargate DAO,7196,11746,1200297,0.613,0.006,1
+sismo.eth,Sismo,linea-build.eth,Linea,6196,11746,2889248,0.527,0.002,2
+sismo.eth,Sismo,syncswapxyz.eth,SyncSwap,5794,11746,220833,0.493,0.026,3
+sismo.eth,Sismo,opcollective.eth,Optimism Collective,5336,11746,88625,0.454,0.056,4
+sismo.eth,Sismo,gmx.eth,GMX,5181,11746,87990,0.441,0.055,5
+speraxdao.eth,Sperax DAO,stgdao.eth,Stargate DAO,19744,21531,1200297,0.917,0.016,1
+speraxdao.eth,Sperax DAO,gmx.eth,GMX,18394,21531,87990,0.854,0.202,2
+speraxdao.eth,Sperax DAO,vestafinance.eth,Vesta,14220,21531,31524,0.66,0.366,3
+speraxdao.eth,Sperax DAO,swpr.eth,Swapr,10094,21531,18440,0.547,0.338,4
+speraxdao.eth,Sperax DAO,arbitrumfoundation.eth,Arbitrum DAO,9417,21531,275546,0.437,0.033,5
+stgdao.eth,Stargate DAO,linea-build.eth,Linea,163326,1200297,2889248,0.136,0.042,1
+stgdao.eth,Stargate DAO,arbitrumfoundation.eth,Arbitrum DAO,107153,1200297,275546,0.389,0.078,2
+stgdao.eth,Stargate DAO,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,75951,1200297,119675,0.635,0.061,3
+stgdao.eth,Stargate DAO,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,73066,1200297,109288,0.669,0.059,4
+stgdao.eth,Stargate DAO,gmx.eth,GMX,66666,1200297,87990,0.758,0.055,5
+sushigov.eth,Sushi,yam.eth,Yam,2602,11730,4867,0.535,0.186,1
+sushigov.eth,Sushi,badgerdao.eth,BadgerDAO,2544,11730,11247,0.226,0.125,2
+sushigov.eth,Sushi,balancer.eth,Balancer,2420,11730,9213,0.263,0.131,3
+sushigov.eth,Sushi,ybaby.eth,yearn (old),2344,11730,4823,0.486,0.165,4
+sushigov.eth,Sushi,aavedao.eth,Aave DAO,2187,11730,77050,0.186,0.025,5
+swpr.eth,Swapr,gmx.eth,GMX,16452,18440,87990,0.892,0.183,1
+swpr.eth,Swapr,stgdao.eth,Stargate DAO,16089,18440,1200297,0.873,0.013,2
+swpr.eth,Swapr,vestafinance.eth,Vesta,12889,18440,31524,0.699,0.348,3
+swpr.eth,Swapr,speraxdao.eth,Sperax DAO,10094,18440,21531,0.547,0.338,4
+swpr.eth,Swapr,arbitrumfoundation.eth,Arbitrum DAO,8672,18440,275546,0.47,0.03,5
+syncswapxyz.eth,SyncSwap,linea-build.eth,Linea,22490,220833,2889248,0.102,0.007,1
+syncswapxyz.eth,SyncSwap,stgdao.eth,Stargate DAO,21659,220833,1200297,0.098,0.015,2
+syncswapxyz.eth,SyncSwap,opcollective.eth,Optimism Collective,13888,220833,88625,0.157,0.047,3
+syncswapxyz.eth,SyncSwap,arbitrumfoundation.eth,Arbitrum DAO,12377,220833,275546,0.056,0.026,4
+syncswapxyz.eth,SyncSwap,mail3.eth,Mail3,12121,220833,45053,0.269,0.048,5
+tahodao.eth,Taho,stgdao.eth,Stargate DAO,10399,20776,1200297,0.501,0.009,1
+tahodao.eth,Taho,linea-build.eth,Linea,7479,20776,2889248,0.36,0.003,2
+tahodao.eth,Taho,gmx.eth,GMX,7380,20776,87990,0.355,0.073,3
+tahodao.eth,Taho,arbitrumfoundation.eth,Arbitrum DAO,5980,20776,275546,0.288,0.021,4
+tahodao.eth,Taho,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,5322,20776,79609,0.256,0.056,5
+tarpon.eth,tarpon,aavedao.eth,Aave DAO,6071,6072,77050,1.0,0.079,1
+tarpon.eth,tarpon,balsam.eth,balsam,6070,6072,6083,1.0,0.998,2
+tarpon.eth,tarpon,hotstock.eth,hotstock,6067,6072,6072,0.999,0.998,3
+tarpon.eth,tarpon,hinny.eth,hinny,6066,6072,6071,0.999,0.998,4
+tarpon.eth,tarpon,caiman.eth,caiman,6065,6072,6075,0.999,0.997,5
+test6.shot.eth,Strio,fabien.eth,Fabien,188,219,1583,0.858,0.116,1
+test6.shot.eth,Strio,metrox.eth,Metrox,164,219,987,0.749,0.157,2
+test6.shot.eth,Strio,stgdao.eth,Stargate DAO,66,219,1200297,0.301,0.0,3
+test6.shot.eth,Strio,cow.eth,CoW DAO,63,219,14175,0.288,0.004,4
+test6.shot.eth,Strio,linea-build.eth,Linea,57,219,2889248,0.26,0.0,5
+theopendao.eth,OpenDAO,ens.eth,ENS,1932,10635,87853,0.182,0.02,1
+theopendao.eth,OpenDAO,stgdao.eth,Stargate DAO,1090,10635,1200297,0.102,0.001,2
+theopendao.eth,OpenDAO,linea-build.eth,Linea,661,10635,2889248,0.062,0.0,3
+theopendao.eth,OpenDAO,opcollective.eth,Optimism Collective,623,10635,88625,0.059,0.006,4
+theopendao.eth,OpenDAO,people-dao.eth,PeopleDAO,550,10635,2661,0.207,0.043,5
+tunny.eth,tunny,aavedao.eth,Aave DAO,6067,6068,77050,1.0,0.079,1
+tunny.eth,tunny,balsam.eth,balsam,6065,6068,6083,1.0,0.997,2
+tunny.eth,tunny,hinny.eth,hinny,6062,6068,6071,0.999,0.998,3
+tunny.eth,tunny,electricite.eth,electricite,6061,6068,6077,0.999,0.996,4
+tunny.eth,tunny,hotstock.eth,hotstock,6061,6068,6072,0.999,0.997,5
+uniswapgovernance.eth,Uniswap,stgdao.eth,Stargate DAO,16174,30294,1200297,0.534,0.013,1
+uniswapgovernance.eth,Uniswap,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,15004,30294,21790,0.689,0.405,2
+uniswapgovernance.eth,Uniswap,aavedao.eth,Aave DAO,12770,30294,77050,0.422,0.135,3
+uniswapgovernance.eth,Uniswap,opcollective.eth,Optimism Collective,11250,30294,88625,0.371,0.104,4
+uniswapgovernance.eth,Uniswap,linea-build.eth,Linea,10213,30294,2889248,0.337,0.004,5
+vestafinance.eth,Vesta,gmx.eth,GMX,27125,31524,87990,0.86,0.294,1
+vestafinance.eth,Vesta,stgdao.eth,Stargate DAO,27087,31524,1200297,0.859,0.022,2
+vestafinance.eth,Vesta,speraxdao.eth,Sperax DAO,14220,31524,21531,0.66,0.366,3
+vestafinance.eth,Vesta,swpr.eth,Swapr,12889,31524,18440,0.699,0.348,4
+vestafinance.eth,Vesta,arbitrumfoundation.eth,Arbitrum DAO,12563,31524,275546,0.399,0.043,5
+wangzian.eth,wangzian,balsam.eth,balsam,5969,5969,6083,1.0,0.981,1
+wangzian.eth,wangzian,aavedao.eth,Aave DAO,5968,5969,77050,1.0,0.077,2
+wangzian.eth,wangzian,tarpon.eth,tarpon,5967,5969,6072,1.0,0.982,3
+wangzian.eth,wangzian,hotstock.eth,hotstock,5966,5969,6072,0.999,0.982,4
+wangzian.eth,wangzian,hinny.eth,hinny,5965,5969,6071,0.999,0.982,5
+yoginth.eth,Yoginth,linea-build.eth,Linea,84727,128501,2889248,0.659,0.029,1
+yoginth.eth,Yoginth,crypto435.eth,Crypto435,65933,128501,188177,0.513,0.263,2
+yoginth.eth,Yoginth,basenamedao.eth,Base Name Service,45638,128501,109684,0.416,0.237,3
+yoginth.eth,Yoginth,stgdao.eth,Stargate DAO,22801,128501,1200297,0.177,0.017,4
+yoginth.eth,Yoginth,arbitrumfoundation.eth,Arbitrum DAO,21704,128501,275546,0.169,0.057,5

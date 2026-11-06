@@ -1,0 +1,64 @@
+deployment_id,name,in_indicators_table,unique_voters_deployments_csv,voters_votes_csv_max100,voters_votes_csv_all,rank_by_voters_votes_csv,neighbour_1_old,neighbour_1_new,proportion_old,overlap_coefficient_new,jaccard_new,F_overlap_old,F_overlap_new,F_size_old,F_size_new
+linea-build.eth,Linea,True,0.0,2889248,2889281,1,Crypto435,Crypto435,,0.91,0.059,False,False,False,True
+stgdao.eth,Stargate DAO,True,30475.0,1200297,1200299,2,Linea,Linea,,0.14,0.042,False,False,True,True
+magicappstore.eth,Magic Square,True,12217.0,651805,651806,3,Stargate DAO,Stargate DAO,2.5,0.05,0.017,False,False,True,True
+arbitrumfoundation.eth,Arbitrum DAO,True,18605.0,275546,275573,4,Linea,Linea,,0.58,0.054,False,False,True,True
+syncswapxyz.eth,SyncSwap,True,0.0,220833,220917,5,Linea,Linea,,0.1,0.007,False,False,False,True
+crypto435.eth,Crypto435,True,0.0,188177,188177,6,Linea,Linea,,0.91,0.059,False,False,False,True
+cakevote.eth,PancakeSwap,True,129322.0,131134,131136,8,Stargate DAO,Stargate DAO,0.43,0.1,0.01,False,False,True,True
+yoginth.eth,Yoginth,True,0.0,128501,128564,9,Linea,Linea,,0.66,0.029,False,False,False,True
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,True,138480.0,119675,119676,10,Arbitrum DAO,Arbitrum DAO,4.9,0.76,0.3,False,False,True,True
+basenamedao.eth,Base Name Service,True,3752.0,109684,109684,11,Linea,Linea,,0.61,0.023,False,False,False,True
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,True,112713.0,109288,109289,12,Arbitrum DAO,Arbitrum DAO,4.64,0.79,0.29,False,False,True,True
+opcollective.eth,Optimism Collective,True,7444.0,88625,88657,13,Stargate DAO,Stargate DAO,6.43,0.54,0.039,False,False,False,True
+gmx.eth,GMX,True,11165.0,87990,88023,14,Stargate DAO,Stargate DAO,5.97,0.76,0.055,False,False,True,True
+ens.eth,ENS,True,9010.0,87853,87854,15,Stargate DAO,Stargate DAO,0.69,0.07,0.005,False,False,False,True
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,True,78724.0,79609,79641,16,Stargate DAO,Stargate DAO,1.69,0.65,0.042,False,False,True,True
+aavedao.eth,Aave DAO,True,47019.0,77050,77110,17,Linea,Linea,,0.39,0.01,False,False,True,True
+etherscoredao.eth,EtherScore,True,5200.0,59626,59627,19,Linea,Linea,,0.77,0.016,False,False,False,True
+mail3.eth,Mail3,True,5215.0,45053,45140,21,Stargate DAO,Stargate DAO,4.83,0.56,0.021,False,False,False,True
+shellprotocol.eth,Shell Protocol,True,12970.0,32308,32370,23,Stargate DAO,Stargate DAO,1.07,0.43,0.011,False,False,True,True
+vestafinance.eth,Vesta,True,7861.0,31524,31524,24,GMX,GMX,3.45,0.86,0.294,False,False,False,True
+uniswapgovernance.eth,Uniswap,True,22446.0,30294,30326,25,Stargate DAO,Stargate DAO,0.72,0.53,0.013,False,False,True,True
+g-dao.eth,G DAO,True,11679.0,28768,28769,27,Linea,Linea,,0.43,0.004,False,False,True,True
+metislayer2.eth,Metis,True,21364.0,25256,25256,29,Stargate DAO,Stargate DAO,0.45,0.38,0.008,False,False,True,True
+bitdao.eth,Mantle (prev. BitDAO),True,12034.0,23054,23055,30,Stargate DAO,Stargate DAO,1.12,0.59,0.011,False,False,True,True
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,True,21747.0,21790,21791,31,Uniswap,Uniswap,0.69,0.69,0.405,False,False,True,False
+speraxdao.eth,Sperax DAO,True,15247.0,21531,21531,32,Stargate DAO,Stargate DAO,1.29,0.92,0.016,False,False,True,False
+cultivatordao.eth,Cultivator DAO,True,0.0,21054,21086,33,Yoginth,Yoginth,,0.42,0.063,False,False,False,False
+tahodao.eth,Taho,True,0.0,20776,20777,34,Stargate DAO,Stargate DAO,,0.5,0.009,False,False,False,False
+swpr.eth,Swapr,True,4542.0,18440,18441,35,GMX,GMX,3.62,0.89,0.183,False,False,False,False
+radiantcapital.eth,Radiant Capital,True,17491.0,17491,17491,38,Stargate DAO,Stargate DAO,0.81,0.81,0.012,False,False,True,False
+mavxyz.eth,Maverick Protocol,True,6498.0,14756,14756,44,Linea,Linea,,0.62,0.003,False,False,False,False
+cow.eth,CoW DAO,True,7534.0,14175,14223,45,Stargate DAO,Stargate DAO,0.5,0.27,0.003,False,False,False,False
+eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,zkprotocolgovernor,True,13510.0,13665,13665,48,Stargate DAO,Stargate DAO,0.6,0.6,0.007,False,False,True,False
+aavegotchi.eth,Aavegotchi,True,13544.0,13543,13544,49,Stargate DAO,Stargate DAO,0.35,0.35,0.004,False,False,True,False
+dao.spaceid.eth,SPACE ID DAO,True,9876.0,12545,12545,50,Stargate DAO,Stargate DAO,0.74,0.58,0.006,False,False,False,False
+gitcoindao.eth,Gitcoin,True,12532.0,12531,12532,51,Stargate DAO,Stargate DAO,0.58,0.58,0.006,False,False,True,False
+sismo.eth,Sismo,True,7602.0,11746,11778,54,Stargate DAO,Stargate DAO,0.95,0.61,0.006,False,False,False,False
+sushigov.eth,Sushi,True,11731.0,11730,11731,55,Yam,Yam,0.53,0.54,0.186,False,False,True,False
+eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,zktokengovernor,True,10933.0,10933,10933,58,zkprotocolgovernor,zkprotocolgovernor,0.73,0.73,0.479,False,False,True,False
+theopendao.eth,OpenDAO,False,,10635,10636,60,,ENS,,0.18,0.02,,,,
+eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,aave,True,9565.0,9564,9565,65,Aave DAO,Aave DAO,0.79,0.79,0.096,False,False,False,False
+balancer.eth,Balancer,True,9210.0,9213,9214,67,BadgerDAO,BadgerDAO,0.28,0.28,0.143,False,False,False,False
+flygame.eth,dappback,True,1792.0,8946,8948,69,SyncSwap,SyncSwap,,0.49,0.02,False,False,False,False
+sharelens.eth,Share,True,0.0,7994,8053,77,Cultivator DAO,Cultivator DAO,,0.62,0.205,False,False,False,False
+joegovernance.eth,Lets F***ing Joe (prev. TJ),True,6950.0,6950,6950,81,Stargate DAO,Stargate DAO,0.86,0.86,0.005,False,False,False,False
+lido-snapshot.eth,Lido,True,6657.0,6656,6657,84,Stargate DAO,Stargate DAO,0.61,0.61,0.003,False,False,False,False
+balsam.eth,balsam,True,4570.0,6083,6083,92,Aave DAO,Aave DAO,1.33,1.0,0.079,True,True,False,False
+electricite.eth,electricite,True,4071.0,6077,6077,94,Aave DAO,Aave DAO,1.49,1.0,0.079,True,True,False,False
+caiman.eth,caiman,True,4085.0,6075,6075,95,Aave DAO,Aave DAO,1.49,1.0,0.079,True,True,False,False
+tarpon.eth,tarpon,True,4541.0,6072,6072,97,Aave DAO,Aave DAO,1.34,1.0,0.079,True,True,False,False
+hotstock.eth,hotstock,True,4083.0,6072,6072,96,Aave DAO,Aave DAO,1.49,1.0,0.079,True,True,False,False
+hinny.eth,hinny,True,4074.0,6071,6071,98,Aave DAO,Aave DAO,1.49,1.0,0.079,True,True,False,False
+tunny.eth,tunny,True,4070.0,6068,6068,99,Aave DAO,Aave DAO,1.49,1.0,0.079,True,True,False,False
+mists.eth,mists,True,4515.0,6049,6049,100,Aave DAO,Aave DAO,1.34,1.0,0.078,True,True,False,False
+danhuacap.eth,danhuacap,True,4527.0,6043,6043,101,balsam,balsam,1.33,1.0,0.993,True,True,False,False
+angelmother.eth,angelmother,True,3744.0,6017,6017,102,balsam,balsam,1.61,1.0,0.989,True,True,False,False
+lootdex.eth,lootdex,True,3739.0,6013,6013,103,balsam,balsam,1.61,1.0,0.988,True,True,False,False
+gaggle.eth,gaggle,True,4203.0,5987,5987,104,Aave DAO,Aave DAO,1.42,1.0,0.078,True,True,False,False
+wangzian.eth,wangzian,True,4211.0,5969,5969,105,balsam,balsam,1.42,1.0,0.981,True,True,False,False
+godsgirl.eth,godsgirl,True,4225.0,5949,5949,106,Aave DAO,Aave DAO,1.41,1.0,0.077,True,True,False,False
+goodchina.eth,goodchina,True,4227.0,5938,5938,107,Aave DAO,Aave DAO,1.4,1.0,0.077,True,True,False,False
+metrox.eth,Metrox,False,,987,1301,360,,Fabien,,0.39,0.176,,,,
+test6.shot.eth,Strio,False,,219,536,1193,,Fabien,,0.86,0.116,,,,
