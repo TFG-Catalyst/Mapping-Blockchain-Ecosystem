@@ -57,8 +57,8 @@ The scripts are the ones of the repository, unchanged, with the same commands as
 Sprint 2. They write to relative paths (`results/S2-0x`, `data/raw`), so they are run from a
 separate working folder, outside the repository, with the repository on `PYTHONPATH`. That
 keeps the Sprint 2 results (v4) in `results/S2-0x` untouched, and the repository without local
-changes. Two scripts of this task are new and live in `analysis/s3_06_v5_comparison/`:
-`select_hubs_v5.py` and `compare_v4_v5.py`.
+changes. Three scripts of this task are new and live in `analysis/s3_06_v5_comparison/`:
+`select_hubs_v5.py`, `compare_v4_v5.py` and `make_s3_06_figures.py`.
 
 Requirements: the packages of `requirements.txt` (pandas, networkx, matplotlib) and the v5
 files of Zenodo (`votes.csv` of about 15 GB, `deployments.csv`, `proposals.csv`) in
@@ -89,6 +89,12 @@ python -m analysis.s2_04_graph_sensitivity.make_s2_04_figures
 python -m analysis.s2_09_ecosystem_hubs.prepare_hub_candidates
 python -m analysis.s2_09_ecosystem_hubs.classify_hubs --top 60
 python <repo>\analysis\s3_06_v5_comparison\select_hubs_v5.py
+```
+
+Comparison figures (`docs/figures/S3-06_fig*.png`):
+
+```
+python <repo>\analysis\s3_06_v5_comparison\make_s3_06_figures.py --v4 <repo>\results --v5 results --out figures
 ```
 
 `select_hubs_v5.py` runs the `select_hubs.py` of the repository with its `SELECTION` list
@@ -139,6 +145,8 @@ from the committed `results/S2-0x`; v5 values from this rerun.
   76.1% to 85.2%, and the percentiles fall (p90 3 to 2, p99 12 to 8, p99.9 26 to 21): the
   complete votes add many occasional voters. At the top nothing moves: maximum 353 to 361 DAOs,
   wallets with more than 100 DAOs 319 to 321, with more than 200 DAOs 91 to 91.
+![Share of wallets by number of DAOs, v4 and v5](figures/S3-06_fig2_activity.png)
+
 - **Group.** The S2-03 rule gives 464 wallets (469 in v4); 446 are in both.
 - **Threshold comparison.**
 
@@ -149,6 +157,8 @@ from the committed `results/S2-0x`; v5 values from this rerun.
 | 100 | 319 / 321 | 0 / **2** | 1.9% / 0.9% |
 | 75 | 337 / 348 | 18 / 29 | 1.9% / 0.9% |
 | 50 | 434 / 536 | 76 / 178 | 0.1% / 0.1% |
+
+![Weight of the group and non-group wallets excluded, by threshold](figures/S3-06_fig1_threshold.png)
 
 ### S2-04: sensitivity of the graph
 
@@ -203,6 +213,10 @@ from the committed `results/S2-0x`; v5 values from this rerun.
 | Lido / ENS | stable | 19 / 21 | 44 / 22 |
 
   Ranks are for `nolimit`; for Metrox, Strio and OpenDAO, `nolimit` to `max100`.
+
+  ![Rank of the selected hubs by weighted degree, v4 and v5](figures/S3-06_fig3_hub_ranks.png)
+
+  The figure uses the `max100` graph.
 
   Metrox and Strio keep depending on the group (more than 30% of their weight); they leave the
   candidates because other nodes gain real weight, not because they stop depending on the

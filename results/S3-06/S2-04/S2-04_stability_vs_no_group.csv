@@ -1,0 +1,5 @@
+config,edges,edges_that_would_not_exist_without_group,pct_edges_depending_on_group,no_group_edges_missing_in_config,total_weight,group_weight,pct_group_weight
+nolimit,776137,74637,9.62,0,15220228,4625935,30.39
+max200,731896,30396,4.15,0,12783012,2188719,17.12
+max100,698898,3285,0.47,5887,10676241,92048,0.86
+max50,655451,1168,0.18,47217,10247205,5179,0.05

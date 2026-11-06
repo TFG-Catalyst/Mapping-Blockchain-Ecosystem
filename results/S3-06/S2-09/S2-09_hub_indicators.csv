@@ -1,0 +1,61 @@
+deployment_id,name,platform,rank_weighted_nolimit,rank_weighted_max200,rank_weighted_max100,rank_weighted_max50,rank_weighted_diff,rank_degree_max100,pct_group_weight_nolimit,unique_voters,rank_unique_voters,neighbor_1,neighbor_1_weight,neighbor_1_proportion,assigned_organization,F_filter,F_overlap,F_size,F_org
+linea-build.eth,Linea,snapshot,1,1,1,1,0,2,0.4,0.0,83972,Crypto435,170988,,,False,False,False,False
+stgdao.eth,Stargate DAO,snapshot,2,2,2,2,0,1,0.0,30475.0,7,Linea,163326,,,False,False,True,False
+arbitrumfoundation.eth,Arbitrum DAO,snapshot,3,3,3,3,0,3,0.4,18605.0,11,Linea,160852,,Arbitrum,False,False,True,True
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,tally,4,4,4,4,0,4,0.0,138480.0,1,Arbitrum DAO,91163,4.9,Arbitrum,False,False,True,True
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,tally,5,5,5,5,0,5,0.0,112713.0,4,Arbitrum DAO,86408,4.64,Arbitrum,False,False,True,True
+aavedao.eth,Aave DAO,snapshot,6,6,6,6,0,6,1.5,47019.0,6,Linea,30122,,Aave,False,False,True,False
+gmx.eth,GMX,snapshot,7,7,7,7,0,7,0.9,11165.0,28,Stargate DAO,66666,5.97,,False,False,True,False
+yoginth.eth,Yoginth,snapshot,8,8,8,8,0,11,1.8,0.0,73585,Linea,84727,,,False,False,False,False
+crypto435.eth,Crypto435,snapshot,9,9,9,9,0,61,0.0,0.0,73569,Linea,170988,,,False,False,False,False
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,tally,10,10,10,10,0,8,1.1,78724.0,5,Stargate DAO,51393,1.69,,False,False,True,False
+opcollective.eth,Optimism Collective,snapshot,11,11,11,11,0,9,1.1,7444.0,47,Stargate DAO,47831,6.43,,False,False,False,False
+etherscoredao.eth,EtherScore,snapshot,12,12,12,12,0,15,0.0,5200.0,73,Linea,46059,,,False,False,False,False
+basenamedao.eth,Base Name Service,snapshot,13,13,13,13,0,18,0.0,3752.0,114,Linea,67178,,,False,False,False,False
+syncswapxyz.eth,SyncSwap,snapshot,14,14,14,14,0,14,4.0,0.0,83973,Linea,22490,,,False,False,False,False
+mail3.eth,Mail3,snapshot,15,15,15,15,0,13,4.1,5215.0,72,Stargate DAO,25213,4.83,,False,False,False,False
+uniswapgovernance.eth,Uniswap,snapshot,16,16,16,16,0,17,2.0,22446.0,8,Stargate DAO,16174,0.72,Uniswap,False,False,True,True
+vestafinance.eth,Vesta,snapshot,17,17,17,17,0,26,0.0,7861.0,43,GMX,27125,3.45,,False,False,False,False
+shellprotocol.eth,Shell Protocol,snapshot,18,18,18,18,0,19,3.9,12970.0,20,Stargate DAO,13843,1.07,,False,False,True,False
+cakevote.eth,PancakeSwap,snapshot,19,19,19,19,0,12,0.1,129322.0,3,Stargate DAO,13151,0.43,,False,False,True,False
+magicappstore.eth,Magic Square,snapshot,20,20,20,20,0,16,0.0,12217.0,23,Stargate DAO,30488,2.5,,False,False,True,False
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,tally,21,21,21,21,0,20,0.0,21747.0,9,Uniswap,15004,0.69,Uniswap,False,False,True,True
+ens.eth,ENS,snapshot,22,22,22,22,0,10,0.0,9010.0,37,Stargate DAO,6233,0.69,,False,False,False,False
+g-dao.eth,G DAO,snapshot,23,23,23,23,0,22,0.0,11679.0,26,Linea,12425,,,False,False,True,False
+cultivatordao.eth,Cultivator DAO,snapshot,24,24,24,24,0,23,2.9,0.0,73628,Yoginth,8848,,,False,False,False,False
+sismo.eth,Sismo,snapshot,25,25,25,26,1,29,3.2,7602.0,45,Stargate DAO,7196,0.95,,False,False,False,False
+speraxdao.eth,Sperax DAO,snapshot,26,26,26,25,1,58,0.0,15247.0,16,Stargate DAO,19744,1.29,,False,False,True,False
+bitdao.eth,Mantle (prev. BitDAO),snapshot,27,27,27,27,0,25,0.0,12034.0,24,Stargate DAO,13518,1.12,,False,False,True,False
+tahodao.eth,Taho,snapshot,28,28,28,29,1,39,0.0,0.0,73586,Stargate DAO,10399,,,False,False,False,False
+swpr.eth,Swapr,snapshot,29,29,29,28,1,54,0.0,4542.0,86,GMX,16452,3.62,,False,False,False,False
+radiantcapital.eth,Radiant Capital,snapshot,30,30,30,30,0,24,0.0,17491.0,12,Stargate DAO,14082,0.81,,False,False,True,False
+gitcoindao.eth,Gitcoin,snapshot,31,31,31,31,0,21,0.0,12532.0,22,Stargate DAO,7253,0.58,,False,False,True,False
+mavxyz.eth,Maverick Protocol,snapshot,32,32,32,32,0,27,0.0,6498.0,55,Linea,9215,,,False,False,False,False
+eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,zkprotocolgovernor,tally,33,33,33,33,0,31,0.0,13510.0,19,Stargate DAO,8142,0.6,zkSync,False,False,True,True
+eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,aave,tally,34,34,34,34,0,34,0.0,9565.0,33,Aave DAO,7587,0.79,Aave,False,False,False,True
+dao.spaceid.eth,SPACE ID DAO,snapshot,36,36,35,35,1,44,0.0,9876.0,32,Stargate DAO,7326,0.74,,False,False,False,False
+balsam.eth,balsam,snapshot,38,38,36,36,2,1542,0.0,4570.0,85,Aave DAO,6080,1.33,,False,True,False,False
+electricite.eth,electricite,snapshot,39,39,37,37,2,1490,0.0,4071.0,103,Aave DAO,6076,1.49,,False,True,False,False
+caiman.eth,caiman,snapshot,40,40,38,38,2,1686,0.0,4085.0,100,Aave DAO,6072,1.49,,False,True,False,False
+tarpon.eth,tarpon,snapshot,41,41,39,39,2,1947,0.0,4541.0,87,Aave DAO,6071,1.34,,False,True,False,False
+hotstock.eth,hotstock,snapshot,42,42,40,40,2,2102,0.0,4083.0,101,Aave DAO,6070,1.49,,False,True,False,False
+hinny.eth,hinny,snapshot,43,43,41,41,2,2019,0.0,4074.0,102,Aave DAO,6068,1.49,,False,True,False,False
+tunny.eth,tunny,snapshot,45,45,42,42,3,3220,0.0,4070.0,104,Aave DAO,6067,1.49,,False,True,False,False
+lido-snapshot.eth,Lido,snapshot,44,44,43,55,12,32,0.0,6657.0,53,Stargate DAO,4087,0.61,,False,False,False,False
+mists.eth,mists,snapshot,46,46,44,43,3,1741,0.0,4515.0,90,Aave DAO,6047,1.34,,False,True,False,False
+danhuacap.eth,danhuacap,snapshot,47,47,45,44,3,2146,0.0,4527.0,88,balsam,6043,1.33,,False,True,False,False
+angelmother.eth,angelmother,snapshot,48,48,46,45,3,2142,0.0,3744.0,115,balsam,6017,1.61,,False,True,False,False
+lootdex.eth,lootdex,snapshot,49,49,47,46,3,2133,0.0,3739.0,116,balsam,6012,1.61,,False,True,False,False
+gaggle.eth,gaggle,snapshot,50,50,48,47,3,1751,0.0,4203.0,97,Aave DAO,5986,1.42,,False,True,False,False
+wangzian.eth,wangzian,snapshot,51,51,49,48,3,2157,0.0,4211.0,96,balsam,5969,1.42,,False,True,False,False
+aavegotchi.eth,Aavegotchi,snapshot,52,52,50,52,2,30,0.0,13544.0,18,Stargate DAO,4708,0.35,,False,False,True,False
+godsgirl.eth,godsgirl,snapshot,53,53,51,49,4,2041,0.0,4225.0,95,Aave DAO,5947,1.41,,False,True,False,False
+goodchina.eth,goodchina,snapshot,54,54,52,50,4,2017,0.0,4227.0,94,Aave DAO,5938,1.4,,False,True,False,False
+eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,zktokengovernor,tally,55,55,53,51,4,37,0.0,10933.0,29,zkprotocolgovernor,7967,0.73,zkSync,False,False,True,True
+sharelens.eth,Share,snapshot,35,35,54,54,19,47,10.5,0.0,73609,Cultivator DAO,4933,,,False,False,False,False
+metislayer2.eth,Metis,snapshot,56,56,55,53,3,28,0.0,21364.0,10,Stargate DAO,9696,0.45,,False,False,True,False
+cow.eth,CoW DAO,snapshot,37,37,56,57,20,33,10.7,7534.0,46,Stargate DAO,3753,0.5,,False,False,False,False
+joegovernance.eth,Lets F***ing Joe (prev. TJ),snapshot,57,57,57,56,1,43,0.0,6950.0,48,Stargate DAO,5981,0.86,,False,False,False,False
+sushigov.eth,Sushi,snapshot,58,58,58,58,0,38,0.0,11731.0,25,Yam,2602,0.53,,False,False,True,False
+flygame.eth,dappback,snapshot,59,59,59,59,0,73,0.8,1792.0,216,SyncSwap,4409,,,False,False,False,False
+balancer.eth,Balancer,snapshot,60,60,60,60,0,45,0.0,9210.0,35,BadgerDAO,2558,0.28,,False,False,False,False

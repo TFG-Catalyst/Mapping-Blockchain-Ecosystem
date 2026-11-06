@@ -1,0 +1,4 @@
+reference,config,edges_ref,edges_other,only_in_ref,only_in_other,common,common_with_different_weight,pct_common_with_different_weight,median_weight_ratio_in_changed,total_weight_ref,total_weight_other
+max200,nolimit,731896,776137,0,44241,731896,28168,3.85,2.265,12783012,15220228
+max200,max100,731896,698898,32998,0,698898,8635,1.24,0.5,12783012,10676241
+max200,max50,731896,655451,76445,0,655451,76529,11.68,0.75,12783012,10247205

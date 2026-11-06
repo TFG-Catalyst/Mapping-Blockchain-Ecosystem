@@ -1,0 +1,141 @@
+hub,hub_name,position,neighbor,neighbor_name,shared_voters,neighbor_unique_voters
+aavedao.eth,Aave DAO,1,linea-build.eth,Linea,30122,0.0
+aavedao.eth,Aave DAO,2,arbitrumfoundation.eth,Arbitrum DAO,28454,18605.0
+aavedao.eth,Aave DAO,3,stgdao.eth,Stargate DAO,27460,30475.0
+aavedao.eth,Aave DAO,4,yoginth.eth,Yoginth,19807,0.0
+aavedao.eth,Aave DAO,5,etherscoredao.eth,EtherScore,19587,5200.0
+arbitrumfoundation.eth,Arbitrum DAO,1,linea-build.eth,Linea,160852,0.0
+arbitrumfoundation.eth,Arbitrum DAO,2,crypto435.eth,Crypto435,116755,0.0
+arbitrumfoundation.eth,Arbitrum DAO,3,stgdao.eth,Stargate DAO,107153,30475.0
+arbitrumfoundation.eth,Arbitrum DAO,4,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,91163,138480.0
+arbitrumfoundation.eth,Arbitrum DAO,5,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,86408,112713.0
+basenamedao.eth,Base Name Service,1,linea-build.eth,Linea,67178,0.0
+basenamedao.eth,Base Name Service,2,yoginth.eth,Yoginth,45638,0.0
+basenamedao.eth,Base Name Service,3,crypto435.eth,Crypto435,38184,0.0
+basenamedao.eth,Base Name Service,4,stgdao.eth,Stargate DAO,27759,30475.0
+basenamedao.eth,Base Name Service,5,whitelist1.eth,Whitelist,13456,6930.0
+bitdao.eth,Mantle (prev. BitDAO),1,stgdao.eth,Stargate DAO,13518,30475.0
+bitdao.eth,Mantle (prev. BitDAO),2,linea-build.eth,Linea,12653,0.0
+bitdao.eth,Mantle (prev. BitDAO),3,arbitrumfoundation.eth,Arbitrum DAO,6725,18605.0
+bitdao.eth,Mantle (prev. BitDAO),4,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,5564,138480.0
+bitdao.eth,Mantle (prev. BitDAO),5,bitembassy.eth,BIT Embassy,5260,5472.0
+cakevote.eth,PancakeSwap,1,stgdao.eth,Stargate DAO,13151,30475.0
+cakevote.eth,PancakeSwap,2,linea-build.eth,Linea,9195,0.0
+cakevote.eth,PancakeSwap,3,aavedao.eth,Aave DAO,7609,47019.0
+cakevote.eth,PancakeSwap,4,arbitrumfoundation.eth,Arbitrum DAO,6591,18605.0
+cakevote.eth,PancakeSwap,5,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,4843,112713.0
+crypto435.eth,Crypto435,1,linea-build.eth,Linea,170988,0.0
+crypto435.eth,Crypto435,2,arbitrumfoundation.eth,Arbitrum DAO,116755,18605.0
+crypto435.eth,Crypto435,3,yoginth.eth,Yoginth,65933,0.0
+crypto435.eth,Crypto435,4,basenamedao.eth,Base Name Service,38184,3752.0
+crypto435.eth,Crypto435,5,etherscoredao.eth,EtherScore,20643,5200.0
+cultivatordao.eth,Cultivator DAO,1,yoginth.eth,Yoginth,8848,0.0
+cultivatordao.eth,Cultivator DAO,2,syncswapxyz.eth,SyncSwap,8064,0.0
+cultivatordao.eth,Cultivator DAO,3,stgdao.eth,Stargate DAO,7824,30475.0
+cultivatordao.eth,Cultivator DAO,4,linea-build.eth,Linea,7477,0.0
+cultivatordao.eth,Cultivator DAO,5,opcollective.eth,Optimism Collective,5761,7444.0
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,1,stgdao.eth,Stargate DAO,51393,30475.0
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,2,arbitrumfoundation.eth,Arbitrum DAO,30671,18605.0
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,3,opcollective.eth,Optimism Collective,30331,7444.0
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,4,linea-build.eth,Linea,26247,0.0
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,5,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,24077,112713.0
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,1,uniswapgovernance.eth,Uniswap,15004,22446.0
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,2,stgdao.eth,Stargate DAO,10346,30475.0
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,3,aavedao.eth,Aave DAO,8281,47019.0
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,4,linea-build.eth,Linea,7122,0.0
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,5,opcollective.eth,Optimism Collective,7122,7444.0
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,1,arbitrumfoundation.eth,Arbitrum DAO,91163,18605.0
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,2,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,86229,112713.0
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,3,stgdao.eth,Stargate DAO,75951,30475.0
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,4,linea-build.eth,Linea,37905,0.0
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,5,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,23074,78724.0
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,1,arbitrumfoundation.eth,Arbitrum DAO,86408,18605.0
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,2,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,86229,138480.0
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,3,stgdao.eth,Stargate DAO,73066,30475.0
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,4,linea-build.eth,Linea,35935,0.0
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,5,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,24077,78724.0
+ens.eth,ENS,1,stgdao.eth,Stargate DAO,6233,30475.0
+ens.eth,ENS,2,aavedao.eth,Aave DAO,4470,47019.0
+ens.eth,ENS,3,opcollective.eth,Optimism Collective,3761,7444.0
+ens.eth,ENS,4,uniswapgovernance.eth,Uniswap,3744,22446.0
+ens.eth,ENS,5,linea-build.eth,Linea,3537,0.0
+etherscoredao.eth,EtherScore,1,linea-build.eth,Linea,46059,0.0
+etherscoredao.eth,EtherScore,2,arbitrumfoundation.eth,Arbitrum DAO,32900,18605.0
+etherscoredao.eth,EtherScore,3,stgdao.eth,Stargate DAO,23405,30475.0
+etherscoredao.eth,EtherScore,4,crypto435.eth,Crypto435,20643,0.0
+etherscoredao.eth,EtherScore,5,aavedao.eth,Aave DAO,19587,47019.0
+g-dao.eth,G DAO,1,linea-build.eth,Linea,12425,0.0
+g-dao.eth,G DAO,2,arbitrumfoundation.eth,Arbitrum DAO,10041,18605.0
+g-dao.eth,G DAO,3,etherscoredao.eth,EtherScore,8432,5200.0
+g-dao.eth,G DAO,4,stgdao.eth,Stargate DAO,8095,30475.0
+g-dao.eth,G DAO,5,aavedao.eth,Aave DAO,7226,47019.0
+gitcoindao.eth,Gitcoin,1,stgdao.eth,Stargate DAO,7253,30475.0
+gitcoindao.eth,Gitcoin,2,arbitrumfoundation.eth,Arbitrum DAO,5809,18605.0
+gitcoindao.eth,Gitcoin,3,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,4713,138480.0
+gitcoindao.eth,Gitcoin,4,linea-build.eth,Linea,4631,0.0
+gitcoindao.eth,Gitcoin,5,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,4630,112713.0
+gmx.eth,GMX,1,stgdao.eth,Stargate DAO,66666,30475.0
+gmx.eth,GMX,2,arbitrumfoundation.eth,Arbitrum DAO,29556,18605.0
+gmx.eth,GMX,3,linea-build.eth,Linea,28927,0.0
+gmx.eth,GMX,4,vestafinance.eth,Vesta,27125,7861.0
+gmx.eth,GMX,5,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,23563,78724.0
+linea-build.eth,Linea,1,crypto435.eth,Crypto435,170988,0.0
+linea-build.eth,Linea,2,stgdao.eth,Stargate DAO,163326,30475.0
+linea-build.eth,Linea,3,arbitrumfoundation.eth,Arbitrum DAO,160852,18605.0
+linea-build.eth,Linea,4,yoginth.eth,Yoginth,84727,0.0
+linea-build.eth,Linea,5,basenamedao.eth,Base Name Service,67178,3752.0
+magicappstore.eth,Magic Square,1,stgdao.eth,Stargate DAO,30488,30475.0
+magicappstore.eth,Magic Square,2,linea-build.eth,Linea,25124,0.0
+magicappstore.eth,Magic Square,3,arbitrumfoundation.eth,Arbitrum DAO,11299,18605.0
+magicappstore.eth,Magic Square,4,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,10544,138480.0
+magicappstore.eth,Magic Square,5,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,9533,112713.0
+mail3.eth,Mail3,1,stgdao.eth,Stargate DAO,25213,30475.0
+mail3.eth,Mail3,2,linea-build.eth,Linea,21152,0.0
+mail3.eth,Mail3,3,gmx.eth,GMX,13888,11165.0
+mail3.eth,Mail3,4,syncswapxyz.eth,SyncSwap,12121,0.0
+mail3.eth,Mail3,5,arbitrumfoundation.eth,Arbitrum DAO,11747,18605.0
+opcollective.eth,Optimism Collective,1,stgdao.eth,Stargate DAO,47831,30475.0
+opcollective.eth,Optimism Collective,2,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,test,30331,78724.0
+opcollective.eth,Optimism Collective,3,linea-build.eth,Linea,26950,0.0
+opcollective.eth,Optimism Collective,4,gmx.eth,GMX,22039,11165.0
+opcollective.eth,Optimism Collective,5,arbitrumfoundation.eth,Arbitrum DAO,19907,18605.0
+radiantcapital.eth,Radiant Capital,1,stgdao.eth,Stargate DAO,14082,30475.0
+radiantcapital.eth,Radiant Capital,2,gmx.eth,GMX,7806,11165.0
+radiantcapital.eth,Radiant Capital,3,arbitrumfoundation.eth,Arbitrum DAO,6641,18605.0
+radiantcapital.eth,Radiant Capital,4,linea-build.eth,Linea,5725,0.0
+radiantcapital.eth,Radiant Capital,5,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,4777,138480.0
+shellprotocol.eth,Shell Protocol,1,stgdao.eth,Stargate DAO,13843,30475.0
+shellprotocol.eth,Shell Protocol,2,linea-build.eth,Linea,8911,0.0
+shellprotocol.eth,Shell Protocol,3,gmx.eth,GMX,7644,11165.0
+shellprotocol.eth,Shell Protocol,4,aavedao.eth,Aave DAO,7368,47019.0
+shellprotocol.eth,Shell Protocol,5,opcollective.eth,Optimism Collective,7234,7444.0
+sismo.eth,Sismo,1,stgdao.eth,Stargate DAO,7196,30475.0
+sismo.eth,Sismo,2,linea-build.eth,Linea,6196,0.0
+sismo.eth,Sismo,3,syncswapxyz.eth,SyncSwap,5794,0.0
+sismo.eth,Sismo,4,opcollective.eth,Optimism Collective,5336,7444.0
+sismo.eth,Sismo,5,gmx.eth,GMX,5181,11165.0
+stgdao.eth,Stargate DAO,1,linea-build.eth,Linea,163326,0.0
+stgdao.eth,Stargate DAO,2,arbitrumfoundation.eth,Arbitrum DAO,107153,18605.0
+stgdao.eth,Stargate DAO,3,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,arbitrum treasury,75951,138480.0
+stgdao.eth,Stargate DAO,4,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,arbitrum core,73066,112713.0
+stgdao.eth,Stargate DAO,5,gmx.eth,GMX,66666,11165.0
+syncswapxyz.eth,SyncSwap,1,linea-build.eth,Linea,22490,0.0
+syncswapxyz.eth,SyncSwap,2,stgdao.eth,Stargate DAO,21659,30475.0
+syncswapxyz.eth,SyncSwap,3,opcollective.eth,Optimism Collective,13888,7444.0
+syncswapxyz.eth,SyncSwap,4,arbitrumfoundation.eth,Arbitrum DAO,12377,18605.0
+syncswapxyz.eth,SyncSwap,5,mail3.eth,Mail3,12121,5215.0
+uniswapgovernance.eth,Uniswap,1,stgdao.eth,Stargate DAO,16174,30475.0
+uniswapgovernance.eth,Uniswap,2,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,uniswap,15004,21747.0
+uniswapgovernance.eth,Uniswap,3,aavedao.eth,Aave DAO,12770,47019.0
+uniswapgovernance.eth,Uniswap,4,opcollective.eth,Optimism Collective,11250,7444.0
+uniswapgovernance.eth,Uniswap,5,linea-build.eth,Linea,10213,0.0
+vestafinance.eth,Vesta,1,gmx.eth,GMX,27125,11165.0
+vestafinance.eth,Vesta,2,stgdao.eth,Stargate DAO,27087,30475.0
+vestafinance.eth,Vesta,3,speraxdao.eth,Sperax DAO,14220,15247.0
+vestafinance.eth,Vesta,4,swpr.eth,Swapr,12889,4542.0
+vestafinance.eth,Vesta,5,arbitrumfoundation.eth,Arbitrum DAO,12563,18605.0
+yoginth.eth,Yoginth,1,linea-build.eth,Linea,84727,0.0
+yoginth.eth,Yoginth,2,crypto435.eth,Crypto435,65933,0.0
+yoginth.eth,Yoginth,3,basenamedao.eth,Base Name Service,45638,3752.0
+yoginth.eth,Yoginth,4,stgdao.eth,Stargate DAO,22801,30475.0
+yoginth.eth,Yoginth,5,arbitrumfoundation.eth,Arbitrum DAO,21704,18605.0

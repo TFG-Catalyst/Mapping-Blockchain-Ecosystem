@@ -1,0 +1,19 @@
+deployment_id,verified_label,source,date_checked
+eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,Optimism: Governance Agora (TransparentUpgradeableProxy),https://optimistic.etherscan.io/address/0xcdf27f107725988f2261ce2256bdfcde8b382b10,2026-10-12
+eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,Uniswap: Governor Bravo (GovernorBravoDelegator),https://etherscan.io/address/0x408ed6354d4973f66138c91495f2f2fcbd8724c3,2026-10-12
+eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,Arbitrum Foundation: Treasury Governor (proxy; implementation 0x46AF4EDF...3d05b5aE0),Arbiscan (screenshot by Carlos),2026-10-12
+eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,Arbitrum Foundation: Core Governor (proxy; same implementation 0x46AF4EDF...3d05b5aE0),Arbiscan (screenshot by Carlos),2026-10-12
+eip155:1:0xec568fffba86c094cf06b22134b23074dfe2252c,Aave: Governance V2,Etherscan (screenshot by Carlos),2026-10-12
+eip155:324:0x76705327e682f2d96943280d99464ab61219e34f,ZkProtocolGovernor (verified contract; creator 0x478A...1B92),ZKsync Era explorer (screenshot by Carlos),2026-10-12
+eip155:324:0x10560f8b7ee37571ad7e3702eeb12bc422036e89,ZkTokenGovernor (verified contract; same creator 0x478A...1B92),ZKsync Era explorer (screenshot by Carlos),2026-10-12
+aavedao.eth,Snapshot: Aave DAO (verified=true; no description),hub.snapshot.org/graphql (space aavedao.eth),2026-10-12
+uniswapgovernance.eth,Snapshot: Uniswap (verified=true; Only delegated UNI may be used to vote on proposals),hub.snapshot.org/graphql (space uniswapgovernance.eth),2026-10-12
+cakevote.eth,Snapshot: PancakeSwap (verified=true; no description),hub.snapshot.org/graphql (space cakevote.eth),2026-10-12
+stgdao.eth,Snapshot: Stargate DAO (verified=true; no description),hub.snapshot.org/graphql (space stgdao.eth),2026-10-12
+lido-snapshot.eth,Snapshot: Lido (verified=true; Off-chain voting is a part of the Lido DAO decision-making process),hub.snapshot.org/graphql (space lido-snapshot.eth),2026-10-12
+ens.eth,Snapshot: ENS (verified=true; no description),hub.snapshot.org/graphql (space ens.eth),2026-10-12
+theopendao.eth,Snapshot: OpenDAO (verified=true; OpenDAO),hub.snapshot.org/graphql (space theopendao.eth),2026-10-12
+balsam.eth,Snapshot: balsam (verified=false; no description; no website),hub.snapshot.org/graphql (space balsam.eth),2026-10-12
+tarpon.eth,Snapshot: tarpon (verified=false; no description),hub.snapshot.org/graphql (space tarpon.eth),2026-10-12
+metrox.eth,Snapshot: Metrox (verified=false; Metrox test space; no website),hub.snapshot.org/graphql (space metrox.eth),2026-10-12
+test6.shot.eth,Snapshot: Strio (verified=false; no description),hub.snapshot.org/graphql (space test6.shot.eth),2026-10-12

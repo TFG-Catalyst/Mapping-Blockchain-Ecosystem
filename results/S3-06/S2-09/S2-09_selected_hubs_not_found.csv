@@ -1,0 +1,4 @@
+category_v4,name,platform,rank_weighted_nolimit,rank_weighted_max200,rank_weighted_max100,rank_weighted_max50,pct_group_weight_nolimit
+filter-dependent,Metrox,snapshot,68.0,91.0,191.0,230.0,90.4
+filter-dependent,Strio,snapshot,72.0,97.0,294.0,582.0,97.3
+dominated by community size,OpenDAO,snapshot,146.0,86.0,86.0,86.0,0.0

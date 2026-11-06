@@ -1,0 +1,161 @@
+config,criterion,position,deployment_id,platform,name,degree,weighted_degree
+nolimit,degree,1,stgdao.eth,snapshot,Stargate DAO,31402,1327903
+nolimit,degree,2,linea-build.eth,snapshot,Linea,18025,1336388
+nolimit,degree,3,arbitrumfoundation.eth,snapshot,Arbitrum DAO,12904,1066714
+nolimit,degree,4,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,tally,arbitrum treasury,10306,643768
+nolimit,degree,5,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,tally,arbitrum core,9692,625552
+nolimit,degree,6,gmx.eth,snapshot,GMX,7793,549799
+nolimit,degree,7,aavedao.eth,snapshot,Aave DAO,7765,562745
+nolimit,degree,8,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,tally,test,7302,460536
+nolimit,degree,9,opcollective.eth,snapshot,Optimism Collective,6922,456888
+nolimit,degree,10,ens.eth,snapshot,ENS,6580,187539
+nolimit,degree,11,mail3.eth,snapshot,Mail3,5805,336001
+nolimit,degree,12,yoginth.eth,snapshot,Yoginth,5782,535269
+nolimit,degree,13,cakevote.eth,snapshot,PancakeSwap,5684,210791
+nolimit,degree,14,syncswapxyz.eth,snapshot,SyncSwap,5536,340460
+nolimit,degree,15,etherscoredao.eth,snapshot,EtherScore,5222,378459
+nolimit,degree,16,uniswapgovernance.eth,snapshot,Uniswap,5173,256585
+nolimit,degree,17,magicappstore.eth,snapshot,Magic Square,5164,198483
+nolimit,degree,18,basenamedao.eth,snapshot,Base Name Service,4926,365386
+nolimit,degree,19,shellprotocol.eth,snapshot,Shell Protocol,4840,223521
+nolimit,degree,20,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,tally,uniswap,4276,189051
+nolimit,weighted_degree,1,linea-build.eth,snapshot,Linea,18025,1336388
+nolimit,weighted_degree,2,stgdao.eth,snapshot,Stargate DAO,31402,1327903
+nolimit,weighted_degree,3,arbitrumfoundation.eth,snapshot,Arbitrum DAO,12904,1066714
+nolimit,weighted_degree,4,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,tally,arbitrum treasury,10306,643768
+nolimit,weighted_degree,5,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,tally,arbitrum core,9692,625552
+nolimit,weighted_degree,6,aavedao.eth,snapshot,Aave DAO,7765,562745
+nolimit,weighted_degree,7,gmx.eth,snapshot,GMX,7793,549799
+nolimit,weighted_degree,8,yoginth.eth,snapshot,Yoginth,5782,535269
+nolimit,weighted_degree,9,crypto435.eth,snapshot,Crypto435,2058,473581
+nolimit,weighted_degree,10,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,tally,test,7302,460536
+nolimit,weighted_degree,11,opcollective.eth,snapshot,Optimism Collective,6922,456888
+nolimit,weighted_degree,12,etherscoredao.eth,snapshot,EtherScore,5222,378459
+nolimit,weighted_degree,13,basenamedao.eth,snapshot,Base Name Service,4926,365386
+nolimit,weighted_degree,14,syncswapxyz.eth,snapshot,SyncSwap,5536,340460
+nolimit,weighted_degree,15,mail3.eth,snapshot,Mail3,5805,336001
+nolimit,weighted_degree,16,uniswapgovernance.eth,snapshot,Uniswap,5173,256585
+nolimit,weighted_degree,17,vestafinance.eth,snapshot,Vesta,3453,228871
+nolimit,weighted_degree,18,shellprotocol.eth,snapshot,Shell Protocol,4840,223521
+nolimit,weighted_degree,19,cakevote.eth,snapshot,PancakeSwap,5684,210791
+nolimit,weighted_degree,20,magicappstore.eth,snapshot,Magic Square,5164,198483
+max200,degree,1,stgdao.eth,snapshot,Stargate DAO,31402,1327903
+max200,degree,2,linea-build.eth,snapshot,Linea,18025,1336388
+max200,degree,3,arbitrumfoundation.eth,snapshot,Arbitrum DAO,12904,1066714
+max200,degree,4,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,tally,arbitrum treasury,10306,643768
+max200,degree,5,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,tally,arbitrum core,9692,625552
+max200,degree,6,gmx.eth,snapshot,GMX,7793,549799
+max200,degree,7,aavedao.eth,snapshot,Aave DAO,7721,562510
+max200,degree,8,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,tally,test,7302,460536
+max200,degree,9,opcollective.eth,snapshot,Optimism Collective,6922,456888
+max200,degree,10,ens.eth,snapshot,ENS,6580,187539
+max200,degree,11,mail3.eth,snapshot,Mail3,5741,332766
+max200,degree,12,yoginth.eth,snapshot,Yoginth,5681,533901
+max200,degree,13,cakevote.eth,snapshot,PancakeSwap,5536,210556
+max200,degree,14,syncswapxyz.eth,snapshot,SyncSwap,5479,337460
+max200,degree,15,etherscoredao.eth,snapshot,EtherScore,5222,378459
+max200,degree,16,uniswapgovernance.eth,snapshot,Uniswap,5173,256585
+max200,degree,17,magicappstore.eth,snapshot,Magic Square,5164,198483
+max200,degree,18,basenamedao.eth,snapshot,Base Name Service,4926,365386
+max200,degree,19,shellprotocol.eth,snapshot,Shell Protocol,4840,223521
+max200,degree,20,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,tally,uniswap,4276,189051
+max200,weighted_degree,1,linea-build.eth,snapshot,Linea,18025,1336388
+max200,weighted_degree,2,stgdao.eth,snapshot,Stargate DAO,31402,1327903
+max200,weighted_degree,3,arbitrumfoundation.eth,snapshot,Arbitrum DAO,12904,1066714
+max200,weighted_degree,4,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,tally,arbitrum treasury,10306,643768
+max200,weighted_degree,5,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,tally,arbitrum core,9692,625552
+max200,weighted_degree,6,aavedao.eth,snapshot,Aave DAO,7721,562510
+max200,weighted_degree,7,gmx.eth,snapshot,GMX,7793,549799
+max200,weighted_degree,8,yoginth.eth,snapshot,Yoginth,5681,533901
+max200,weighted_degree,9,crypto435.eth,snapshot,Crypto435,2058,473581
+max200,weighted_degree,10,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,tally,test,7302,460536
+max200,weighted_degree,11,opcollective.eth,snapshot,Optimism Collective,6922,456888
+max200,weighted_degree,12,etherscoredao.eth,snapshot,EtherScore,5222,378459
+max200,weighted_degree,13,basenamedao.eth,snapshot,Base Name Service,4926,365386
+max200,weighted_degree,14,syncswapxyz.eth,snapshot,SyncSwap,5479,337460
+max200,weighted_degree,15,mail3.eth,snapshot,Mail3,5741,332766
+max200,weighted_degree,16,uniswapgovernance.eth,snapshot,Uniswap,5173,256585
+max200,weighted_degree,17,vestafinance.eth,snapshot,Vesta,3453,228871
+max200,weighted_degree,18,shellprotocol.eth,snapshot,Shell Protocol,4840,223521
+max200,weighted_degree,19,cakevote.eth,snapshot,PancakeSwap,5536,210556
+max200,weighted_degree,20,magicappstore.eth,snapshot,Magic Square,5164,198483
+max100,degree,1,stgdao.eth,snapshot,Stargate DAO,31309,1327703
+max100,degree,2,linea-build.eth,snapshot,Linea,17832,1331181
+max100,degree,3,arbitrumfoundation.eth,snapshot,Arbitrum DAO,12816,1062406
+max100,degree,4,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,tally,arbitrum treasury,10301,643668
+max100,degree,5,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,tally,arbitrum core,9688,625452
+max100,degree,6,aavedao.eth,snapshot,Aave DAO,7629,554174
+max100,degree,7,gmx.eth,snapshot,GMX,7580,544592
+max100,degree,8,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,tally,test,7195,455429
+max100,degree,9,opcollective.eth,snapshot,Optimism Collective,6816,451781
+max100,degree,10,ens.eth,snapshot,ENS,6580,187439
+max100,degree,11,yoginth.eth,snapshot,Yoginth,5591,525665
+max100,degree,12,cakevote.eth,snapshot,PancakeSwap,5534,210456
+max100,degree,13,mail3.eth,snapshot,Mail3,5519,322087
+max100,degree,14,syncswapxyz.eth,snapshot,SyncSwap,5340,327041
+max100,degree,15,etherscoredao.eth,snapshot,EtherScore,5130,378359
+max100,degree,16,magicappstore.eth,snapshot,Magic Square,5072,198383
+max100,degree,17,uniswapgovernance.eth,snapshot,Uniswap,5058,251478
+max100,degree,18,basenamedao.eth,snapshot,Base Name Service,4926,365386
+max100,degree,19,shellprotocol.eth,snapshot,Shell Protocol,4719,214759
+max100,degree,20,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,tally,uniswap,4270,188951
+max100,weighted_degree,1,linea-build.eth,snapshot,Linea,17832,1331181
+max100,weighted_degree,2,stgdao.eth,snapshot,Stargate DAO,31309,1327703
+max100,weighted_degree,3,arbitrumfoundation.eth,snapshot,Arbitrum DAO,12816,1062406
+max100,weighted_degree,4,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,tally,arbitrum treasury,10301,643668
+max100,weighted_degree,5,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,tally,arbitrum core,9688,625452
+max100,weighted_degree,6,aavedao.eth,snapshot,Aave DAO,7629,554174
+max100,weighted_degree,7,gmx.eth,snapshot,GMX,7580,544592
+max100,weighted_degree,8,yoginth.eth,snapshot,Yoginth,5591,525665
+max100,weighted_degree,9,crypto435.eth,snapshot,Crypto435,2058,473581
+max100,weighted_degree,10,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,tally,test,7195,455429
+max100,weighted_degree,11,opcollective.eth,snapshot,Optimism Collective,6816,451781
+max100,weighted_degree,12,etherscoredao.eth,snapshot,EtherScore,5130,378359
+max100,weighted_degree,13,basenamedao.eth,snapshot,Base Name Service,4926,365386
+max100,weighted_degree,14,syncswapxyz.eth,snapshot,SyncSwap,5340,327041
+max100,weighted_degree,15,mail3.eth,snapshot,Mail3,5519,322087
+max100,weighted_degree,16,uniswapgovernance.eth,snapshot,Uniswap,5058,251478
+max100,weighted_degree,17,vestafinance.eth,snapshot,Vesta,3453,228871
+max100,weighted_degree,18,shellprotocol.eth,snapshot,Shell Protocol,4719,214759
+max100,weighted_degree,19,cakevote.eth,snapshot,PancakeSwap,5534,210456
+max100,weighted_degree,20,magicappstore.eth,snapshot,Magic Square,5072,198383
+max50,degree,1,stgdao.eth,snapshot,Stargate DAO,31205,1318052
+max50,degree,2,linea-build.eth,snapshot,Linea,17690,1322642
+max50,degree,3,arbitrumfoundation.eth,snapshot,Arbitrum DAO,12671,1053989
+max50,degree,4,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,tally,arbitrum treasury,10134,636159
+max50,degree,5,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,tally,arbitrum core,9516,617555
+max50,degree,6,aavedao.eth,snapshot,Aave DAO,7453,544428
+max50,degree,7,gmx.eth,snapshot,GMX,7430,536034
+max50,degree,8,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,tally,test,7034,448084
+max50,degree,9,opcollective.eth,snapshot,Optimism Collective,6668,443408
+max50,degree,10,ens.eth,snapshot,ENS,6445,179666
+max50,degree,11,yoginth.eth,snapshot,Yoginth,5457,518420
+max50,degree,12,cakevote.eth,snapshot,PancakeSwap,5375,204886
+max50,degree,13,mail3.eth,snapshot,Mail3,5356,314208
+max50,degree,14,syncswapxyz.eth,snapshot,SyncSwap,5187,319019
+max50,degree,15,magicappstore.eth,snapshot,Magic Square,5017,196341
+max50,degree,16,etherscoredao.eth,snapshot,EtherScore,4957,371347
+max50,degree,17,uniswapgovernance.eth,snapshot,Uniswap,4868,242548
+max50,degree,18,basenamedao.eth,snapshot,Base Name Service,4859,362660
+max50,degree,19,shellprotocol.eth,snapshot,Shell Protocol,4553,206350
+max50,degree,20,eip155:1:0x408ed6354d4973f66138c91495f2f2fcbd8724c3,tally,uniswap,4081,181133
+max50,weighted_degree,1,linea-build.eth,snapshot,Linea,17690,1322642
+max50,weighted_degree,2,stgdao.eth,snapshot,Stargate DAO,31205,1318052
+max50,weighted_degree,3,arbitrumfoundation.eth,snapshot,Arbitrum DAO,12671,1053989
+max50,weighted_degree,4,eip155:42161:0x789fc99093b09ad01c34dc7251d0c89ce743e5a4,tally,arbitrum treasury,10134,636159
+max50,weighted_degree,5,eip155:42161:0xf07ded9dc292157749b6fd268e37df6ea38395b9,tally,arbitrum core,9516,617555
+max50,weighted_degree,6,aavedao.eth,snapshot,Aave DAO,7453,544428
+max50,weighted_degree,7,gmx.eth,snapshot,GMX,7430,536034
+max50,weighted_degree,8,yoginth.eth,snapshot,Yoginth,5457,518420
+max50,weighted_degree,9,crypto435.eth,snapshot,Crypto435,1955,471606
+max50,weighted_degree,10,eip155:10:0xcdf27f107725988f2261ce2256bdfcde8b382b10,tally,test,7034,448084
+max50,weighted_degree,11,opcollective.eth,snapshot,Optimism Collective,6668,443408
+max50,weighted_degree,12,etherscoredao.eth,snapshot,EtherScore,4957,371347
+max50,weighted_degree,13,basenamedao.eth,snapshot,Base Name Service,4859,362660
+max50,weighted_degree,14,syncswapxyz.eth,snapshot,SyncSwap,5187,319019
+max50,weighted_degree,15,mail3.eth,snapshot,Mail3,5356,314208
+max50,weighted_degree,16,uniswapgovernance.eth,snapshot,Uniswap,4868,242548
+max50,weighted_degree,17,vestafinance.eth,snapshot,Vesta,3368,226013
+max50,weighted_degree,18,shellprotocol.eth,snapshot,Shell Protocol,4553,206350
+max50,weighted_degree,19,cakevote.eth,snapshot,PancakeSwap,5375,204886
+max50,weighted_degree,20,magicappstore.eth,snapshot,Magic Square,5017,196341
