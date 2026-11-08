@@ -1,0 +1,14 @@
+step,measure,value
+1. votes.csv,vote rows,67340666
+"2. (voter, DAO) pairs",distinct pairs,9250601
+"2. (voter, DAO) pairs",distinct voters,6509336
+3. Filter max_daos = 100,voters excluded (more than 100 DAOs),321
+3. Filter max_daos = 100,voters in one DAO only (no edges),5543929
+3. Filter max_daos = 100,voters that create edges,965086
+4. Nodes,nodes,86495
+4. Nodes,nodes not in the catalogue,6
+5. Edges,edges,700304
+5. Edges,total weight (shared voters),10682356
+6. Jaccard,edges with Jaccard weight,700304
+7. Graph,connected nodes,51218
+7. Graph,isolated nodes,35277

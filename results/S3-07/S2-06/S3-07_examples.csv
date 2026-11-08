@@ -1,0 +1,21 @@
+type,pair,shared_voters,jaccard
+size effect,Crypto435  -  Linea,170988,0.0588307952314122
+size effect,Linea  -  Stargate DAO,163326,0.041598800270693
+size effect,Arbitrum DAO  -  Linea,160852,0.053546972611322
+size effect,Arbitrum DAO  -  Crypto435,116755,0.3365007724055244
+size effect,Arbitrum DAO  -  Stargate DAO,107153,0.078288728638333
+both,arbitrum treasury  -  arbitrum core,86229,0.6041237546765311
+both,balsam  -  tarpon,6070,0.9975349219391948
+both,balsam  -  hotstock,6069,0.9972067039106144
+both,balsam  -  hinny,6068,0.9970423923759448
+both,hotstock  -  tarpon,6067,0.9983544512094784
+neither,8686DAO  -  CoW DAO,354,0.0203191367236827
+neither,zkprotocolgovernor  -  Napoleon Club,354,0.0256243213897937
+neither,Share  -   Guru Network DAO,354,0.0178409434532809
+neither,Arbitrum DAO  -  PeopleDAO,354,0.0012740549859098
+neither,Hashflow  -  Decentraland,354,0.0273316862260654
+proportional overlap,Oldmaster  -  miniworld,257,0.9884615384615384
+proportional overlap,DadJokes DAO  -  RickDev,248,0.5767441860465117
+proportional overlap,0x DAO  -  Yo,204,0.6238532110091743
+proportional overlap,Cube stone  -  Work Club 1,190,0.8558558558558559
+proportional overlap,lumao  -  lumao(狂奔的蜗牛4.eth),184,0.6715328467153284

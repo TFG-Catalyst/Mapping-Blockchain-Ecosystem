@@ -1,0 +1,8 @@
+platform,declared,rows_in_votes_csv,coverage_pct
+snapshot,64697595,64585436,99.8
+tally,1440390,1597604,110.9
+realms,1067333,1067333,100.0
+daohaus,51129,51129,100.0
+aragon,26833,26833,100.0
+daostack,12331,12331,100.0
+total,67295611,67340666,100.1

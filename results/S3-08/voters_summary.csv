@@ -1,0 +1,12 @@
+metric,value
+max_daos,100
+vote_rows,67340666
+vote_rows_without_voter,0
+deployments_with_vote_rows,66086
+distinct_voters,6509336
+voters_in_one_dao,5543929
+voters_in_2_to_100_daos,965086
+voters_in_more_than_100_daos,321
+distinct_voter_dao_pairs,9250601
+pairs_of_voters_that_create_edges,3654669
+deployments_with_votes_and_voter,66086

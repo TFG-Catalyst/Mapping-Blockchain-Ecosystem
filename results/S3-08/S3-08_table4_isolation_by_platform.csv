@@ -1,0 +1,8 @@
+platform,nodes,connected,votes_no_edges,no_votes,isolated_among_with_votes_pct
+snapshot,71958,48148,13349,10461,21.7
+tally,4394,905,244,3245,21.2
+realms,4224,780,673,2771,46.3
+daohaus,3459,787,151,2521,16.1
+aragon,2402,562,432,1408,43.5
+daostack,58,36,19,3,34.5
+total,86495,51218,14868,20409,22.5

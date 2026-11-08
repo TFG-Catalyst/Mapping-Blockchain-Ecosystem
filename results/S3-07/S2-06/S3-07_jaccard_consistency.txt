@@ -1,0 +1,7 @@
+Edges in edges_jaccard.csv: 700,304 | in edges.csv: 700,304
+OK   union = voters_source + voters_target - shared: 0 edges break it
+OK   shared <= smaller DAO: 0 edges break it
+OK   union >= bigger DAO: 0 edges break it
+OK   jaccard = shared / union: 0 edges break it
+OK   0 < jaccard <= 1: 0 edges break it
+OK   same pairs and same shared voters as edges.csv
