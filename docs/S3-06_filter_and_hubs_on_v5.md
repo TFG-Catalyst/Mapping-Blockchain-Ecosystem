@@ -260,6 +260,16 @@ from the committed `results/S2-0x`; v5 values from this rerun.
 
   Ranks are for `nolimit`; for Metrox, Strio and OpenDAO, `nolimit` to `max100`.
 
+  **Which rank is this?** Weighted degree is the sum of the weights of all the edges of a node
+  (every pair with at least one shared voter), and it is the measure used throughout this
+  document, here in the `nolimit` graph. S3-07 (`S3-07_normalization_and_author_on_v5.md`) ranks
+  the same hubs in the `max100` graph by strength (the same sum, but only over edges with at
+  least 10 shared voters) and by summed Jaccard, so the numbers are not the same: Lido is 44 here and 51 in S3-07 (by count),
+  balsam 38 and 36, while ENS is 22 in both. The direction agrees: the hubs move down in v5
+  because the new hubs enter above. The ranking by Jaccard (Lido 353, ENS 591, balsam 97) is in
+  S3-07 and is not repeated here. Do not compare ranks of the two documents without checking the
+  measure.
+
   ![Rank of the selected hubs by weighted degree, v4 and v5](figures/S3-06_fig3_hub_ranks.png)
 
   The figure uses the `max100` graph.
