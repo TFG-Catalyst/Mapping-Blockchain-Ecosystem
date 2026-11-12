@@ -1,0 +1,3 @@
+scope,voter_edges,author_edges,common_edges,voter_only,author_only,pct_author_edges_in_voters,pct_voter_edges_in_authors
+all,700304,28359,10506,689798,17853,37.046440283507884,1.5002056249857205
+covered_platforms,611886,28359,10506,601380,17853,37.046440283507884,1.7169864974848257

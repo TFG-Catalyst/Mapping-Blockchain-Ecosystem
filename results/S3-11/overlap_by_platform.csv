@@ -1,0 +1,11 @@
+platform_pair,voter_edges,author_edges,common_edges,pct_author_edges_in_voters
+aragon - aragon,472,1655,312,18.851963746223564
+aragon - daohaus,534,736,235,31.929347826086957
+aragon - daostack,64,92,33,35.869565217391305
+aragon - snapshot,3748,572,226,39.51048951048951
+daohaus - daohaus,5242,7321,3377,46.12757819969949
+daohaus - daostack,133,273,90,32.967032967032964
+daohaus - snapshot,13147,3145,1780,56.59777424483307
+daostack - daostack,78,613,64,10.440456769983687
+daostack - snapshot,806,158,81,51.265822784810126
+snapshot - snapshot,587662,13794,4308,31.23096998695085

@@ -37,7 +37,7 @@ def isolation_figure():
 
 def graph_view_figure():
     plt.show = lambda: plt.gcf().savefig(FIGURES_DIR / "S3-08_fig2_graph_view_all.png", dpi=160, bbox_inches="tight")
-    visualize_top_daos(build_graph())              # default view: 100 strongest relationships among the top 50 DAOs
+    visualize_top_daos(build_graph(include_jaccard=True))              # default view: 100 strongest relationships among the top 50 DAOs
 
 
 if __name__ == "__main__":

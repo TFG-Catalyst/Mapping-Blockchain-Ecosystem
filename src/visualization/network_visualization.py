@@ -5,6 +5,8 @@ import pandas as pd
 from matplotlib.lines import Line2D
 
 from src.pipeline.graph_builder import build_graph
+from matplotlib.colors import to_rgba
+
 
 PLATFORM_COLORS = {
     "snapshot": "#1f77b4",
@@ -76,11 +78,7 @@ def visualize_top_daos(graph, top_n=50, max_edges=100, min_shared_voters=1, plat
     for u, v, data in strongest_edges:
         strong_subgraph.add_node(u, **subgraph.nodes[u])
         strong_subgraph.add_node(v, **subgraph.nodes[v])
-        strong_subgraph.add_edge(
-            u,
-            v,
-            shared_voters=data["shared_voters"]
-        )
+        strong_subgraph.add_edge(u, v, **data)
 
     subgraph = strong_subgraph
     if subgraph.number_of_edges() == 0:
@@ -223,7 +221,8 @@ def visualize_top_daos(graph, top_n=50, max_edges=100, min_shared_voters=1, plat
     ax.text(
         0.01,
         0.01,
-        "Click a node or an edge to see its details",
+         "Click a node to highlight displayed neighbours; "
+        "click an edge for details; click empty space to reset.",
         transform=ax.transAxes,
         fontsize=8,
         color="gray"
@@ -241,12 +240,65 @@ def visualize_top_daos(graph, top_n=50, max_edges=100, min_shared_voters=1, plat
         ax.figure.canvas.draw_idle()
 
 
+    def reset_highlight():
+        node_collection.set_facecolors(node_colors)
+        node_collection.set_edgecolors("white")
+        node_collection.set_linewidths(0.5)
+        edge_collection.set_alpha(0.6)
+        edge_collection.set_color("gray")
+        edge_collection.set_linewidths(edge_widths)
+
+    def highlight_neighbours(selected):
+        neighbours = set(subgraph.neighbors(selected))
+        active = neighbours | {selected}
+
+        node_collection.set_facecolors([
+            to_rgba(color, 1.0 if node in active else 0.15)
+            for node, color in zip(node_ids, node_colors)
+        ])
+        node_collection.set_edgecolors([
+            "#111111" if node == selected
+            else "#d97706" if node in neighbours
+            else "white"
+            for node in node_ids
+        ])
+        node_collection.set_linewidths([
+            2.5 if node == selected
+            else 1.5 if node in neighbours
+            else 0.5
+            for node in node_ids
+        ])
+
+        edge_collection.set_alpha(None)
+        edge_collection.set_color([
+            to_rgba("#d97706", 0.95) if selected in edge
+            else to_rgba("gray", 0.10)
+            for edge in edge_ids
+        ])
+        edge_collection.set_linewidths([
+            width + 1 if selected in edge else width
+            for edge, width in zip(edge_ids, edge_widths)
+        ])
+
+    def on_background_click(event):
+        if event.inaxes is not ax:
+            return
+        if node_collection.contains(event)[0]:
+            return
+        if edge_collection.contains(event)[0]:
+            return
+
+        reset_highlight()
+        info_box.set_visible(False)
+        ax.figure.canvas.draw_idle()
+
     def on_node_click(event):
         if event.artist is not node_collection or len(event.ind) == 0:
             return
 
         node_id = node_ids[event.ind[0]]
         attributes = subgraph.nodes[node_id]
+        highlight_neighbours(node_id)
 
         details = (
             f"DAO: {node_name(subgraph, node_id)}\n"
@@ -271,11 +323,19 @@ def visualize_top_daos(graph, top_n=50, max_edges=100, min_shared_voters=1, plat
 
         source, target = edge_ids[event.ind[0]]
         attributes = subgraph.edges[source, target]
+        reset_highlight()
+        jaccard_value = attributes.get("jaccard")
+        jaccard_text = (
+            "Unknown"
+            if jaccard_value is None or pd.isna(jaccard_value)
+            else f"{jaccard_value:.6g}"
+        )
 
         details = (
             f"DAO 1: {node_name(subgraph, source)}\n"
             f"DAO 2: {node_name(subgraph, target)}\n"
-            f"Shared voters: {attributes['shared_voters']:,}"
+            f"Shared voters: {attributes['shared_voters']:,}\n"
+            f"Jaccard: {jaccard_text}"
         )
 
         x = (pos[source][0] + pos[target][0]) / 2
@@ -290,6 +350,10 @@ def visualize_top_daos(graph, top_n=50, max_edges=100, min_shared_voters=1, plat
     node_collection.figure.canvas.mpl_connect(
         "pick_event",
         on_edge_click
+    )
+    node_collection.figure.canvas.mpl_connect(
+        "button_press_event",
+        on_background_click,
     )
 
 
@@ -329,7 +393,7 @@ if __name__ == "__main__":
     if args.min_shared_voters < 1:
         parser.error("--min-shared-voters must be at least 1")
 
-    graph = build_graph()
+    graph = build_graph(include_jaccard=True)
 
     visualize_top_daos(
         graph,

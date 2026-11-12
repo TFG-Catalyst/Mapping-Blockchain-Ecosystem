@@ -1,0 +1,10 @@
+category,source,target,shared_voters,shared_authors
+common_by_authors,狂奔的蜗牛.eth,狂奔的蜗牛5.eth,136,133
+common_by_authors,狂奔的蜗牛3.eth,狂奔的蜗牛4.eth,176,122
+common_by_authors,狂奔的蜗牛1.eth,狂奔的蜗牛3.eth,175,114
+author_only,0x1b975a9daf25e7b01e0a6c72d657ff74925327a8,0x7961b6c69ec7d7203cbecc4f3bf30755713a3822,0,140
+author_only,0x7961b6c69ec7d7203cbecc4f3bf30755713a3822,0x815aa1d90bcf6535bba894db67c49cd34f5cfc66,0,93
+author_only,0x1b975a9daf25e7b01e0a6c72d657ff74925327a8,0x5a81e684beb1f8551c5a781112385216049d7070,0,47
+voter_only,crypto435.eth,linea-build.eth,170988,0
+voter_only,linea-build.eth,stgdao.eth,163326,0
+voter_only,arbitrumfoundation.eth,linea-build.eth,160852,0
